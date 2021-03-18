@@ -225,28 +225,16 @@ fem_filter1['Total']=fem_filter1[['Enero','Febrero','Marzo','Abril','Mayo','Juni
 
 #- FILE MUNICIPIOS ------------------------------------------------------------------------------
 
+fem_filter1.fillna(0, inplace=True) 
+fem_filter1['Total']=fem_filter1['Total'].astype(int)
 
-geo_mpios = gpd.read_file("mpios_clear.shp")
 
-geo_mpios.replace(['Coahuila',
-                'Distrito Federal',
-                'Michoacán',
-                'Veracruz'],
-               #por
-                 ['Coahuila de Zaragoza',
-                 'Ciudad de México',
-                 'Michoacán de Ocampo',
-                  'Veracruz de Ignacio de la Llave'],inplace=True)
-
-concat = geo_mpios.merge(fem_filter1, left_on=(['NOM_MUN','NOM_ENT']), right_on=(['Municipio','Entidad']), how= "left" )
-concat.fillna(0, inplace=True) 
-concat['Total']=concat['Total'].astype(int)
 
 
 ############################################### filtro para estados(3) e identifiación de mpios y abs feminicidios
 
 # estado 1
-estado1=concat[concat.Entidad=='México']
+estado1=fem_filter1[fem_filter1.Entidad=='México']
 edo1orden=estado1[['Municipio','Total']].sort_values('Total',ascending=False)
 #1
 edo1mpio1=edo1orden.iloc[0]['Municipio']
@@ -265,7 +253,7 @@ edo1mpio5=edo1orden.iloc[4]['Municipio']
 edo1mpio5v=edo1orden.iloc[4]['Total']
 
 # estado 2
-estado2=concat[concat.Entidad=='Veracruz de Ignacio de la Llave']
+estado2=fem_filter1[fem_filter1.Entidad=='Veracruz de Ignacio de la Llave']
 edo2orden=estado2[['Municipio','Total']].sort_values('Total',ascending=False)
 #1
 edo2mpio1=edo2orden.iloc[0]['Municipio']
@@ -284,7 +272,7 @@ edo2mpio5=edo2orden.iloc[4]['Municipio']
 edo2mpio5v=edo2orden.iloc[4]['Total']
 
 # estado 3
-estado3=concat[concat.Entidad=='Ciudad de México']
+estado3=fem_filter1[fem_filter1.Entidad=='Ciudad de México']
 edo3orden=estado3[['Municipio','Total']].sort_values('Total',ascending=False)
 #1
 edo3mpio1=edo3orden.iloc[0]['Municipio']
@@ -303,7 +291,7 @@ edo3mpio5=edo3orden.iloc[4]['Municipio']
 edo3mpio5v=edo3orden.iloc[4]['Total']
 
 # estado 4
-estado4=concat[concat.Entidad=='Jalisco']
+estado4=fem_filter1[fem_filter1.Entidad=='Jalisco']
 edo4orden=estado4[['Municipio','Total']].sort_values('Total',ascending=False)
 #1
 edo4mpio1=edo4orden.iloc[0]['Municipio']
