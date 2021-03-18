@@ -1,4 +1,5 @@
 import dash
+import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
@@ -17,6 +18,7 @@ from datetime import date
 import geopandas as gpd
 import flask
 import os
+
 yesterday = datetime.now() - timedelta(1)
 yea = datetime.strftime(yesterday, '%Y%m%d')
 
@@ -30,25 +32,17 @@ d2 = today.strftime("Fecha de actualización : %d-%m-%Y")
 ############################### Abre archivos
 
 
-os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
-#pd.read_csv("Municipal-Delitos-2015-2021_ene2021.csv")
-columns = ['Año', 'Clave_Ent', 'Entidad', 'Cve. Municipio', 'Municipio',
-        'Tipo de delito',  'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-       'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+#os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
-delitos = pd.read_csv("Municipal-Delitos-2015-2021_ene2021.csv", encoding= "Latin-1", 
-                      usecols= columns)
+delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/feminicidios2015_2020.csv?raw=true")
+delitos.drop('Unnamed: 0',1, inplace=True)
 
 delitos.groupby(['Año','Entidad','Tipo de delito'])['Enero', 
                  'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
        'Julio', 'Agosto', 'Septiembre', 'Octubre',
        'Noviembre', 'Diciembre'].sum().to_csv("00.csv",  header=True)
 
-feminicidio= pd.read_csv("00.csv")
-feminicidio[feminicidio["Tipo de delito"]== "Feminicidio"].to_csv("01.csv", header=True)
-
-fem= pd.read_csv("01.csv")
-
+fem= pd.read_csv("00.csv")
 
 ############################################### separación de años
 
@@ -96,85 +90,26 @@ fd = fc.merge(y19, on="Entidad",  how="inner")
 fe = fd.merge(y20, on="Entidad",  how="inner")
                       
 femi15_20 = fe[[
- 'Entidad',
- 'Enero15',
- 'Febrero15',
- 'Marzo15',
- 'Abril15',
- 'Mayo15',
- 'Junio15',
- 'Julio15',
- 'Agosto15',
- 'Septiembre15',
- 'Octubre15',
- 'Noviembre15',
- 'Diciembre15',
+ 'Entidad','Enero15','Febrero15','Marzo15','Abril15','Mayo15','Junio15',
+ 'Julio15','Agosto15','Septiembre15','Octubre15','Noviembre15','Diciembre15',
  
- 'Enero16',
- 'Febrero16',
- 'Marzo16',
- 'Abril16',
- 'Mayo16',
- 'Junio16',
- 'Julio16',
- 'Agosto16',
- 'Septiembre16',
- 'Octubre16',
- 'Noviembre16',
- 'Diciembre16',
+ 'Enero16','Febrero16','Marzo16','Abril16','Mayo16','Junio16','Julio16',
+ 'Agosto16','Septiembre16','Octubre16','Noviembre16','Diciembre16',
 
- 'Enero17',
- 'Febrero17',
- 'Marzo17',
- 'Abril17',
- 'Mayo17',
- 'Junio17',
- 'Julio17',
- 'Agosto17',
- 'Septiembre17',
- 'Octubre17',
- 'Noviembre17',
- 'Diciembre17',
- 'Enero18',
- 'Febrero18',
- 'Marzo18',
- 'Abril18',
- 'Mayo18',
- 'Junio18',
- 'Julio18',
- 'Agosto18',
- 'Septiembre18',
- 'Octubre18',
- 'Noviembre18',
- 'Diciembre18',
+ 'Enero17','Febrero17','Marzo17','Abril17','Mayo17','Junio17','Julio17',
+ 'Agosto17','Septiembre17','Octubre17','Noviembre17','Diciembre17',
+    
+ 'Enero18','Febrero18','Marzo18','Abril18','Mayo18','Junio18','Julio18',
+ 'Agosto18','Septiembre18','Octubre18','Noviembre18','Diciembre18',
  
- 'Enero19',
- 'Febrero19',
- 'Marzo19',
- 'Abril19',
- 'Mayo19',
- 'Junio19',
- 'Julio19',
- 'Agosto19',
- 'Septiembre19',
- 'Octubre19',
- 'Noviembre19',
- 'Diciembre19',
+ 'Enero19','Febrero19','Marzo19','Abril19','Mayo19','Junio19','Julio19',
+ 'Agosto19','Septiembre19','Octubre19','Noviembre19','Diciembre19',
 
- 'Enero20',
- 'Febrero20',
- 'Marzo20',
- 'Abril20',
- 'Mayo20',
- 'Junio20',
- 'Julio20',
- 'Agosto20',
- 'Septiembre20',
- 'Octubre20',
- 'Noviembre20',
- 'Diciembre20']]
+ 'Enero20','Febrero20','Marzo20','Abril20','Mayo20','Junio20','Julio20',
+ 'Agosto20','Septiembre20','Octubre20','Noviembre20','Diciembre20']]
 
-# Crear columna de TOTAL ANUAL 
+
+##CRear columna de TOTAL ANUAL 
 femi15_20['Total2015']= femi15_20[[ 'Enero15', 'Febrero15', 'Marzo15', 'Abril15', 'Mayo15',
                                'Junio15', 'Julio15', 'Agosto15', 'Septiembre15', 'Octubre15',
                                'Noviembre15', 'Diciembre15',]].sum(axis=1)
@@ -204,10 +139,7 @@ conf_2019= femi15_20.Total2019.sum()
 conf_2020= femi15_20.Total2020.sum()
 
 
-
-
-
-###############################################  GRAFICA MENSUAL
+#--------------------------- PREPARA GRAFICA MENSUAL
 pagra = fe[[
   'Enero15', 'Febrero15', 'Marzo15', 'Abril15', 'Mayo15', 'Junio15', 'Julio15', 'Agosto15', 
     'Septiembre15', 'Octubre15', 'Noviembre15', 'Diciembre15',
@@ -242,9 +174,11 @@ gra_mes = gra_mes.rename(columns= {"Unnamed: 0": "Mes"})
 gra_mes = gra_mes.rename(columns= {"32": "Total"})
 gra_mes['Total'] = pd.to_numeric(gra_mes['Total'])
 
+
+#Grafica mensual 
 graf_meses = go.Figure()
 graf_meses.add_trace(go.Bar(x=gra_mes['Mes'],y=gra_mes['Total'],
-                marker_color='purple', # cambiar nuemeritos de rgb
+                marker_color='indianred'  # cambiar nuemeritos de rgb
                 ))
 graf_meses.update_layout(
     paper_bgcolor='rgba(0,0,0,0)',
@@ -259,25 +193,42 @@ graf_meses.update_layout(
         tickfont_size=12,
         titlefont_family= "Monserrat"),
     #autosize=False,
-    width=1400,
-    height=400
+    #width=1000,
+    #height=400
     )
 
 
 
 
-#- FILE JSON ------------------------------------------------------------------------------
 
-from urllib.request import urlopen
-import json
-with urlopen('https://raw.githubusercontent.com/Aeelen-Miranda/exercises_pythoncitos/master/mexico.json') as response:
-    counties = json.load(response)
-counties["features"][0]
+#- FILE JSON PARA ENTIDADES ------------------------------------------------------------------------------
 
-# Creacion de geodataframe
-geo_df = gpd.GeoDataFrame.from_features(counties["features"])
 
-geo_df.replace(['Coahuila',
+
+################################################ SUMA TODOS LOS AÑOS ranking de municipios por estado (3edos)
+
+#filtro de feminicidio
+delitos.groupby(['Municipio','Entidad',])['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo',
+                                             'Junio','Julio', 'Agosto', 'Septiembre', 'Octubre',
+                                             'Noviembre', 'Diciembre'].sum().to_csv('0000procesofem.csv')
+
+fem_filter1=pd.read_csv('0000procesofem.csv')
+fem_filter1[['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
+                                 'Septiembre','Octubre','Noviembre','Diciembre']] = fem_filter1[['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
+                                 'Septiembre','Octubre','Noviembre','Diciembre']].astype(int)
+    
+fem_filter1['Total']=fem_filter1[['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto',
+                                 'Septiembre','Octubre','Noviembre','Diciembre']].sum(1)
+
+
+
+
+#- FILE MUNICIPIOS ------------------------------------------------------------------------------
+
+
+geo_mpios = gpd.read_file("mpios_clear.shp")
+
+geo_mpios.replace(['Coahuila',
                 'Distrito Federal',
                 'Michoacán',
                 'Veracruz'],
@@ -286,242 +237,126 @@ geo_df.replace(['Coahuila',
                  'Ciudad de México',
                  'Michoacán de Ocampo',
                   'Veracruz de Ignacio de la Llave'],inplace=True)
-# Merge 
-concat0 = geo_df.merge(femi15_20, left_on= "name", right_on= "Entidad", how= "right")
+
+concat = geo_mpios.merge(fem_filter1, left_on=(['NOM_MUN','NOM_ENT']), right_on=(['Municipio','Entidad']), how= "left" )
+concat.fillna(0, inplace=True) 
+concat['Total']=concat['Total'].astype(int)
+
+
+############################################### filtro para estados(3) e identifiación de mpios y abs feminicidios
+
+# estado 1
+estado1=concat[concat.Entidad=='México']
+edo1orden=estado1[['Municipio','Total']].sort_values('Total',ascending=False)
+#1
+edo1mpio1=edo1orden.iloc[0]['Municipio']
+edo1mpio1v=edo1orden.iloc[0]['Total']
+#2
+edo1mpio2=edo1orden.iloc[1]['Municipio']
+edo1mpio2v=edo1orden.iloc[1]['Total']
+#3
+edo1mpio3=edo1orden.iloc[2]['Municipio']
+edo1mpio3v=edo1orden.iloc[2]['Total']
+#4
+edo1mpio4=edo1orden.iloc[3]['Municipio']
+edo1mpio4v=edo1orden.iloc[3]['Total']
+#5
+edo1mpio5=edo1orden.iloc[4]['Municipio']
+edo1mpio5v=edo1orden.iloc[4]['Total']
+
+# estado 2
+estado2=concat[concat.Entidad=='Veracruz de Ignacio de la Llave']
+edo2orden=estado2[['Municipio','Total']].sort_values('Total',ascending=False)
+#1
+edo2mpio1=edo2orden.iloc[0]['Municipio']
+edo2mpio1v=edo2orden.iloc[0]['Total']
+#2
+edo2mpio2=edo2orden.iloc[1]['Municipio']
+edo2mpio2v=edo2orden.iloc[1]['Total']
+#3
+edo2mpio3=edo2orden.iloc[2]['Municipio']
+edo2mpio3v=edo2orden.iloc[2]['Total']
+#4
+edo2mpio4=edo2orden.iloc[3]['Municipio']
+edo2mpio4v=edo2orden.iloc[3]['Total']
+#5
+edo2mpio5=edo2orden.iloc[4]['Municipio']
+edo2mpio5v=edo2orden.iloc[4]['Total']
+
+# estado 3
+estado3=concat[concat.Entidad=='Ciudad de México']
+edo3orden=estado3[['Municipio','Total']].sort_values('Total',ascending=False)
+#1
+edo3mpio1=edo3orden.iloc[0]['Municipio']
+edo3mpio1v=edo3orden.iloc[0]['Total']
+#2
+edo3mpio2=edo3orden.iloc[1]['Municipio']
+edo3mpio2v=edo3orden.iloc[1]['Total']
+#3
+edo3mpio3=edo3orden.iloc[2]['Municipio']
+edo3mpio3v=edo3orden.iloc[2]['Total']
+#4
+edo3mpio4=edo3orden.iloc[3]['Municipio']
+edo3mpio4v=edo3orden.iloc[3]['Total']
+#5
+edo3mpio5=edo3orden.iloc[4]['Municipio']
+edo3mpio5v=edo3orden.iloc[4]['Total']
+
+# estado 4
+estado4=concat[concat.Entidad=='Jalisco']
+edo4orden=estado4[['Municipio','Total']].sort_values('Total',ascending=False)
+#1
+edo4mpio1=edo4orden.iloc[0]['Municipio']
+edo4mpio1v=edo4orden.iloc[0]['Total']
+#2
+edo4mpio2=edo4orden.iloc[1]['Municipio']
+edo4mpio2v=edo4orden.iloc[1]['Total']
+#3
+edo4mpio3=edo4orden.iloc[2]['Municipio']
+edo4mpio3v=edo4orden.iloc[2]['Total']
+#4
+edo4mpio4=edo4orden.iloc[3]['Municipio']
+edo4mpio4v=edo4orden.iloc[3]['Total']
+#5
+edo4mpio5=edo4orden.iloc[4]['Municipio']
+edo4mpio5v=edo4orden.iloc[4]['Total']
 
 
 
-# Selección de columnas 
-concat2 = concat0[[
- 'geometry', 'name',
- 'Entidad',
- 'Enero15',
- 'Febrero15',
- 'Marzo15',
- 'Abril15',
- 'Mayo15',
- 'Junio15',
- 'Julio15',
- 'Agosto15',
- 'Septiembre15',
- 'Octubre15',
- 'Noviembre15',
- 'Diciembre15',
- 'Enero16',
- 'Febrero16',
- 'Marzo16',
- 'Abril16',
- 'Mayo16',
- 'Junio16',
- 'Julio16',
- 'Agosto16',
- 'Septiembre16',
- 'Octubre16',
- 'Noviembre16',
- 'Diciembre16',
- 'Enero17',
- 'Febrero17',
- 'Marzo17',
- 'Abril17',
- 'Mayo17',
- 'Junio17',
- 'Julio17',
- 'Agosto17',
- 'Septiembre17',
- 'Octubre17',
- 'Noviembre17',
- 'Diciembre17',
- 'Enero18',
- 'Febrero18',
- 'Marzo18',
- 'Abril18',
- 'Mayo18',
- 'Junio18',
- 'Julio18',
- 'Agosto18',
- 'Septiembre18',
- 'Octubre18',
- 'Noviembre18',
- 'Diciembre18',
- 'Enero19',
- 'Febrero19',
- 'Marzo19',
- 'Abril19',
- 'Mayo19',
- 'Junio19',
- 'Julio19',
- 'Agosto19',
- 'Septiembre19',
- 'Octubre19',
- 'Noviembre19',
- 'Diciembre19',
- 'Enero20',
- 'Febrero20',
- 'Marzo20',
- 'Abril20',
- 'Mayo20',
- 'Junio20',
- 'Julio20',
- 'Agosto20',
- 'Septiembre20',
- 'Octubre20',
- 'Noviembre20',
- 'Diciembre20',
- 'Total2015',
- 'Total2016',
- 'Total2017',
- 'Total2018',
- 'Total2019',
- 'Total2020']]
+######################################################### tablas Ranking municipios
+############## tabla 1
+patabla1 = {'Mpio' : [edo1mpio1,edo1mpio2,edo1mpio3,edo1mpio4,edo1mpio5],
+            'Casos': [edo1mpio1v,edo1mpio2v,edo1mpio3v,edo1mpio4v,edo1mpio5v],}
+
+patabla1a = pd.DataFrame (patabla1, columns = ['Mpio','Casos'])
 
 
+############## tabla 2
+patabla2 = {'Mpio'  : [edo2mpio1,edo2mpio2,edo2mpio3,edo2mpio4,edo2mpio5],
+            'Casos' : [edo2mpio1v,edo2mpio2v,edo2mpio3v,edo2mpio4v,edo2mpio5v],}
+
+patabla2a = pd.DataFrame (patabla2, columns = ['Mpio','Casos'])
 
 
+############## tabla 3
+patabla3 = {'Mpio'  : [edo3mpio1,edo3mpio2,edo3mpio3,edo3mpio4,edo3mpio5],
+            'Casos' : [edo3mpio1v,edo3mpio2v,edo3mpio3v,edo3mpio4v,edo3mpio5v],}
 
-#########################################################
-
-# M A P A S
-
-######################################################### MAPAS ANUALES
-
-# 2015
-
-mapa2015 =  px.choropleth_mapbox(concat2,
-                                   geojson=geo_df.geometry,
-                                   locations=concat2.index,
-                                   color= "Total2015",   
-                                   center={"lat": 23.88234, "lon": -102.28259},
-                                   mapbox_style="white-bg",
-                                   zoom= 2,
-                                   opacity=.6,
-                                   color_continuous_scale=px.colors.sequential.Purples,
-                                       ) 
-mapa2015.update_layout(
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor='rgba(0,0,0,0)',
-    height=200, width = 200, margin={"r":0,"t":0,"l":0,"b":0},
-                      coloraxis_showscale=False)
+patabla3a = pd.DataFrame (patabla3, columns = ['Mpio','Casos'])
 
 
-# 2016
+############## tabla 4
+patabla4 = {'Mpio'  : [edo4mpio1,edo4mpio2,edo4mpio3,edo4mpio4,edo4mpio5],
+            'Casos' : [edo4mpio1v,edo4mpio2v,edo4mpio3v,edo4mpio4v,edo4mpio5v],}
 
-mapa2016 =  px.choropleth_mapbox(concat2,
-                                   geojson=geo_df.geometry,
-                                   locations=concat2.index,
-                                   color= "Total2016",   
-                                   center={"lat": 23.88234, "lon": -102.28259},
-                                   mapbox_style="white-bg",
-                                   zoom= 2,
-                                   opacity=.6,
-                                   color_continuous_scale=px.colors.sequential.Purples,
-      
-                                       ) 
-mapa2016.update_layout(
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor='rgba(0,0,0,0)',
-    height=200, width = 200, margin={"r":0,"t":0,"l":0,"b":0},
-                      coloraxis_showscale=False)
+patabla4a = pd.DataFrame (patabla4, columns = ['Mpio','Casos'])
+######################################################### MAPAS 3estados con más feminicidios
 
-
-# 2017
-
-mapa2017 =  px.choropleth_mapbox(concat2,
-                                   geojson=geo_df.geometry,
-                                   locations=concat2.index,
-                                   color= "Total2017",   
-                                   center={"lat": 23.88234, "lon": -102.28259},
-                                   mapbox_style="white-bg",
-                                   zoom= 2,
-                                   opacity=.6,
-                                   color_continuous_scale=px.colors.sequential.Purples,
-      
-                                       ) 
-mapa2017.update_layout(
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor='rgba(0,0,0,0)',
-    height=200, width = 200, margin={"r":0,"t":0,"l":0,"b":0},
-                      coloraxis_showscale=False)
-
-
-# 2018
-
-mapa2018 =  px.choropleth_mapbox(concat2,
-                                   geojson=geo_df.geometry,
-                                   locations=concat2.index,
-                                   color= "Total2018",   
-                                   center={"lat": 23.88234, "lon": -102.28259},
-                                   mapbox_style="white-bg",
-                                   zoom= 2,
-                                   opacity=.6,
-                                   
-                                   color_continuous_scale=px.colors.sequential.Purples,
-      
-                                       ) 
-mapa2018.update_layout(
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor='rgba(0,0,0,0)',
-    height=200, width = 200, margin={"r":0,"t":0,"l":0,"b":0},
-                      coloraxis_showscale=False)
-
-
-# 2019
-
-mapa2019 =  px.choropleth_mapbox(concat2,
-                                   geojson=geo_df.geometry,
-                                   locations=concat2.index,
-                                   color= "Total2019",   
-                                   center={"lat": 23.88234, "lon": -102.28259},
-                                   mapbox_style="white-bg",
-                                   zoom= 2,
-                                   opacity=.6,
-                                   color_continuous_scale=px.colors.sequential.Purples,
-      
-                                       )
-mapa2019.update_layout(
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor='rgba(0,0,0,0)',
-    height=200, width = 200, margin={"r":0,"t":0,"l":0,"b":0},
-                      coloraxis_showscale=False)
-
-
-# 2020
-
-mapa2020 =  px.choropleth_mapbox(concat2,
-                                   geojson=geo_df.geometry,
-                                   locations=concat2.index,
-                                   color= "Total2020",   
-                                   center={"lat": 23.88234, "lon": -102.28259},
-                                   mapbox_style="white-bg",
-                                   zoom= 2,
-                                   opacity=.6,  
-                                   labels = None,
-                                   color_continuous_scale=px.colors.sequential.Purples,
-      
-                                       ) 
-mapa2020.update_layout(
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor='rgba(0,0,0,0)',
-    template = 'simple_white',
-    
-    height=200, width = 200, margin={"r":0,"t":0,"l":0,"b":0},
-                       coloraxis_showscale=False)
-
-
-
-###########################
-# FALTA UNA GRAFICA 
-#######################
-
-
-
-
-
-
-
-
-
-
-
+#concat2 = concat[concat.Entidad == "Veracruz de Ignacio de la Llave"]
+#concat.plot("NOM_ENT", cmap= "Oranges", legend=True, k=5)
+#plt.axis("off")
+#plt.savefig("ver.png", dpi= 120)
+#plt.show()
 
 
 ####################################
@@ -540,9 +375,6 @@ server = flask.Flask(__name__)
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes. LUX], server=server)
 
 body = html.Div([
-    
-       html.Hr(),
-
 # Cintillo 000
         dbc.Row(
            [
@@ -550,9 +382,13 @@ body = html.Div([
                         width={'size': 1,  "offset": 1}),
                dbc.Col(html.H1("Feminicidios en México"),
                         width={'offset' : 2}),
-               #dbc.Col(html.H4("Cifras Internacionales"),
-               #         width={'size': 1,  "offset": 3}),
            ]),
+
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
     
 #Cintillo 00    
     dbc.Row(
@@ -567,13 +403,22 @@ body = html.Div([
                         width={'size': 3,  "offset":1 }),
             ]),
        html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+    
     
 #cintillo 0
+    
      dbc.Row(
            [
-               dbc.Col(html.H4("Casos anuales y según entidad (2015-2020)"),
-                        width={'size': 6,  "offset":1 }),
-           ]),#justify= "start"),
+               dbc.Col(html.H1("Casos Anuales"),
+                        width={'size': 5,  "offset":1 }),
+            ]),
+
+       html.Hr(),
        html.Hr(),
        html.Hr(),
     
@@ -599,53 +444,162 @@ body = html.Div([
             ]),#justify= "start"),
     
 # Cintillo 1.1
-     dbc.Row(
-           [
-               dbc.Col(dcc.Graph(figure=mapa2015)),
-               dbc.Col(dcc.Graph(figure=mapa2016)),
-               dbc.Col(dcc.Graph(figure=mapa2017)),
-               dbc.Col(dcc.Graph(figure=mapa2018)),
-               dbc.Col(dcc.Graph(figure=mapa2019)),
-               dbc.Col(dcc.Graph(figure=mapa2020)),
-            ]),#justify= "start"),
-    
-    
-       html.Hr(),
-   
-# Cintillo 2
-     dbc.Row(
-           [
-               #dbc.Col(html.H3("Feminicidios por día")),
-               #dbc.Col(html.H3("Donde ocurrieron")),
-               #dbc.Col(html.H3("Rango de edad")),
-               #dbc.Col(html.H3("Tipo de victima")),
-               #dbc.Col(html.H3("Modus operandi")),
-               #dbc.Col(html.H3("Otras variables")),
-            ], justify= "end"),
+        dbc.Row([
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mapa2015.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mapa2016.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mapa2017.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mapa2018.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mapa2019.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mapa2020.jpeg?raw=true")),
+           ]),
     
        html.Hr(),
        html.Hr(),
        html.Hr(),
-    
-       dbc.Row(
-           [
-               dbc.Col(html.H4("Casos mensuales (2015-2020)"),
-                        width={'size': 6,  "offset":1 }),
-            ], justify= "start"),
-
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       
 #---------Grafica mensual
-     dbc.Row([dbc.Col(dcc.Graph(figure=graf_meses, config= "autosize"))]),
+     dbc.Row(
+           [
+               dbc.Col(html.H1("Casos mensuales (2015-2020)"),
+                        width={'size': 6,  "offset":1 }),
+            ]),
+   
+    dbc.Row(
+        [
+            dbc.Col(dcc.Graph(figure=graf_meses, config= "autosize")),
+        ]),
+
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
     
+##Cintillo mapas y ranking
+
+    #títulos
+     dbc.Row(
+           [
+               dbc.Col(html.H1("Municipios en entidades con más casos"),
+                        width={'size': 7,  "offset":1 }),
+            ]),
+
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+    
+     dbc.Row(
+           [
+               dbc.Col(html.H3("México"),
+                        width=4, lg={'size': 2,  "offset": 1, }),
+               dbc.Col(html.H3("Veracruz"),
+                        width=4, lg={'size': 1,  "offset": 3, }),
+           ], justify= "center"),
+    dbc.Row([
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mx.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/cdmx.jpeg?raw=true")),
+           ]),
+       html.Hr(),
+
+    ################################################################# tablas MIUNICIPIOS ranking 1-2    
+    dbc.Row([
+               dbc.Col(dbc.Table.from_dataframe(patabla1a, 
+                        bordered="success", size=82, striped=True), 
+                        width=4, lg={'size': 3,  "offset": 2, }),
+        
+               dbc.Col(dbc.Table.from_dataframe(patabla2a,
+                        bordered="success", size=82, striped=True), 
+                        width=4, lg={'size': 3,  "offset": 3, }),
+            ]),
+
        html.Hr(),
        html.Hr(),
        html.Hr(),
        html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+    
+    
+    
+     dbc.Row(
+           [
+               dbc.Col(html.H3("Ciudad de México"),
+                        width=4, lg={'size': 3,  "offset": 1, }),
+                      
+               dbc.Col(html.H3("Jalisco"),
+                        width=4, lg={'size': 1,  "offset": 4, }),
+           ]),
+    
+    dbc.Row([
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/ver.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/jal.jpeg?raw=true")),
+           ]),
+   
     
 # Cintillo 3
-       
+       ##### tablas ranking 3-4
+    dbc.Row([
+               dbc.Col(dbc.Table.from_dataframe(patabla3a,
+                        bordered="success", size=82, striped=True), 
+                        width=4, lg={'size': 3,  "offset": 2, }),
+    
+        
+               dbc.Col(dbc.Table.from_dataframe(patabla4a,
+                        bordered="success", size=82, striped=True), 
+                        width=4, lg={'size': 3,  "offset": 3, }),
+            ]),
+
+    
        html.Hr(),
-            dbc.Row([
-           
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+    
+
+# nuevo
+    
+    dbc.Jumbotron(
+    [
+        dbc.Container(
+            [
+                html.H4("Consideraciones generales "),
+                html.P(
+                    "Los feminicidios son un problema aún irresuelto y son tema central de la " 
+                    "agenda de seguridad nacional. La gravedad del fenómeno se observa "
+                    "en los registros anual y mensual, que se presentan al "
+                    "inicio de esta visualización. ",
+                    className="lead"),
+                html.P(
+                    "Existe una mayor atención institucional y atención publica al fenómeno en los últimos "
+                    "años, lo que hace que todos seamos más vigilantes al respecto. No obstante, sin duda aún "
+                    "hace falta más acción social y más intervención institucional para "
+                    "establecer estrategias efectivas de prevención y denuncia. "
+                    , className="lead"),
+                html.P(
+                    "Este es un ejercicio institucional de informar a la sociedad, cuya fuente de información "
+                    "es el Secretariado Ejecutivo Ejecutivo Nacional del Sistema Nacional de Seguridad Nacional "
+                    "(SENSNSP, Gobierno Federal), que seguramente puede ser completado con otras fuentes de "
+                    "información gubernamentales y de información proveniente de organizaciones civiles que "
+                    "dan seguimiento al tema. ",className="lead"),
+            ], fluid=True,
+        )
+    ],
+    fluid=True,
+    ),    
+    
+        
+    
+    
+    
+
+    dbc.Row([
+                                    #https://github.com/fdealbam/CamaraDiputados/blob/b11ef31e8e0f73e1a4a06ce60402563e1bd0122e/application/static/logocamara.jfif
            dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
                         width=4, lg={'size': 1,  "offset": 3, }),
             
@@ -665,4 +619,3 @@ from settings import config
 
 if __name__ == "__main__":
     app.run_server()
-
