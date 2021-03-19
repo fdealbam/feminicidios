@@ -351,6 +351,8 @@ fem15_20 = femi15_20[['Entidad', 'Total2015', 'Total2016', 'Total2017',
        'Total2018', 'Total2019', 'Total2020']]
 
 junto15_20 = fem15_20.merge(junto1,right_on='NOM_ENT',left_on='Entidad')
+junto15_20["Entidad"].replace('Veracruz de Ignacio de la Llave','Veracruz' , inplace=True)
+
 junto15_20['Totfem1520']=junto15_20[['Total2015', 'Total2016', 'Total2017', 'Total2018','Total2019', 'Total2020']].sum(1)
 junto15_20['Totpob1520']=junto15_20[['POB15', 'POB16', 'POB17', 'POB18','POB19', 'POB20']].sum(1)
 junto15_20['Tasa1520']=((junto15_20.Totfem1520/junto15_20.Totpob1520)*100000).round(2)
@@ -378,10 +380,35 @@ graf_tasafem.update_layout(
         tickfont_size=12,
         titlefont_family= "Monserrat"),
     autosize=True,
-    width=2100,
-    height=600
+#    width=2100,
+#    height=600
     )
 
+
+######################################################### Grafica Totales
+TasasTot15_20index=junto15_20[['Entidad','Totfem1520','Totpob1520','Tasa1520']].sort_values('Totfem1520',ascending=False)
+
+graf_totfem = go.Figure()
+graf_totfem.add_trace(go.Bar(x=TasasTot15_20index['Entidad'],y=TasasTot15_20index['Totfem1520'],
+                marker_color='sandybrown'  # cambiar nuemeritos de rgb
+                ))
+
+graf_totfem.update_layout(
+    paper_bgcolor='rgba(0,0,0,0)',
+    plot_bgcolor='rgba(0,0,0,0)',
+    xaxis_tickangle=-45,
+    template = 'simple_white',
+    #title='Tasa feminicidio periodo 2015-2020',
+    xaxis_tickfont_size= 12,
+    yaxis=dict(
+        title='Tasa cada 100 000 habitantes',
+        titlefont_size=14,
+        tickfont_size=12,
+        titlefont_family= "Monserrat"),
+    autosize=True,
+ #   width=2100,
+  #  height=600
+    )
 
 
 ######################################################### MAPAS 3estados con más feminicidios
@@ -414,7 +441,7 @@ body = html.Div([
            [
                dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
                         width={'size': 1,  "offset": 1}),
-               dbc.Col(html.H1("Feminicidios en México"),
+               dbc.Col(html.H1("Feminicidios en México (2015-2020)"),
                         width={'offset' : 2}),
            ]),
 
@@ -448,7 +475,8 @@ body = html.Div([
     
      dbc.Row(
            [
-               dbc.Col(html.H1("Casos Anuales (valores absolutos)"),
+               dbc.Col(html.H1(["Casos ", 
+                                dbc.Badge("anuales", color="info", className="mr-1")]),
                         width={'size': 8,  "offset":1 }),
             ]),
 
@@ -464,7 +492,7 @@ body = html.Div([
                dbc.Col(html.H5("2018")),
                dbc.Col(html.H5("2019")),
                dbc.Col(html.H5("2020")),
-           ]),#justify= "start"),
+           ], justify= "end"),
     
 #Cintillo 1
     dbc.Row(
@@ -475,7 +503,7 @@ body = html.Div([
                dbc.Col(html.H2(conf_2018)),
                dbc.Col(html.H2(conf_2019)),
                dbc.Col(html.H2(conf_2020)),
-            ]),#justify= "start"),
+            ],justify= "end"),
     
 # Cintillo 1.1
         dbc.Row([
@@ -497,7 +525,8 @@ body = html.Div([
 #---------Grafica mensual
      dbc.Row(
            [
-               dbc.Col(html.H1("Casos mensuales (2015-2020) (Valores absolutos)"),
+               dbc.Col(html.H1(["Casos ", 
+                                dbc.Badge("mensuales", color="info", className="mr-1")]),
                         width={'size': 8,  "offset":1 }),
             ]),
    
@@ -518,7 +547,9 @@ body = html.Div([
     #títulos
      dbc.Row(
            [
-               dbc.Col(html.H1("Municipios en entidades con más casos (valores absolutos)"),
+               dbc.Col(html.H1([dbc.Badge("Municipios", color="dark", className="ml-1"), 
+                               " en entidades con más casos ",]),
+                       
                         width={'size': 10,  "offset":1 }),
             ]),
 
@@ -531,7 +562,7 @@ body = html.Div([
                dbc.Col(html.H3("México"),
                         width=4, lg={'size': 2,  "offset": 1, }),
                dbc.Col(html.H3("Veracruz"),
-                        width=4, lg={'size': 1,  "offset": 3, }),
+                        width=4, lg={'size': 2,  "offset": 3, }),
            ], justify= "center"),
     dbc.Row([
                dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mx.jpeg?raw=true")),
@@ -540,15 +571,18 @@ body = html.Div([
        html.Hr(),
 
     ################################################################# tablas MIUNICIPIOS ranking 1-2    
+
+# tablas 1-2    
+    
     dbc.Row([
                dbc.Col(dbc.Table.from_dataframe(patabla1a, 
-                        bordered="success", size=82, striped=True), 
+                        bordered="success", size=422, striped=True), 
                         width=4, lg={'size': 3,  "offset": 2, }),
         
                dbc.Col(dbc.Table.from_dataframe(patabla2a,
-                        bordered="success", size=82, striped=True), 
+                        bordered="success", size=422, striped=True), 
                         width=4, lg={'size': 3,  "offset": 3, }),
-            ]),
+            ], justify="center", no_gutters=False),
 
        html.Hr(),
        html.Hr(),
@@ -577,37 +611,65 @@ body = html.Div([
    
     
 # Cintillo 3
-       ##### tablas ranking 3-4
+    
+# tablas 3-4    
     dbc.Row([
                dbc.Col(dbc.Table.from_dataframe(patabla3a,
-                        bordered="success", size=82, striped=True), 
+                        bordered="success", size=422, striped=True), 
                         width=4, lg={'size': 3,  "offset": 2, }),
-    
         
                dbc.Col(dbc.Table.from_dataframe(patabla4a,
-                        bordered="success", size=82, striped=True), 
+                        bordered="success", size=422, striped=True), 
                         width=4, lg={'size': 3,  "offset": 3, }),
-            ]),
+            ], justify="center", no_gutters=False),
 
-    
        html.Hr(),
        html.Hr(),
        html.Hr(),
        html.Hr(),
-     html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
        
-#---------Grafica mensual
+#---------Grafica por entidad
      dbc.Row(
            [
-               dbc.Col(html.H1("Tasa de feminicidios, según entidad (2015-2020)"),
-                        width={'size': 8,  "offset":1 }),
+               dbc.Col(html.H1([dbc.Badge("Comparativo", color="info", className="mr-1"),
+                               " entre total de casos y tasas por entidad"]),
+                       width={'size': 10,  "offset":1 }),
             ]),
+
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+    
+    dbc.Row(
+           [
+               dbc.Col(html.H4("Total entidad"),
+                        width=2,lg={'size': 3,  "offset": 1, }),
+
+               dbc.Col(html.H4("Tasa por entidad"),
+                       width=1, lg={'size': 3,  "offset": 4, }),                     #size=12
+               
+            ], justify="end",),
    
     dbc.Row(
         [
             dbc.Col(dcc.Graph(figure=graf_tasafem, config= "autosize")),
-        ]),
+                   #lg={'size': 5,  "offset": 0,}),
+            
+            dbc.Col(dcc.Graph(figure=graf_totfem, config= "autosize")),
+                   #lg={'size': 5,  "offset": 1,}),
+        ], justify="end", no_gutters=True,),
 
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
+       html.Hr(),
        html.Hr(),
     
 
@@ -622,15 +684,11 @@ body = html.Div([
                     "Los feminicidios son un problema aún irresuelto y son tema central de la " 
                     "agenda de seguridad nacional. La gravedad del fenómeno se observa "
                     "en los registros anual y mensual, que se presentan al "
-                    "inicio de esta visualización. ",
-                    className="lead"),
-                html.P(
+                    "inicio de esta visualización. "
                     "Existe una mayor atención institucional y atención publica al fenómeno en los últimos "
                     "años, lo que hace que todos seamos más vigilantes al respecto. No obstante, sin duda aún "
                     "hace falta más acción social y más intervención institucional para "
-                    "establecer estrategias efectivas de prevención y denuncia. ",
-                    className="lead"),
-                html.P(
+                    "establecer estrategias efectivas de prevención y denuncia. "
                     "Este es un ejercicio institucional de informar a la sociedad, cuya fuente de información "
                     "es el Secretariado Ejecutivo Ejecutivo Nacional del Sistema Nacional de Seguridad Nacional "
                     "(SENSNSP, Gobierno Federal), que seguramente puede ser completado con otras fuentes de "
@@ -639,6 +697,7 @@ body = html.Div([
                     "posicionamiento partidista, personal o institucional ni representa opinión o postura alguna "
                     "sobre el fenómeno.  ",
                     className="lead"),
+                html.Hr(),
                 html.H6("Metodología "),
                 html.P(
                     "Esta información fue tratada con el lenguaje de programación Python y varias de las librerías "
