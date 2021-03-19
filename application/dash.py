@@ -681,27 +681,29 @@ body = html.Div([
             [
                 html.H4("Consideraciones generales "),
                 html.P(
-                    "Los feminicidios son un problema aún irresuelto y son tema central de la " 
+                    "Los feminicidios son un problema aún irresuelto y es tema central de la " 
                     "agenda de seguridad nacional. La gravedad del fenómeno se observa "
-                    "en los registros anual y mensual, que se presentan al "
-                    "inicio de esta visualización. "
-                    "Existe una mayor atención institucional y atención publica al fenómeno en los últimos "
-                    "años, lo que hace que todos seamos más vigilantes al respecto. No obstante, sin duda aún "
-                    "hace falta más acción social y más intervención institucional para "
-                    "establecer estrategias efectivas de prevención y denuncia. "
-                    "Este es un ejercicio institucional de informar a la sociedad, cuya fuente de información "
-                    "es el Secretariado Ejecutivo Ejecutivo Nacional del Sistema Nacional de Seguridad Nacional "
-                    "(SENSNSP, Gobierno Federal), que seguramente puede ser completado con otras fuentes de "
-                    "información gubernamentales y de información proveniente de organizaciones civiles que "
+                    "en los registros anuales y mensuales, que se presentan al "
+                    "inicio de esta visualización."
+                    "Existe mayor atención institucional al fenómeno y fuerte preocupación de la sociedad, " 
+                    "lo que se evidencia en el hecho que todos seamos más vigilantes al respecto. "
+                    "No obstante, sin duda aún hace falta más acción social y más intervención institucional "
+                    "para diseñar estrategias efectivas de prevención y denuncia. Es imperante acabar con esta "
+                    "violencia de género. "
+                    "El presente es un ejercicio institucional con el objeto de informar a la sociedad, cuya "
+                    "fuente de información es el Secretariado Ejecutivo Nacional del Sistema Nacional de "
+                    "Seguridad Pública (SENSNSP), que seguramente puede ser completado con otras fuentes de "
+                    "información gubernamentales y de otra información proveniente de organizaciones civiles que "
                     "dan seguimiento al tema. En ningún caso, la información aquí presentada representa algún "
-                    "posicionamiento partidista, personal o institucional ni representa opinión o postura alguna "
-                    "sobre el fenómeno.  ",
+                    "posicionamiento partidista, personal o institucional, ni representa opinión o postura alguna "
+                    "sobre el fenómeno. ",
                     className="lead"),
                 html.Hr(),
-                html.H6("Metodología "),
+                html.H5("Metodología "),
                 html.P(
                     "Esta información fue tratada con el lenguaje de programación Python y varias de las librerías "
-                    "que automatizan la recurrencia a la fuente de información, lo que hace interactivo este Dashboard.",
+                    "que automatizan la recurrencia a la fuente de información, lo que hace interactivo esta tabla "
+                    "de datos (Dashboard). ",
                     className="lead"),
                     
             ], fluid=True,
