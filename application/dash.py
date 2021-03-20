@@ -1,4 +1,3 @@
-
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -433,7 +432,7 @@ sourceurl='https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-inci
 
 
 server = flask.Flask(__name__)
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes. LUX], server=server)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes. DARKLY], server=server)
 
 body = html.Div([
 # Cintillo 000
@@ -692,8 +691,10 @@ body = html.Div([
                     "violencia de género. "
                     "El presente es un ejercicio institucional con el objeto de informar a la sociedad, cuya "
                     "fuente de información es el Secretariado Ejecutivo Nacional del Sistema Nacional de "
-                    "Seguridad Pública (SENSNSP), que seguramente puede ser completado con otras fuentes de "
-                    "información gubernamentales y de otra información proveniente de organizaciones civiles que "
+                    "Seguridad Pública (SENSNSP). El lector debe ser advertido que el período cubierto por esta "
+                    "información es del mes de enero de 2015 hasta el mes de diciembre del 2020. "
+                    "Ademas, dicha información seguramente puede ser completada con otras fuentes de información "
+                    "gubernamental y por toda aquella información proveniente de organizaciones civiles que " 
                     "dan seguimiento al tema. En ningún caso, la información aquí presentada representa algún "
                     "posicionamiento partidista, personal o institucional, ni representa opinión o postura alguna "
                     "sobre el fenómeno. ",
