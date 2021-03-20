@@ -34,7 +34,7 @@ d2 = today.strftime("Fecha de actualización : %d-%m-%Y")
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
-delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/feminicidios2015_2020.csv?raw=true")
+delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/feminicidios2015_2021.csv?raw=true")
 delitos.drop('Unnamed: 0',1, inplace=True)
 
 delitos.groupby(['Año','Entidad','Tipo de delito'])['Enero', 
