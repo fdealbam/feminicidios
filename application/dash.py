@@ -52,6 +52,7 @@ year17= fem[fem.Año == 2017]
 year18= fem[fem.Año == 2018]
 year19= fem[fem.Año == 2019]
 year20= fem[fem.Año == 2020]
+year21= fem[fem.Año == 2021]
 
 ############################################### Agregar suffix de años
 
@@ -79,6 +80,10 @@ y20= year20.add_suffix('20')
 y20.rename(columns ={'Año20': 'Año', 'Tipo de delito20': 'Tipo de delito','Unnamed: 020' : 'Unnamed: 0',
                             'Entidad20': 'Entidad'}, inplace = True)
 
+y21= year21.add_suffix('21')
+y21.rename(columns ={'Año21': 'Año', 'Tipo de delito21': 'Tipo de delito','Unnamed: 021' : 'Unnamed: 0',
+                            'Entidad21': 'Entidad'}, inplace = True)
+
 
 
 ############################################### Concat todos los años
@@ -88,8 +93,9 @@ fb = fa.merge(y17, on="Entidad",  how="inner")
 fc = fb.merge(y18, on="Entidad",  how="inner")
 fd = fc.merge(y19, on="Entidad",  how="inner")
 fe = fd.merge(y20, on="Entidad",  how="inner")
-                      
-femi15_20 = fe[[
+ff = fe.merge(y21, on="Entidad",  how="inner")
+                    
+femi15_21 = ff[[
  'Entidad','Enero15','Febrero15','Marzo15','Abril15','Mayo15','Junio15',
  'Julio15','Agosto15','Septiembre15','Octubre15','Noviembre15','Diciembre15',
  
@@ -106,41 +112,52 @@ femi15_20 = fe[[
  'Agosto19','Septiembre19','Octubre19','Noviembre19','Diciembre19',
 
  'Enero20','Febrero20','Marzo20','Abril20','Mayo20','Junio20','Julio20',
- 'Agosto20','Septiembre20','Octubre20','Noviembre20','Diciembre20']]
+ 'Agosto20','Septiembre20','Octubre20','Noviembre20','Diciembre20',
+    
+ 'Enero21',#'Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
+# 'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21'
+             ]]
+
 
 
 ##CRear columna de TOTAL ANUAL 
-femi15_20['Total2015']= femi15_20[[ 'Enero15', 'Febrero15', 'Marzo15', 'Abril15', 'Mayo15',
+femi15_21['Total2015']= femi15_21[[ 'Enero15', 'Febrero15', 'Marzo15', 'Abril15', 'Mayo15',
                                'Junio15', 'Julio15', 'Agosto15', 'Septiembre15', 'Octubre15',
                                'Noviembre15', 'Diciembre15',]].sum(axis=1)
-femi15_20['Total2016']= femi15_20[[ 'Enero16', 'Febrero16', 'Marzo16', 'Abril16', 'Mayo16',
+femi15_21['Total2016']= femi15_21[[ 'Enero16', 'Febrero16', 'Marzo16', 'Abril16', 'Mayo16',
                                'Junio16', 'Julio16', 'Agosto16', 'Septiembre16', 'Octubre16',
                                'Noviembre16', 'Diciembre16',]].sum(axis=1)
-femi15_20['Total2017']= femi15_20[[ 'Enero17', 'Febrero17', 'Marzo17', 'Abril17', 'Mayo17',
+femi15_21['Total2017']= femi15_21[[ 'Enero17', 'Febrero17', 'Marzo17', 'Abril17', 'Mayo17',
                                'Junio17', 'Julio17', 'Agosto17', 'Septiembre17', 'Octubre17',
                                'Noviembre17', 'Diciembre17',]].sum(axis=1)
-femi15_20['Total2018']= femi15_20[[ 'Enero18', 'Febrero18', 'Marzo18', 'Abril18', 'Mayo18',
+femi15_21['Total2018']= femi15_21[[ 'Enero18', 'Febrero18', 'Marzo18', 'Abril18', 'Mayo18',
                                'Junio18', 'Julio18', 'Agosto18', 'Septiembre18', 'Octubre18',
                                'Noviembre18', 'Diciembre18',]].sum(axis=1)
-femi15_20['Total2019']= femi15_20[[ 'Enero19', 'Febrero19', 'Marzo19', 'Abril19', 'Mayo19',
+femi15_21['Total2019']= femi15_21[[ 'Enero19', 'Febrero19', 'Marzo19', 'Abril19', 'Mayo19',
                                'Junio19', 'Julio19', 'Agosto19', 'Septiembre19', 'Octubre19',
                                'Noviembre19', 'Diciembre19',]].sum(axis=1)
-femi15_20['Total2020']= femi15_20[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20', 'Mayo20',
+femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20', 'Mayo20',
                                'Junio20', 'Julio20', 'Agosto20', 'Septiembre20', 'Octubre20',
                                'Noviembre20', 'Diciembre20',]].sum(axis=1)
 
+femi15_21['Total2021']= femi15_21[[ 'Enero21',#'Febrero21', 'Marzo21', 'Abril21', 'Mayo21',
+                                   #'Junio21','Julio21','Agosto21','Septiembre21','Octubre21',
+                                   #'Noviembre21','Diciembre21'
+                                  ]]#.sum(axis=1)
+
 
 #identificadores
-conf_2015= femi15_20.Total2015.sum()
-conf_2016= femi15_20.Total2016.sum()
-conf_2017= femi15_20.Total2017.sum()
-conf_2018= femi15_20.Total2018.sum()
-conf_2019= femi15_20.Total2019.sum()
-conf_2020= femi15_20.Total2020.sum()
+conf_2015= femi15_21.Total2015.sum()
+conf_2016= femi15_21.Total2016.sum()
+conf_2017= femi15_21.Total2017.sum()
+conf_2018= femi15_21.Total2018.sum()
+conf_2019= femi15_21.Total2019.sum()
+conf_2020= femi15_21.Total2020.sum()
+conf_2021= femi15_21.Total2021.sum()
 
 
 #--------------------------- PREPARA GRAFICA MENSUAL
-pagra = fe[[
+pagra = ff[[
   'Enero15', 'Febrero15', 'Marzo15', 'Abril15', 'Mayo15', 'Junio15', 'Julio15', 'Agosto15', 
     'Septiembre15', 'Octubre15', 'Noviembre15', 'Diciembre15',
  
@@ -156,7 +173,11 @@ pagra = fe[[
     'Septiembre19', 'Octubre19', 'Noviembre19', 'Diciembre19',
 
  'Enero20', 'Febrero20', 'Marzo20', 'Abril20', 'Mayo20', 'Junio20', 'Julio20', 'Agosto20',
-    'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20']]
+    'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20',
+
+ 'Enero21',# 'Febrero21', 'Marzo21', 'Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
+  #  'Septiembre21','Octubre21','Noviembre21','Diciembre21'
+            ]]
 
 
 pagrafm = pagra.stb.subtotal()
@@ -346,7 +367,7 @@ patabla4a = pd.DataFrame (patabla4, columns = ['Mpio','Casos'])
 ######################################################### Graf. Tasas de feminicidios por entidad 2015-2020
 
 junto1 = pd.read_csv('https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/POB_15_20.csv')
-fem15_20 = femi15_20[['Entidad', 'Total2015', 'Total2016', 'Total2017',
+fem15_20 = femi15_21[['Entidad', 'Total2015', 'Total2016', 'Total2017',
        'Total2018', 'Total2019', 'Total2020']]
 
 junto15_20 = fem15_20.merge(junto1,right_on='NOM_ENT',left_on='Entidad')
@@ -734,8 +755,8 @@ body = html.Div([
 
 app.layout = html.Div([body])
 
-from application.dash import app
-from settings import config
+#from application.dash import app
+#from settings import config
 
 if __name__ == "__main__":
     app.run_server()
