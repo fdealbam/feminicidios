@@ -453,7 +453,7 @@ sourceurl='https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-inci
 
 
 server = flask.Flask(__name__)
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes. DARKLY], server=server)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes. LUX], server=server)
 
 body = html.Div([
 # Cintillo 000
