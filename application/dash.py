@@ -1,3 +1,5 @@
+
+
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -156,7 +158,9 @@ conf_2020= femi15_21.Total2020.sum()
 conf_2021= femi15_21.Total2021.sum()
 
 
-#--------------------------- PREPARA GRAFICA MENSUAL
+
+
+################################################## PREPARA GRAFICA MENSUAL
 pagra = ff[[
   'Enero15', 'Febrero15', 'Marzo15', 'Abril15', 'Mayo15', 'Junio15', 'Julio15', 'Agosto15', 
     'Septiembre15', 'Octubre15', 'Noviembre15', 'Diciembre15',
@@ -207,7 +211,7 @@ graf_meses.update_layout(
     xaxis_tickangle=-45,
     template = 'simple_white',
     title='',
-    xaxis_tickfont_size= 6,
+    xaxis_tickfont_size= 12,
     yaxis=dict(
         title='Acumulados mensuales',
         titlefont_size=14,
@@ -380,7 +384,7 @@ junto15_20['Tasa1520']=((junto15_20.Totfem1520/junto15_20.Totpob1520)*100000).ro
 TasasFem15_20index=junto15_20[['Entidad','Totfem1520','Totpob1520','Tasa1520']].sort_values('Tasa1520',ascending=False)
 
 
-######################################################### Grafica Tasas
+######################################################### Grafica Totales
 
 graf_tasafem = go.Figure()
 graf_tasafem.add_trace(go.Bar(x=TasasFem15_20index['Entidad'],y=TasasFem15_20index['Tasa1520'],
@@ -405,12 +409,13 @@ graf_tasafem.update_layout(
     )
 
 
-######################################################### Grafica Totales
+######################################################### Grafica Total
+
 TasasTot15_20index=junto15_20[['Entidad','Totfem1520','Totpob1520','Tasa1520']].sort_values('Totfem1520',ascending=False)
 
 graf_totfem = go.Figure()
 graf_totfem.add_trace(go.Bar(x=TasasTot15_20index['Entidad'],y=TasasTot15_20index['Totfem1520'],
-                marker_color='sandybrown'  # cambiar nuemeritos de rgb
+                marker_color='indianred'  # cambiar nuemeritos de rgb
                 ))
 
 graf_totfem.update_layout(
@@ -465,24 +470,16 @@ body = html.Div([
                         width={'offset' : 2}),
            ]),
 
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-    
 #Cintillo 00    
     dbc.Row(
            [
                dbc.Col(html.H6(d2),           #Fecha de actualización
                width={'size' : "auto",
                       'offset' : 4}), 
-           ]),  
-    dbc.Row(
-           [
                dbc.Col(html.H6("Fuente: SENSNSP"),
                         width={'size': 3,  "offset":1 }),
             ]),
+               
        html.Hr(),
        html.Hr(),
        html.Hr(),
@@ -512,18 +509,18 @@ body = html.Div([
                dbc.Col(html.H5("2018")),
                dbc.Col(html.H5("2019")),
                dbc.Col(html.H5("2020")),
-           ], justify= "end"),
+           ], justify= "start"),
     
 #Cintillo 1
     dbc.Row(
            [
-               dbc.Col(html.H2(conf_2015)),
-               dbc.Col(html.H2(conf_2016)),
-               dbc.Col(html.H2(conf_2017)),
-               dbc.Col(html.H2(conf_2018)),
-               dbc.Col(html.H2(conf_2019)),
-               dbc.Col(html.H2(conf_2020)),
-            ],justify= "end"),
+               dbc.Col(html.H1(conf_2015)),
+               dbc.Col(html.H1(conf_2016)),
+               dbc.Col(html.H1(conf_2017)),
+               dbc.Col(html.H1(conf_2018)),
+               dbc.Col(html.H1(conf_2019)),
+               dbc.Col(html.H1(conf_2020)),
+            ],justify= "start"),
     
 # Cintillo 1.1
         dbc.Row([
@@ -534,11 +531,77 @@ body = html.Div([
                dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mapa2019.jpeg?raw=true")),
                dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mapa2020.jpeg?raw=true")),
            ]),
+# Cintillo párrafos
+       html.Hr(),
     
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
+      dbc.Row([
+               dbc.Col(dbc.Container([
+                       html.P(
+                           "En 10 entidades se registraron 82.2% de feminicidios (338)"
+                           " en 2015: Jalisco (62), México (59), Ciudad de México (56),"
+                           "Veracruz (40), Chiapas (36), Sonora (24), Guanajuato (16),"
+                           "Coahuila (16), Morelos (15) y Sinaloa (14).",
+                    className="top",)
+                                ], fluid=True)
+                       
+                      ),
+          dbc.Col(dbc.Jumbotron([
+                   dbc.Container([
+                       html.P(
+                           "En 10 entidades se registraron 71.5% de feminicidios (433)"
+                           " en 2016 : Oaxaca (67), Veracruz (58), México (56), Jalisco"
+                           "(48), Ciudad de México (46), Sinaloa (39), Chiapas (32), "
+                           "Sonora (30), Morelos (30) y Tabasco (27).",
+                    className="top")
+                                ], fluid=True)
+                                    ], fluid=True)
+                      ),
+          dbc.Col(
+                   dbc.Container([
+                       html.P(
+                           "En 10 entidades se registraron 68.3% de feminicidios (507)"
+                           " en 2017 : Veracruz (100), Sinaloa (82), México (70), Oaxaca"
+                           " (57), Nuevo León (43), Ciudad de México (37), Sonora (32),"
+                           " Michoacán (29), Chiapas (29) y Tabasco (28).",
+                    className="top")
+                                ], fluid=True)
+                                    )
+                      ,
+          dbc.Col(dbc.Jumbotron([
+                   dbc.Container([
+                       html.P(
+                           "En 10 entidades se registraron 63.6% de feminicidios (568)"
+                           " en 2018 : México (115), Veracruz (101), Nuevo León (79), "
+                           "Sinaloa (48), Chihuahua (44), Ciudad de México (43), Tabasco"
+                           " (40), Jalisco (33), Guerrero (33) y Puebla (32).",
+                    className="top")
+                                ], fluid=True)
+                                    ], fluid=True)
+                      ),
+          dbc.Col(dbc.Container([
+                       html.P(
+                           "En 10 entidades se registraron 66.4% de feminicidios (627)"
+                           " en 2019 : México (122), Veracruz (104), Ciudad de México "
+                           "(72), Nuevo León (67), Jalisco (62), Puebla (58), Morelos "
+                           "(39), Sonora (37), Sinaloa (37) y Chihuahua (29).",
+                    className="top")
+                                ], fluid=True)
+                      ),
+          dbc.Col(dbc.Jumbotron([
+                   dbc.Container([
+                       html.P(
+                           "En 10 entidades se registraron 65.8% de feminicidios (618)"
+                           " en 2020 : México (150), Veracruz (84), Nuevo León (67), "
+                           "Jalisco (66), Ciudad de México (64), Puebla (52), Oaxaca "
+                           "(38), Morelos (35), Sonora (31) y Baja California (31).",
+                    className="top")
+                                ], fluid=True)
+                                    ], fluid=True),
+                  
+                      ),
+      ]),
+                
+    
        html.Hr(),
        html.Hr(),
        
@@ -555,10 +618,7 @@ body = html.Div([
             dbc.Col(dcc.Graph(figure=graf_meses, config= "autosize")),
         ]),
 
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
+      
        html.Hr(),
        html.Hr(),
     
@@ -567,8 +627,8 @@ body = html.Div([
     #títulos
      dbc.Row(
            [
-               dbc.Col(html.H1([dbc.Badge("Municipios", color="dark", className="ml-1"), 
-                               " en entidades con más casos ",]),
+               dbc.Col(html.H1([dbc.Badge("Municipios", color="info", className="ml-1"), 
+                               " en entidades con más casos acumulados ",]),
                        
                         width={'size': 10,  "offset":1 }),
             ]),
@@ -579,77 +639,94 @@ body = html.Div([
     
      dbc.Row(
            [
-               dbc.Col(html.H3("México"),
-                        width=4, lg={'size': 2,  "offset": 1, }),
+               dbc.Col(html.H3("México", ),
+                       #width=1, 
+                       lg={'size': 1,  "offset": 1, }
+                      ),
+               
                dbc.Col(html.H3("Veracruz"),
-                        width=4, lg={'size': 2,  "offset": 3, }),
-           ], justify= "center"),
+                        #width=1, 
+                       lg={'size': 1,  "offset": 1, }
+                      ),
+               
+               dbc.Col(html.H3("Ciudad de México"),
+                       # width=1, 
+                       lg={'size': 3,  "offset": 2, }
+                      ),
+                      
+               dbc.Col(html.H3("Jalisco"),
+                       # width=1, 
+                       lg={'size': 1,  "offset": 1, }
+                      ),
+           ], #, justify= "end", 
+    align= "center"),
+
+    
     dbc.Row([
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mx.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/ver.jpeg?raw=true")),
-           ]),
-       html.Hr(),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mx2.jpeg?raw=true"),
+                      #width=4,lg={'size': 3,  "offset": 3, }
+                      ),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/ver2.jpeg?raw=true"),
+                      #width=4,lg={'size': 3,  "offset": 3, }
+                      ),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/cdmx2.jpeg?raw=true"),
+                      #width=4,lg={'size': 3,  "offset": 3, }
+                      ),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/jal2.jpeg?raw=true"),
+                      #width=4,lg={'size': 3,  "offset": 3, }
+                      ),
+           ], no_gutters=True),
+       #html.Hr(),
 
     ################################################################# tablas MIUNICIPIOS ranking 1-2    
 
 # tablas 1-2    
     
-    dbc.Row([
-               dbc.Col(dbc.Table.from_dataframe(patabla1a, 
-                        bordered="success", size=422, striped=True), 
-                        width=4, lg={'size': 3,  "offset": 2, }),
-        
-               dbc.Col(dbc.Table.from_dataframe(patabla2a,
-                        bordered="success", size=422, striped=True), 
-                        width=4, lg={'size': 3,  "offset": 3, }),
-            ], justify="center", no_gutters=False),
-
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-    
-    
-    
-     dbc.Row(
-           [
-               dbc.Col(html.H3("Ciudad de México"),
-                        width=4, lg={'size': 3,  "offset": 1, }),
-                      
-               dbc.Col(html.H3("Jalisco"),
-                        width=4, lg={'size': 1,  "offset": 4, }),
-           ], justify= "center"),
+#    dbc.Row([
+#               dbc.Col(dbc.Table.from_dataframe(patabla1a, 
+#                        bordered="success", size=422, striped=True), 
+#                        width=4, lg={'size': 3,  "offset": 2, }),
+#        
+#               dbc.Col(dbc.Table.from_dataframe(patabla2a,
+#                        bordered="success", size=422, striped=True), 
+#                        width=4, lg={'size': 3,  "offset": 3, }),
+#            ], justify="center", no_gutters=False),
+#
+#       html.Hr(),
+#       html.Hr(),
+#       html.Hr(),
+#       html.Hr(),
+#       html.Hr(),
+#       html.Hr(),
+#       html.Hr(),
+#       html.Hr(),
+#    
     
     dbc.Row([
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/cdmx.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/jal.jpeg?raw=true")),
+               
            ]),
    
     
 # Cintillo 3
     
 # tablas 3-4    
-    dbc.Row([
-               dbc.Col(dbc.Table.from_dataframe(patabla3a,
-                        bordered="success", size=422, striped=True), 
-                        width=4, lg={'size': 3,  "offset": 2, }),
-        
-               dbc.Col(dbc.Table.from_dataframe(patabla4a,
-                        bordered="success", size=422, striped=True), 
-                        width=4, lg={'size': 3,  "offset": 3, }),
-            ], justify="center", no_gutters=False),
-
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
+#    dbc.Row([
+#               dbc.Col(dbc.Table.from_dataframe(patabla3a,
+#                        bordered="success", size=422, striped=True), 
+#                        width=4, lg={'size': 3,  "offset": 2, }),
+#        
+#               dbc.Col(dbc.Table.from_dataframe(patabla4a,
+#                        bordered="success", size=422, striped=True), 
+#                        width=4, lg={'size': 3,  "offset": 3, }),
+#            ], justify="center", no_gutters=False),
+##
+ #      html.Hr(),
+ #      html.Hr(),
+ #      html.Hr(),
+ #      html.Hr(),
+ #      html.Hr(),
+ #      html.Hr(),
+ #      html.Hr(),
        html.Hr(),
        html.Hr(),
        html.Hr(),
@@ -658,7 +735,7 @@ body = html.Div([
      dbc.Row(
            [
                dbc.Col(html.H1([dbc.Badge("Comparativo", color="info", className="mr-1"),
-                               " entre total de casos y tasas por entidad"]),
+                               " entre total de casos acumulados y tasas (por entidad)"]),
                        width={'size': 10,  "offset":1 }),
             ]),
 
@@ -668,7 +745,7 @@ body = html.Div([
     
     dbc.Row(
            [
-               dbc.Col(html.H4("Total entidad"),
+               dbc.Col(html.H4("Total acumulado por entidad"),
                         width=2,lg={'size': 3,  "offset": 1, }),
 
                dbc.Col(html.H4("Tasa por entidad"),
@@ -678,10 +755,10 @@ body = html.Div([
    
     dbc.Row(
         [
-            dbc.Col(dcc.Graph(figure=graf_tasafem, config= "autosize")),
+            dbc.Col(dcc.Graph(figure=graf_totfem , config= "autosize")),
                    #lg={'size': 5,  "offset": 0,}),
             
-            dbc.Col(dcc.Graph(figure=graf_totfem, config= "autosize")),
+            dbc.Col(dcc.Graph(figure= graf_tasafem, config= "autosize")),
                    #lg={'size': 5,  "offset": 1,}),
         ], justify="end", no_gutters=True,),
 
@@ -701,31 +778,32 @@ body = html.Div([
             [
                 html.H4("Consideraciones generales "),
                 html.P(
-                    "Los feminicidios son un problema aún irresuelto y es tema central de la " 
-                    "agenda de seguridad nacional. La gravedad del fenómeno se observa "
-                    "en los registros anuales y mensuales, que se presentan al "
+                    "Los feminicidios son un problema aún irresuelto y son tema central de la " 
+                    "agenda de seguridad nacional. Su gravedad se observa "
+                    "en los registros anuales y registros mensuales, que se presentan al "
                     "inicio de esta visualización."
                     "Existe mayor atención institucional al fenómeno y fuerte preocupación de la sociedad, " 
                     "lo que se evidencia en el hecho que todos seamos más vigilantes al respecto. "
-                    "No obstante, sin duda aún hace falta más acción social y más intervención institucional "
-                    "para diseñar estrategias efectivas de prevención y denuncia. Es imperante acabar con esta "
-                    "violencia de género. "
-                    "El presente es un ejercicio institucional con el objeto de informar a la sociedad, cuya "
-                    "fuente de información es el Secretariado Ejecutivo Nacional del Sistema Nacional de "
-                    "Seguridad Pública (SENSNSP). El lector debe ser advertido que el período cubierto por esta "
-                    "información es del mes de enero de 2015 hasta el mes de diciembre del 2020. "
-                    "Ademas, dicha información seguramente puede ser completada con otras fuentes de información "
+                    "No obstante, aún hace falta más acción social, sobretodo, más intervención institucional "
+                    "para diseñar estrategias efectivas de prevención y promover su denuncia. Es imperante "
+                    "acabar con esta violencia de género. "
+                    "El presente dashboard (tablero de datos) es un ejercicio institucional con el objeto de "
+                    "informar a la sociedad. La información proviene del Secretariado Ejecutivo Nacional del Sistema Nacional de "
+                    "Seguridad Pública (SENSNSP). El lector debe ser advertido que el período cubierto "
+                    "es del mes de enero de 2015 hasta el mes de enero del 2021. "
+                    "Ademas, esta dashboard seguramente puede ser completado con otras fuentes de información "
                     "gubernamental y por toda aquella información proveniente de organizaciones civiles que " 
-                    "dan seguimiento al tema. En ningún caso, la información aquí presentada representa algún "
-                    "posicionamiento partidista, personal o institucional, ni representa opinión o postura alguna "
+                    "dan seguimiento al tema. En ningún caso, este contenido representa algún "
+                    "posicionamiento partidista, personal o institucional, mucho menos opinión o postura alguna "
                     "sobre el fenómeno. ",
                     className="lead"),
                 html.Hr(),
                 html.H5("Metodología "),
                 html.P(
                     "Esta información fue tratada con el lenguaje de programación Python y varias de las librerías "
-                    "que automatizan la recurrencia a la fuente de información, lo que hace interactivo esta tabla "
-                    "de datos (Dashboard). ",
+                    "más comunes (Dash, Choropleth, Pandas, Numpy, Geopandas, etc.), que nos ayudan a automatizar "
+                    "la recurrencia (request) a la fuente de información y las operaciones necesarias para creargraficas "
+                    "interactivas y mapas presentados. ",
                     className="lead"),
                     
             ], fluid=True,
