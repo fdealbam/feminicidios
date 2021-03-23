@@ -36,7 +36,7 @@ d2 = today.strftime("Fecha de actualización : %d-%m-%Y")
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
-delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/feminicidios2015_2020.csv?raw=true")
+delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/feminicidios2015_2021.csv?raw=true")
 delitos.drop('Unnamed: 0',1, inplace=True)
 
 delitos.groupby(['Año','Entidad','Tipo de delito'])['Enero', 
@@ -116,7 +116,7 @@ femi15_21 = ff[[
  'Enero20','Febrero20','Marzo20','Abril20','Mayo20','Junio20','Julio20',
  'Agosto20','Septiembre20','Octubre20','Noviembre20','Diciembre20',
     
- 'Enero21',#'Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
+ 'Enero21','Febrero21'#,'Marzo21','Abril21','Mayo21','Junio21','Julio21',
 # 'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21'
              ]]
 
@@ -142,10 +142,10 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
                                'Junio20', 'Julio20', 'Agosto20', 'Septiembre20', 'Octubre20',
                                'Noviembre20', 'Diciembre20',]].sum(axis=1)
 
-femi15_21['Total2021']= femi15_21[[ 'Enero21',#'Febrero21', 'Marzo21', 'Abril21', 'Mayo21',
+femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21'#, 'Marzo21', 'Abril21', 'Mayo21',
                                    #'Junio21','Julio21','Agosto21','Septiembre21','Octubre21',
                                    #'Noviembre21','Diciembre21'
-                                  ]]#.sum(axis=1)
+                                  ]].sum(axis=1)
 
 
 #identificadores
@@ -156,7 +156,6 @@ conf_2018= femi15_21.Total2018.sum()
 conf_2019= femi15_21.Total2019.sum()
 conf_2020= femi15_21.Total2020.sum()
 conf_2021= femi15_21.Total2021.sum()
-
 
 
 
@@ -179,7 +178,7 @@ pagra = ff[[
  'Enero20', 'Febrero20', 'Marzo20', 'Abril20', 'Mayo20', 'Junio20', 'Julio20', 'Agosto20',
     'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20',
 
- 'Enero21',# 'Febrero21', 'Marzo21', 'Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
+ 'Enero21', 'Febrero21'#, 'Marzo21', 'Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
   #  'Septiembre21','Octubre21','Noviembre21','Diciembre21'
             ]]
 
@@ -370,24 +369,24 @@ patabla4a = pd.DataFrame (patabla4, columns = ['Mpio','Casos'])
 
 ######################################################### Graf. Tasas de feminicidios por entidad 2015-2020
 
-junto1 = pd.read_csv('https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/POB_15_20.csv')
-fem15_20 = femi15_21[['Entidad', 'Total2015', 'Total2016', 'Total2017',
-       'Total2018', 'Total2019', 'Total2020']]
+junto1 = pd.read_csv('https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/POB_15_21.csv')
+fem15_21 = femi15_21[['Entidad', 'Total2015', 'Total2016', 'Total2017',
+       'Total2018', 'Total2019', 'Total2020', 'Total2021']]
 
-junto15_20 = fem15_20.merge(junto1,right_on='NOM_ENT',left_on='Entidad')
-junto15_20["Entidad"].replace('Veracruz de Ignacio de la Llave','Veracruz' , inplace=True)
+junto15_21 = fem15_21.merge(junto1,right_on='NOM_ENT',left_on='Entidad')
+junto15_21["Entidad"].replace('Veracruz de Ignacio de la Llave','Veracruz' , inplace=True)
 
-junto15_20['Totfem1520']=junto15_20[['Total2015', 'Total2016', 'Total2017', 'Total2018','Total2019', 'Total2020']].sum(1)
-junto15_20['Totpob1520']=junto15_20[['POB15', 'POB16', 'POB17', 'POB18','POB19', 'POB20']].sum(1)
-junto15_20['Tasa1520']=((junto15_20.Totfem1520/junto15_20.Totpob1520)*100000).round(2)
+junto15_21['Totfem1521']=junto15_21[['Total2015', 'Total2016', 'Total2017', 'Total2018','Total2019', 'Total2020', 'Total2021']].sum(1)
+junto15_21['Totpob1521']=junto15_21[['POB15', 'POB16', 'POB17', 'POB18','POB19', 'POB20', 'POB21']].sum(1)
+junto15_21['Tasa1521']=((junto15_21.Totfem1521/junto15_21.Totpob1521)*100000).round(2)
 
-TasasFem15_20index=junto15_20[['Entidad','Totfem1520','Totpob1520','Tasa1520']].sort_values('Tasa1520',ascending=False)
+TasasFem15_21index=junto15_21[['Entidad','Totfem1521','Totpob1521','Tasa1521']].sort_values('Tasa1521',ascending=False)
 
 
 ######################################################### Grafica Totales
 
 graf_tasafem = go.Figure()
-graf_tasafem.add_trace(go.Bar(x=TasasFem15_20index['Entidad'],y=TasasFem15_20index['Tasa1520'],
+graf_tasafem.add_trace(go.Bar(x=TasasFem15_21index['Entidad'],y=TasasFem15_21index['Tasa1521'],
                 marker_color='sandybrown'  # cambiar nuemeritos de rgb
                 ))
 
@@ -411,10 +410,10 @@ graf_tasafem.update_layout(
 
 ######################################################### Grafica Total
 
-TasasTot15_20index=junto15_20[['Entidad','Totfem1520','Totpob1520','Tasa1520']].sort_values('Totfem1520',ascending=False)
+TasasTot15_21index=junto15_21[['Entidad','Totfem1521','Totpob1521','Tasa1521']].sort_values('Totfem1521',ascending=False)
 
 graf_totfem = go.Figure()
-graf_totfem.add_trace(go.Bar(x=TasasTot15_20index['Entidad'],y=TasasTot15_20index['Totfem1520'],
+graf_totfem.add_trace(go.Bar(x=TasasTot15_21index['Entidad'],y=TasasTot15_21index['Totfem1521'],
                 marker_color='indianred'  # cambiar nuemeritos de rgb
                 ))
 
@@ -609,8 +608,12 @@ body = html.Div([
      dbc.Row(
            [
                dbc.Col(html.H1(["Casos ", 
-                                dbc.Badge("mensuales", color="info", className="mr-1")]),
-                        width={'size': 8,  "offset":1 }),
+                       dbc.Badge("mensuales", color="info", className="mr-1")]), 
+                                       width={'size': 11,  "offset":1 })]),
+       dbc.Row([        
+               dbc.Col(html.H5("(hasta febrero 2021)"),
+                                       width={ 'size': 3, "offset":1 }),
+
             ]),
    
     dbc.Row(
@@ -833,8 +836,8 @@ body = html.Div([
 
 app.layout = html.Div([body])
 
-#from application.dash import app
-#from settings import config
+from application.dash import app
+from settings import config
 
 if __name__ == "__main__":
     app.run_server()
