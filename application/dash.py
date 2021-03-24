@@ -1,5 +1,3 @@
-
-
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -681,28 +679,56 @@ body = html.Div([
            ], no_gutters=True),
        #html.Hr(),
 
-    ################################################################# tablas MIUNICIPIOS ranking 1-2    
+    #################################################################  MUNICIPIOS ranking    
 
-# tablas 1-2    
-    
-#    dbc.Row([
-#               dbc.Col(dbc.Table.from_dataframe(patabla1a, 
-#                        bordered="success", size=422, striped=True), 
-#                        width=4, lg={'size': 3,  "offset": 2, }),
-#        
-#               dbc.Col(dbc.Table.from_dataframe(patabla2a,
-#                        bordered="success", size=422, striped=True), 
-#                        width=4, lg={'size': 3,  "offset": 3, }),
-#            ], justify="center", no_gutters=False),
-#
-#       html.Hr(),
-#       html.Hr(),
-#       html.Hr(),
-#       html.Hr(),
-#       html.Hr(),
-#       html.Hr(),
-#       html.Hr(),
-#       html.Hr(),
+    dbc.Row([
+               dbc.Col(dbc.Container([
+                       html.P(
+                           "Los 10 Municipios con mayor número de feminicidios son: "
+                           "Ecatepec de Morelos (56), Chimalhuacán (35), Nezahualcóyotl (31), "
+                           "Toluca (27), Naucalpan de Juárez (22), Ixtapaluca (22), Zumpango "
+                           "(21), Tecámac (19), Cuautitlán Izcalli (19), y Valle de Chalco "
+                           "Solidaridad (16).",
+                    className="top",)
+                                ], fluid=True)
+                       
+                      ),
+          dbc.Col(dbc.Jumbotron([
+                   dbc.Container([
+                       html.P(
+                           "Los 10 Municipios con mayor número de casos de feminicidios son:"
+                           " Veracruz (49), Xalapa (42), Coatzacoalcos (25), Córdoba (24), "
+                           "Poza Rica de Hidalgo (17), Tuxpan (13), Papantla (12), Tierra "
+                           "Blanca (11), Minatitlán (11), y San Andrés Tuxtla (11).",
+                    className="top")
+                                ], fluid=True)
+                                    ], fluid=True)
+                      ),
+          dbc.Col(
+                   dbc.Container([
+                       html.P(
+                           "Los 10 Municipios con mayor número de casos de feminicidios son:"
+                           " Iztapalapa (68), Gustavo A. Madero (37), Tlalpan (35), Cuauhtémoc"
+                           "(34), Xochimilco (25), Miguel Hidalgo (19), Álvaro Obregón (17),"
+                           " Tláhuac (16), Coyoacán (14), y Venustiano Carranza (14).",
+                    className="top")
+                                ], fluid=True)
+                                    )
+                      ,
+          dbc.Col(dbc.Jumbotron([
+                   dbc.Container([
+                       html.P(
+                           "Los 10 Municipios con mayor número de casos de feminicidios son:"
+                           " Guadalajara (51), Tlajomulco de Zúñiga (38), Zapopan (34), "
+                           "El Salto (24), Tonalá (17), Puerto Vallarta (10), Ocotlán (6),"
+                           " Tequila (6), Mezquitic (6), y Ixtlahuacán de los Membrillos (6).",
+                    className="top")
+                                ], fluid=True)
+                                    ], fluid=True)
+                      ),
+      ]),
+
+####
 #    
     
     dbc.Row([
@@ -738,7 +764,7 @@ body = html.Div([
      dbc.Row(
            [
                dbc.Col(html.H1([dbc.Badge("Comparativo", color="info", className="mr-1"),
-                               " entre total de casos acumulados y tasas (por entidad)"]),
+                               " entre casos acumulados & tasas "]),
                        width={'size': 10,  "offset":1 }),
             ]),
 
@@ -749,7 +775,7 @@ body = html.Div([
     dbc.Row(
            [
                dbc.Col(html.H4("Total acumulado por entidad"),
-                        width=2,lg={'size': 3,  "offset": 1, }),
+                        width=2,lg={'size': 4,  "offset": 1, }),
 
                dbc.Col(html.H4("Tasa por entidad"),
                        width=1, lg={'size': 3,  "offset": 4, }),                     #size=12
