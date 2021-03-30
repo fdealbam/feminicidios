@@ -244,7 +244,6 @@ fem_filter1['Total']=fem_filter1[['Enero','Febrero','Marzo','Abril','Mayo','Juni
 
 
 
-
 #- FILE MUNICIPIOS ------------------------------------------------------------------------------
 
 fem_filter1.fillna(0, inplace=True) 
@@ -477,12 +476,8 @@ body = html.Div([
                         width={'size': 3,  "offset":1 }),
             ]),
                
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
+       html.Br(),
+       html.Br(),
     
     
 #cintillo 0
@@ -494,9 +489,7 @@ body = html.Div([
                         width={'size': 8,  "offset":1 }),
             ]),
 
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
+      html.Br(),
     
      dbc.Row(
            [
@@ -529,7 +522,7 @@ body = html.Div([
                dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mapa2020.jpeg?raw=true")),
            ]),
 # Cintillo párrafos
-       html.Hr(),
+       html.Br(),
     
       dbc.Row([
                dbc.Col(dbc.Container([
@@ -599,8 +592,8 @@ body = html.Div([
       ]),
                 
     
-       html.Hr(),
-       html.Hr(),
+       html.Br(),
+       html.Br(),
        
 #---------Grafica mensual
      dbc.Row(
@@ -620,9 +613,8 @@ body = html.Div([
         ]),
 
       
-       html.Hr(),
-       html.Hr(),
-    
+      html.Br(),
+    html.Br(),
 ##Cintillo mapas y ranking
 
     #títulos
@@ -634,9 +626,8 @@ body = html.Div([
                         width={'size': 10,  "offset":1 }),
             ]),
 
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
+     html.Br(),
+    html.Br(),
     
      dbc.Row(
            [
@@ -677,17 +668,17 @@ body = html.Div([
                       #width=4,lg={'size': 3,  "offset": 3, }
                       ),
            ], no_gutters=True),
-       #html.Hr(),
+       
 
     #################################################################  MUNICIPIOS ranking    
 
     dbc.Row([
                dbc.Col(dbc.Container([
                        html.P(
-                           "Los 10 Municipios con mayor número de feminicidios son: "
-                           "Ecatepec de Morelos (56), Chimalhuacán (35), Nezahualcóyotl (31), "
-                           "Toluca (27), Naucalpan de Juárez (22), Ixtapaluca (22), Zumpango "
-                           "(21), Tecámac (19), Cuautitlán Izcalli (19), y Valle de Chalco "
+                           "Los 10 Municipios con mayor número de casos de feminicidios son:"
+                           " Ecatepec de Morelos (56), Chimalhuacán (35), Nezahualcóyotl (31)"
+                           ", Toluca (27), Naucalpan de Juárez (22), Ixtapaluca (22), Zumpango"
+                           "(21), Tecámac (19), Cuautitlán Izcalli (19), y Valle de Chalco"
                            "Solidaridad (16).",
                     className="top",)
                                 ], fluid=True)
@@ -728,37 +719,85 @@ body = html.Div([
                       ),
       ]),
 
-####
-#    
-    
+############################################  MUNICIPIOS ranking (OPCION  2)
+    dbc.Row([
+               dbc.Col(dbc.Container([
+                       html.P(
+                           "Ecatepec de Morelos (56)"
+                           "Chimalhuacán (35)"
+                           "Nezahualcóyotl (31)"
+                           "Toluca (27)"
+                           "Naucalpan de Juárez (22)"
+                           "Ixtapaluca (22)"
+                           "Zumpango (21)"
+                           "Tecámac (19)"
+                           "Cuautitlán Izcalli (19)"
+                           "Valle de Chalco Solidaridad (16)",
+                    className="top",)
+                                ],)
+                       
+                      ),
+          dbc.Col(dbc.Jumbotron([
+                   dbc.Container([
+                       html.P(
+                           "Veracruz (49)"
+                           "Xalapa (42)"
+                           "Coatzacoalcos (25)"
+                           "Córdoba (24)"
+                           "Poza Rica de Hidalgo (17)"
+                           "Tuxpan (13)"
+                           "Papantla (12)"
+                           "Tierra Blanca (11)"
+                           "Minatitlán (11)"
+                           "San Andrés Tuxtla (11)",
+                    className="top")
+                                ], )
+                                    ], )
+                      ),
+          dbc.Col(
+                   dbc.Container([
+                       html.P(
+                           "Iztapalapa (68)"
+                           "Gustavo A. Madero (37)"
+                           "Tlalpan (35)"
+                           "Cuauhtémoc (34)"
+                           "Xochimilco (25)"
+                           "Miguel Hidalgo (19)"
+                           "Álvaro Obregón (17)"
+                           "Tláhuac (16)"
+                           "Coyoacán (14)"
+                           "Venustiano Carranza (14)",
+                    className="top")
+                                ],)
+                                    )
+                      ,
+          dbc.Col(dbc.Jumbotron([
+                   dbc.Container([
+                       html.P(
+                           "Guadalajara (51)"
+                           "Tlajomulco de Zúñiga (38)"
+                           "Zapopan (34)"
+                           "El Salto (24)"
+                           "Tonalá (17)"
+                           "Puerto Vallarta (10)"
+                           "Ocotlán (6)"
+                           "Tequila (6)"
+                           "Mezquitic (6)"
+                           "Ixtlahuacán de los Membrillos (6)",
+                    className="top")
+                                ], )
+                                    ], )
+                      ),
+      ]),
+  
     dbc.Row([
                
            ]),
    
     
 # Cintillo 3
-    
-# tablas 3-4    
-#    dbc.Row([
-#               dbc.Col(dbc.Table.from_dataframe(patabla3a,
-#                        bordered="success", size=422, striped=True), 
-#                        width=4, lg={'size': 3,  "offset": 2, }),
-#        
-#               dbc.Col(dbc.Table.from_dataframe(patabla4a,
-#                        bordered="success", size=422, striped=True), 
-#                        width=4, lg={'size': 3,  "offset": 3, }),
-#            ], justify="center", no_gutters=False),
-##
- #      html.Hr(),
- #      html.Hr(),
- #      html.Hr(),
- #      html.Hr(),
- #      html.Hr(),
- #      html.Hr(),
- #      html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
+ html.Br(),
+    html.Br(),
        
 #---------Grafica por entidad
      dbc.Row(
@@ -768,9 +807,7 @@ body = html.Div([
                        width={'size': 10,  "offset":1 }),
             ]),
 
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
+      html.Br(),
     
     dbc.Row(
            [
@@ -791,12 +828,9 @@ body = html.Div([
                    #lg={'size': 5,  "offset": 1,}),
         ], justify="end", no_gutters=True,),
 
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
-       html.Hr(),
+       html.Br(),
+    html.Br(),
+    
     
 
 # nuevo
@@ -826,7 +860,7 @@ body = html.Div([
                     "posicionamiento partidista, personal o institucional, mucho menos opinión o postura alguna "
                     "sobre el fenómeno. ",
                     className="lead"),
-                html.Hr(),
+                html.Br(),
                 html.H5("Metodología "),
                 html.P(
                     "Esta información fue tratada con el lenguaje de programación Python y varias de las librerías "
