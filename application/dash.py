@@ -1133,7 +1133,7 @@ body = html.Div([
           
         ]
     ),
-    style={"width": "13rem"},
+    style={"width": "9rem"},
 ),]),
         dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1173,7 +1173,7 @@ body = html.Div([
           
         ]
     ),
-    style={"width": "13rem"},
+    style={"width": "9rem"},
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1214,7 +1214,7 @@ body = html.Div([
              
         ]
     ),
-    style={"width": "13rem"},
+    style={"width": "9rem"},
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1254,7 +1254,7 @@ body = html.Div([
             html.H6([ (esc318_txt)," ", (esc318_val),]),
                         ]
     ),
-    style={"width": "13rem"},
+    style={"width": "9rem"},
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1294,7 +1294,7 @@ body = html.Div([
             html.H6([ (esc319_txt)," ", (esc319_val),]),
                         ]
     ),
-    style={"width": "13rem"},
+    style={"width": "9rem"},
 ),]),]),
     html.Br(),
     
