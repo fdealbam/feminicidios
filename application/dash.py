@@ -31,6 +31,40 @@ d2 = today.strftime("Fecha de actualización : %d-%m-%Y")
 # DATABASES
 ############################### Abre archivos
 
+defunciones15 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def15_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
+                    )
+def_tot15 =defunciones15.iloc[0]['Valor']
+def15_tot =defunciones15.iloc[0]['Valor']
+agr15_val = defunciones15.iloc[29]['Valor']
+agr15_txt = defunciones15.iloc[29]['Variable']
+viofm15_val = defunciones15.iloc[19]['Valor']
+viofm15_txt = defunciones15.iloc[19]['Variable']
+lug115_val = defunciones15.iloc[10]['Valor']
+lug115_txt = defunciones15.iloc[10]['Variable']
+lug215_val = defunciones15.iloc[11]['Valor']
+lug215_txt = defunciones15.iloc[11]['Variable']
+aurb15_val = defunciones15.iloc[17]['Valor']
+aurb15_txt = defunciones15.iloc[17]['Variable']
+ent115_val = defunciones15.iloc[2]['Valor']
+ent115_txt = defunciones15.iloc[2]['Variable']
+ent215_val = defunciones15.iloc[3]['Valor']
+ent215_txt = defunciones15.iloc[3]['Variable']
+ent315_val = defunciones15.iloc[4]['Valor']
+ent315_txt = defunciones15.iloc[4]['Variable']
+eda115_val = defunciones15.iloc[21]['Valor']
+eda115_txt = defunciones15.iloc[21]['Variable']
+eda215_val = defunciones15.iloc[22]['Valor']
+eda215_txt = defunciones15.iloc[22]['Variable']
+eda315_val = defunciones15.iloc[23]['Valor']
+eda315_txt = defunciones15.iloc[23]['Variable']
+emba15_val = defunciones15.iloc[14]['Valor']
+emba15_txt = defunciones15.iloc[14]['Variable']
+esc115_val = defunciones15.iloc[6]['Valor']
+esc115_txt = defunciones15.iloc[6]['Variable']
+esc215_val = defunciones15.iloc[7]['Valor']
+esc215_txt = defunciones15.iloc[7]['Variable']
+esc315_val = defunciones15.iloc[8]['Valor']
+esc315_txt = defunciones15.iloc[8]['Variable']
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
@@ -454,7 +488,7 @@ sourceurl='https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-inci
 
 
 server = flask.Flask(__name__)
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes. LUX], server=server)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes. FLATLY], server=server)
 
 body = html.Div([
 # Cintillo 000
@@ -535,6 +569,7 @@ body = html.Div([
                                 ], fluid=True)
                        
                       ),
+        
           dbc.Col(dbc.Jumbotron([
                    dbc.Container([
                        html.P(
@@ -593,7 +628,14 @@ body = html.Div([
                 
     
        html.Br(),
+     dbc.Row(
+           [
+               dbc.Col(html.H1([dbc.Badge((def_tot15), className="ml-1",color="light"),
+                               "  "]),
+                       width={'size': 10,  "offset":1 }),
+            ]),
        html.Br(),
+   
        
 #---------Grafica mensual
      dbc.Row(
@@ -601,7 +643,8 @@ body = html.Div([
                dbc.Col(html.H1(["Casos ", 
                        dbc.Badge("mensuales", color="info", className="mr-1")]), 
                                        width={'size': 11,  "offset":1 })]),
-       dbc.Row([        
+       dbc.Row(
+           [        
                dbc.Col(html.H5("(hasta febrero 2021)"),
                                        width={ 'size': 3, "offset":1 }),
 
@@ -611,9 +654,7 @@ body = html.Div([
         [
             dbc.Col(dcc.Graph(figure=graf_meses, config= "autosize")),
         ]),
-
-      
-      html.Br(),
+    html.Br(),
     html.Br(),
 ##Cintillo mapas y ranking
 
@@ -626,7 +667,7 @@ body = html.Div([
                         width={'size': 10,  "offset":1 }),
             ]),
 
-     html.Br(),
+    html.Br(),
     html.Br(),
     
      dbc.Row(
@@ -798,6 +839,7 @@ body = html.Div([
 # Cintillo 3
  html.Br(),
     html.Br(),
+     
        
 #---------Grafica por entidad
      dbc.Row(
@@ -829,6 +871,75 @@ body = html.Div([
         ], justify="end", no_gutters=True,),
 
        html.Br(),
+    html.Br(),
+    dbc.Row(
+    [
+        dbc.Col(html.H2([dbc.Alert("Perfil de Homicidios femeninos", color="primary",# className="alert-link",
+                                  className="alert-heading"),
+                        ]),width={'size': 10,  "offset":1 })]),
+      dbc.Row(
+           [
+               dbc.Col(html.H5("2015")),
+               dbc.Col(html.H5("2016")),
+               dbc.Col(html.H5("2017")),
+               dbc.Col(html.H5("2018")),
+               dbc.Col(html.H5("2019")),
+               dbc.Col(html.H5("2020")),
+           ], justify= "start"),
+    
+   
+
+      
+     dbc.Row(
+           [
+               dbc.Col(html.H1([" ", 
+                                dbc.Badge((def_tot15), 
+                                          className="mb-0",
+                                          color="light",),
+                               ]),
+                       ),
+            ]),
+    html.Br(),
+   
+
+
+
+    dbc.Row([
+        dbc.Col([dbc.Card(
+            dbc.CardBody([
+            html.H4("Modus Operandi", className="card-title"),
+            html.Code("Parentesco con agresor", className="card-text"),
+            html.H6([ (agr15_txt)," ", (agr15_val),]),
+            html.Code("Violencia familiar:", className="card-text"), 
+            html.H6([ (viofm15_txt)," ", (viofm15_val),]),
+            html.Code("Lugar donde ocurrió "),
+            html.H6([ (lug115_txt)," ", (lug115_val),]),
+            html.H6([ (lug215_txt)," ", (lug215_val),]),
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Code("Entidades con más casos:"),
+            html.H6([ (ent115_txt)," ", (ent115_val),]),
+            html.H6([ (ent215_txt)," ", (ent215_val),]),
+            html.H6([ (ent315_txt)," ", (ent315_val),]),
+            html.Code("Área urbana "),
+            html.H6([ (aurb15_txt)," ", (aurb15_val),]),
+            html.H4("Perfil de la victima ", className="card-title"), 
+            html.Code("Grupos de edad con mayor incidencia"),
+            html.H6([ (eda115_txt)," ", (eda115_val),]),
+            html.H6([ (eda215_txt)," ", (eda215_val),]),
+            html.H6([ (eda315_txt)," ", (eda315_val),]),
+            html.Code("Estado civil"),
+            html.H6("Embarazada:"),
+            html.H6([ (emba15_txt)," ", (emba15_val),]), 
+            html.Code("Escolaridad"),
+            html.H6([ (esc115_txt)," ", (esc115_val),]),
+            html.H6([ (esc215_txt)," ", (esc215_val),]),
+            html.H6([ (esc315_txt)," ", (esc315_val),]),
+
+          
+        ]
+    ),
+    style={"width": "13rem"},
+),])]),
     html.Br(),
     
     
