@@ -1,7 +1,7 @@
 ,Variable,Valor
 0,Total anual,7504
 1,Entidad,Entidad_%
-2,México,12.2
+2,Mexico,12.2
 3,Guanajuato,9.4
 4,Jalisco,7.2
 5,Escolaridad,Escolaridad_%
@@ -9,7 +9,7 @@
 7,Primaria completa,24.3
 8,No especificado,18.1
 9,Lugar,Lugar_%
-10,via pública,51.3
+10,via publica,51.3
 11,Hogar,20.4
 12,Embarazo,Embarazo_%
 13,No especificado ,57.6
@@ -20,9 +20,9 @@
 18,Violencia Familiar,Violencia Familiar_%
 19,Hubo violencia familiar,1.2
 20,Edad Agrupada,Edad Agrupada_%
-21,De 25 a 29 años,14.0
-22,De 20 a 24 años,13.9
-23,De 30 a 34 años,11.6
+21,De 25 a 29 anos,14.0
+22,De 20 a 24 anos,13.9
+23,De 30 a 34 anos,11.6
 24,Ocupación,Ocupación_%
 25,No trabaja,45.2
 26,Ocupaciones insuficientemente especificadas,23.8
