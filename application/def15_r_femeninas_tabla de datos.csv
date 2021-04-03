@@ -1,7 +1,7 @@
 ,Variable,Valor
 0,Total anual,4766
 1,Entidad,Entidad_%
-2,México,17.0
+2,Mexico,17.0
 3,Guerrero,9.2
 4,Jalisco,6.2
 5,Escolaridad,Escolaridad_%
@@ -9,7 +9,7 @@
 7,Primaria completa,14.6
 8,No especificado,11.5
 9,Lugar,Lugar_%
-10,via pública,44.7
+10,via publica,44.7
 11,Hogar,26.0
 12,Embarazo,Embarazo_%
 13,No especificado ,63.5
