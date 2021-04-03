@@ -33,10 +33,22 @@ d2 = today.strftime("Fecha de actualización : %d-%m-%Y")
 
 defunciones15 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def15_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
+defunciones16 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def16_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
+                    )
+defunciones17 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def17_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
+                    )
+defunciones18 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def18_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
+                    )
+defunciones19 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def19_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
+                    )
+#defunciones20 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def20_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
+#                    )
 def_tot15 =defunciones15.iloc[0]['Valor']
 def15_tot =defunciones15.iloc[0]['Valor']
 agr15_val = defunciones15.iloc[29]['Valor']
 agr15_txt = defunciones15.iloc[29]['Variable']
+agr215_val  = defunciones15.iloc[30]['Valor']
+agr215_txt  = defunciones15.iloc[30]['Variable']
 viofm15_val = defunciones15.iloc[19]['Valor']
 viofm15_txt = defunciones15.iloc[19]['Variable']
 lug115_val = defunciones15.iloc[10]['Valor']
@@ -65,6 +77,176 @@ esc215_val = defunciones15.iloc[7]['Valor']
 esc215_txt = defunciones15.iloc[7]['Variable']
 esc315_val = defunciones15.iloc[8]['Valor']
 esc315_txt = defunciones15.iloc[8]['Variable']
+
+def16_tot   = defunciones16.iloc[0]['Valor']
+agr16_val   = defunciones16.iloc[29]['Valor']
+agr16_txt   = defunciones16.iloc[29]['Variable']
+agr216_val  = defunciones16.iloc[30]['Valor']
+agr216_txt  = defunciones16.iloc[30]['Variable']
+viofm16_val = defunciones16.iloc[19]['Valor']
+viofm16_txt = defunciones16.iloc[19]['Variable']
+lug116_val  = defunciones16.iloc[10]['Valor']
+lug116_txt  = defunciones16.iloc[10]['Variable']
+lug216_val  = defunciones16.iloc[11]['Valor']
+lug216_txt  = defunciones16.iloc[11]['Variable']
+aurb16_val  = defunciones16.iloc[17]['Valor']
+aurb16_txt  = defunciones16.iloc[17]['Variable']
+ent116_val  = defunciones16.iloc[2]['Valor']
+ent116_txt  = defunciones16.iloc[2]['Variable']
+ent216_val  = defunciones16.iloc[3]['Valor']
+ent216_txt  = defunciones16.iloc[3]['Variable']
+ent316_val  = defunciones16.iloc[4]['Valor']
+ent316_txt  = defunciones16.iloc[4]['Variable']
+eda116_val  = defunciones16.iloc[21]['Valor']
+eda116_txt  = defunciones16.iloc[21]['Variable']
+eda216_val  = defunciones16.iloc[22]['Valor']
+eda216_txt  = defunciones16.iloc[22]['Variable']
+eda316_val  = defunciones16.iloc[23]['Valor']
+eda316_txt  = defunciones16.iloc[23]['Variable']
+emba16_val  = defunciones16.iloc[14]['Valor']
+emba16_txt  = defunciones16.iloc[14]['Variable']
+esc116_val  = defunciones16.iloc[6]['Valor']
+esc116_txt  = defunciones16.iloc[6]['Variable']
+esc216_val  = defunciones16.iloc[7]['Valor']
+esc216_txt  = defunciones16.iloc[7]['Variable']
+esc316_val  = defunciones16.iloc[8]['Valor']
+esc316_txt  = defunciones16.iloc[8]['Variable']
+
+def17_tot   = defunciones17.iloc[0]['Valor']
+agr17_val   = defunciones17.iloc[29]['Valor']
+agr17_txt   = defunciones17.iloc[29]['Variable']
+agr217_val  = defunciones17.iloc[30]['Valor']
+agr217_txt  = defunciones17.iloc[30]['Variable']
+viofm17_val = defunciones17.iloc[19]['Valor']
+viofm17_txt = defunciones17.iloc[19]['Variable']
+lug117_val  = defunciones17.iloc[10]['Valor']
+lug117_txt  = defunciones17.iloc[10]['Variable']
+lug217_val  = defunciones17.iloc[11]['Valor']
+lug217_txt  = defunciones17.iloc[11]['Variable']
+aurb17_val  = defunciones17.iloc[17]['Valor']
+aurb17_txt  = defunciones17.iloc[17]['Variable']
+ent117_val  = defunciones17.iloc[2]['Valor']
+ent117_txt  = defunciones17.iloc[2]['Variable']
+ent217_val  = defunciones17.iloc[3]['Valor']
+ent217_txt  = defunciones17.iloc[3]['Variable']
+ent317_val  = defunciones17.iloc[4]['Valor']
+ent317_txt  = defunciones17.iloc[4]['Variable']
+eda117_val  = defunciones17.iloc[21]['Valor']
+eda117_txt  = defunciones17.iloc[21]['Variable']
+eda217_val  = defunciones17.iloc[22]['Valor']
+eda217_txt  = defunciones17.iloc[22]['Variable']
+eda317_val  = defunciones17.iloc[23]['Valor']
+eda317_txt  = defunciones17.iloc[23]['Variable']
+emba17_val  = defunciones17.iloc[14]['Valor']
+emba17_txt  = defunciones17.iloc[14]['Variable']
+esc117_val  = defunciones17.iloc[6]['Valor']
+esc117_txt  = defunciones17.iloc[6]['Variable']
+esc217_val  = defunciones17.iloc[7]['Valor']
+esc217_txt  = defunciones17.iloc[7]['Variable']
+esc317_val  = defunciones17.iloc[8]['Valor']
+esc317_txt  = defunciones17.iloc[8]['Variable']
+
+def18_tot   = defunciones18.iloc[0]['Valor']
+agr18_val   = defunciones18.iloc[29]['Valor']
+agr18_txt   = defunciones18.iloc[29]['Variable']
+agr218_val  = defunciones18.iloc[30]['Valor']
+agr218_txt  = defunciones18.iloc[30]['Variable']
+viofm18_val = defunciones18.iloc[19]['Valor']
+viofm18_txt = defunciones18.iloc[19]['Variable']
+lug118_val  = defunciones18.iloc[10]['Valor']
+lug118_txt  = defunciones18.iloc[10]['Variable']
+lug218_val  = defunciones18.iloc[11]['Valor']
+lug218_txt  = defunciones18.iloc[11]['Variable']
+aurb18_val  = defunciones18.iloc[18]['Valor']
+aurb18_txt  = defunciones18.iloc[18]['Variable']
+ent118_val  = defunciones18.iloc[2]['Valor']
+ent118_txt  = defunciones18.iloc[2]['Variable']
+ent218_val  = defunciones18.iloc[3]['Valor']
+ent218_txt  = defunciones18.iloc[3]['Variable']
+ent318_val  = defunciones18.iloc[4]['Valor']
+ent318_txt  = defunciones18.iloc[4]['Variable']
+eda118_val  = defunciones18.iloc[21]['Valor']
+eda118_txt  = defunciones18.iloc[21]['Variable']
+eda218_val  = defunciones18.iloc[22]['Valor']
+eda218_txt  = defunciones18.iloc[22]['Variable']
+eda318_val  = defunciones18.iloc[23]['Valor']
+eda318_txt  = defunciones18.iloc[23]['Variable']
+emba18_val  = defunciones18.iloc[14]['Valor']
+emba18_txt  = defunciones18.iloc[14]['Variable']
+esc118_val  = defunciones18.iloc[6]['Valor']
+esc118_txt  = defunciones18.iloc[6]['Variable']
+esc218_val  = defunciones18.iloc[7]['Valor']
+esc218_txt  = defunciones18.iloc[7]['Variable']
+esc318_val  = defunciones18.iloc[8]['Valor']
+esc318_txt  = defunciones18.iloc[8]['Variable']
+
+def19_tot   = defunciones19.iloc[0]['Valor']
+agr19_val   = defunciones19.iloc[29]['Valor']
+agr19_txt   = defunciones19.iloc[29]['Variable']
+agr219_val  = defunciones19.iloc[30]['Valor']
+agr219_txt  = defunciones19.iloc[30]['Variable']
+viofm19_val = defunciones19.iloc[19]['Valor']
+viofm19_txt = defunciones19.iloc[19]['Variable']
+lug119_val  = defunciones19.iloc[10]['Valor']
+lug119_txt  = defunciones19.iloc[10]['Variable']
+lug219_val  = defunciones19.iloc[11]['Valor']
+lug219_txt  = defunciones19.iloc[11]['Variable']
+aurb19_val  = defunciones19.iloc[19]['Valor']
+aurb19_txt  = defunciones19.iloc[19]['Variable']
+ent119_val  = defunciones19.iloc[2]['Valor']
+ent119_txt  = defunciones19.iloc[2]['Variable']
+ent219_val  = defunciones19.iloc[3]['Valor']
+ent219_txt  = defunciones19.iloc[3]['Variable']
+ent319_val  = defunciones19.iloc[4]['Valor']
+ent319_txt  = defunciones19.iloc[4]['Variable']
+eda119_val  = defunciones19.iloc[21]['Valor']
+eda119_txt  = defunciones19.iloc[21]['Variable']
+eda219_val  = defunciones19.iloc[22]['Valor']
+eda219_txt  = defunciones19.iloc[22]['Variable']
+eda319_val  = defunciones19.iloc[23]['Valor']
+eda319_txt  = defunciones19.iloc[23]['Variable']
+emba19_val  = defunciones19.iloc[14]['Valor']
+emba19_txt  = defunciones19.iloc[14]['Variable']
+esc119_val  = defunciones19.iloc[6]['Valor']
+esc119_txt  = defunciones19.iloc[6]['Variable']
+esc219_val  = defunciones19.iloc[7]['Valor']
+esc219_txt  = defunciones19.iloc[7]['Variable']
+esc319_val  = defunciones19.iloc[8]['Valor']
+esc319_txt  = defunciones19.iloc[8]['Variable']
+
+#def20_tot   = defunciones20.iloc[0]['Valor']
+#agr20_val   = defunciones20.iloc[29]['Valor']
+#agr20_txt   = defunciones20.iloc[29]['Variable']
+#agr220_val  = defunciones20.iloc[30]['Valor']
+#agr220_txt  = defunciones20.iloc[30]['Variable']
+#viofm20_val = defunciones20.iloc[20]['Valor']
+#viofm20_txt = defunciones20.iloc[20]['Variable']
+#lug120_val  = defunciones20.iloc[10]['Valor']
+#lug120_txt  = defunciones20.iloc[10]['Variable']
+#lug220_val  = defunciones20.iloc[11]['Valor']
+#lug220_txt  = defunciones20.iloc[11]['Variable']
+#aurb20_val  = defunciones20.iloc[20]['Valor']
+#aurb20_txt  = defunciones20.iloc[20]['Variable']
+#ent120_val  = defunciones20.iloc[2]['Valor']
+#ent120_txt  = defunciones20.iloc[2]['Variable']
+#ent220_val  = defunciones20.iloc[3]['Valor']
+#ent220_txt  = defunciones20.iloc[3]['Variable']
+#ent320_val  = defunciones20.iloc[4]['Valor']
+#ent320_txt  = defunciones20.iloc[4]['Variable']
+#eda120_val  = defunciones20.iloc[21]['Valor']
+#eda120_txt  = defunciones20.iloc[21]['Variable']
+#eda220_val  = defunciones20.iloc[22]['Valor']
+#eda220_txt  = defunciones20.iloc[22]['Variable']
+#eda320_val  = defunciones20.iloc[23]['Valor']
+#eda320_txt  = defunciones20.iloc[23]['Variable']
+#emba20_val  = defunciones20.iloc[14]['Valor']
+#emba20_txt  = defunciones20.iloc[14]['Variable']
+#esc120_val  = defunciones20.iloc[6]['Valor']
+#esc120_txt  = defunciones20.iloc[6]['Variable']
+#esc220_val  = defunciones20.iloc[7]['Valor']
+#esc220_txt  = defunciones20.iloc[7]['Variable']
+#esc320_val  = defunciones20.iloc[8]['Valor']
+#esc320_txt  = defunciones20.iloc[8]['Variable']
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
@@ -884,7 +1066,7 @@ body = html.Div([
                dbc.Col(html.H5("2017")),
                dbc.Col(html.H5("2018")),
                dbc.Col(html.H5("2019")),
-               dbc.Col(html.H5("2020")),
+              # dbc.Col(html.H5("2020")),
            ], justify= "start"),
     
    
@@ -893,11 +1075,17 @@ body = html.Div([
      dbc.Row(
            [
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((def_tot15), 
-                                          className="mb-0",
-                                          color="light",),
-                               ]),
-                       ),
+                                dbc.Badge((def15_tot),className="mb-0",color="light",),]),),
+               dbc.Col(html.H1([" ", 
+                                dbc.Badge((def16_tot),className="mb-0",color="light",),]),),
+               dbc.Col(html.H1([" ", 
+                                dbc.Badge((def17_tot),className="mb-0",color="light",),]),),
+               dbc.Col(html.H1([" ", 
+                                dbc.Badge((def18_tot),className="mb-0",color="light",),]),),
+               dbc.Col(html.H1([" ", 
+                                dbc.Badge((def19_tot),className="mb-0",color="light",),]),),
+               #dbc.Col(html.H1([" ", 
+               #                 dbc.Badge((def_tot20),className="mb-0",color="light",),]),),
             ]),
     html.Br(),
    
@@ -907,10 +1095,12 @@ body = html.Div([
     dbc.Row([
         dbc.Col([dbc.Card(
             dbc.CardBody([
+            
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
             html.H6([ (agr15_txt)," ", (agr15_val),]),
+            html.H6([ (agr215_txt)," ", (agr215_val),]),
             html.Code("Violencia familiar:", className="card-text"), 
             html.H6([ (viofm15_txt)," ", (viofm15_val),]),
             html.Code("Lugar donde ocurrió "),
@@ -944,7 +1134,168 @@ body = html.Div([
         ]
     ),
     style={"width": "13rem"},
-),])]),
+),]),
+        dbc.Col([dbc.Card(
+            dbc.CardBody([
+            html.H4("Modus Operandi", className="card-title"),
+            html.Hr(),
+            html.Code("Parentesco con agresor", className="card-text"),
+            html.H6([ (agr16_txt)," ", (agr16_val),]),
+            html.H6([ (agr216_txt)," ", (agr216_val),]),
+            html.Code("Violencia familiar:", className="card-text"), 
+            html.H6([ (viofm16_txt)," ", (viofm16_val),]),
+            html.Code("Lugar donde ocurrió "),
+            html.H6([ (lug116_txt)," ", (lug116_val),]),
+            html.H6([ (lug216_txt)," ", (lug216_val),]),
+            html.Hr(),
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Hr(),
+            html.Code("Entidades con más casos:"),
+            html.H6([ (ent116_txt)," ", (ent116_val),]),
+            html.H6([ (ent216_txt)," ", (ent216_val),]),
+            html.H6([ (ent316_txt)," ", (ent316_val),]),
+            html.Code("Área urbana "),
+            html.H6([ (aurb16_txt)," ", (aurb16_val),]),
+            html.Hr(),
+            html.H4("Perfil de la victima ", className="card-title"), 
+            html.Hr(),
+            html.Code("Grupos de edad con mayor incidencia"),
+            html.H6([ (eda116_txt)," ", (eda116_val),]),
+            html.H6([ (eda216_txt)," ", (eda216_val),]),
+            html.H6([ (eda316_txt)," ", (eda316_val),]),
+            html.Code("Estado civil"),
+            html.H6("Embarazada:"),
+            html.H6([ (emba16_txt)," ", (emba16_val),]), 
+            html.Code("Escolaridad"),
+            html.H6([ (esc116_txt)," ", (esc116_val),]),
+            html.H6([ (esc216_txt)," ", (esc216_val),]),
+            html.H6([ (esc316_txt)," ", (esc316_val),]),
+          
+        ]
+    ),
+    style={"width": "13rem"},
+),]),
+         dbc.Col([dbc.Card(
+            dbc.CardBody([
+            
+            html.H4("Modus Operandi", className="card-title"),
+            html.Hr(),
+            html.Code("Parentesco con agresor", className="card-text"),
+            html.H6([ (agr17_txt)," ", (agr17_val),]),
+            html.H6([ (agr217_txt)," ", (agr217_val),]),
+            html.Code("Violencia familiar:", className="card-text"), 
+            html.H6([ (viofm17_txt)," ", (viofm17_val),]),
+            html.Code("Lugar donde ocurrió "),
+            html.H6([ (lug117_txt)," ", (lug117_val),]),
+            html.H6([ (lug217_txt)," ", (lug217_val),]),
+            html.Hr(),
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Hr(),
+            html.Code("Entidades con más casos:"),
+            html.H6([ (ent117_txt)," ", (ent117_val),]),
+            html.H6([ (ent217_txt)," ", (ent217_val),]),
+            html.H6([ (ent317_txt)," ", (ent317_val),]),
+            html.Code("Área urbana "),
+            html.H6([ (aurb17_txt)," ", (aurb17_val),]),
+            html.Hr(),
+            html.H4("Perfil de la victima ", className="card-title"), 
+            html.Hr(),
+            html.Code("Grupos de edad con mayor incidencia"),
+            html.H6([ (eda117_txt)," ", (eda117_val),]),
+            html.H6([ (eda217_txt)," ", (eda217_val),]),
+            html.H6([ (eda317_txt)," ", (eda317_val),]),
+            html.Code("Estado civil"),
+            html.H6("Embarazada:"),
+            html.H6([ (emba17_txt)," ", (emba17_val),]), 
+            html.Code("Escolaridad"),
+            html.H6([ (esc117_txt)," ", (esc117_val),]),
+            html.H6([ (esc217_txt)," ", (esc217_val),]),
+            html.H6([ (esc317_txt)," ", (esc317_val),]),
+             
+        ]
+    ),
+    style={"width": "13rem"},
+),]),
+         dbc.Col([dbc.Card(
+            dbc.CardBody([
+            
+            html.H4("Modus Operandi", className="card-title"),
+            html.Hr(),
+            html.Code("Parentesco con agresor", className="card-text"),
+            html.H6([ (agr18_txt)," ", (agr18_val),]),
+            html.H6([ (agr218_txt)," ", (agr218_val),]),
+            html.Code("Violencia familiar:", className="card-text"), 
+            html.H6([ (viofm18_txt)," ", (viofm18_val),]),
+            html.Code("Lugar donde ocurrió "),
+            html.H6([ (lug118_txt)," ", (lug118_val),]),
+            html.H6([ (lug218_txt)," ", (lug218_val),]),
+            html.Hr(),
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Hr(),
+            html.Code("Entidades con más casos:"),
+            html.H6([ (ent118_txt)," ", (ent118_val),]),
+            html.H6([ (ent218_txt)," ", (ent218_val),]),
+            html.H6([ (ent318_txt)," ", (ent318_val),]),
+            html.Code("Área urbana "),
+            html.H6([ (aurb18_txt)," ", (aurb18_val),]),
+            html.Hr(),
+            html.H4("Perfil de la victima ", className="card-title"), 
+            html.Hr(),
+            html.Code("Grupos de edad con mayor incidencia"),
+            html.H6([ (eda118_txt)," ", (eda118_val),]),
+            html.H6([ (eda218_txt)," ", (eda218_val),]),
+            html.H6([ (eda318_txt)," ", (eda318_val),]),
+            html.Code("Estado civil"),
+            html.H6("Embarazada:"),
+            html.H6([ (emba18_txt)," ", (emba18_val),]), 
+            html.Code("Escolaridad"),
+            html.H6([ (esc118_txt)," ", (esc118_val),]),
+            html.H6([ (esc218_txt)," ", (esc218_val),]),
+            html.H6([ (esc318_txt)," ", (esc318_val),]),
+                        ]
+    ),
+    style={"width": "13rem"},
+),]),
+         dbc.Col([dbc.Card(
+            dbc.CardBody([
+            
+            html.H4("Modus Operandi", className="card-title"),
+            html.Hr(),
+            html.Code("Parentesco con agresor", className="card-text"),
+            html.H6([ (agr19_txt)," ", (agr19_val),]),
+            html.H6([ (agr219_txt)," ", (agr219_val),]),
+            html.Code("Violencia familiar:", className="card-text"), 
+            html.H6([ (viofm19_txt)," ", (viofm19_val),]),
+            html.Code("Lugar donde ocurrió "),
+            html.H6([ (lug119_txt)," ", (lug119_val),]),
+            html.H6([ (lug219_txt)," ", (lug219_val),]),
+            html.Hr(),
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Hr(),
+            html.Code("Entidades con más casos:"),
+            html.H6([ (ent119_txt)," ", (ent119_val),]),
+            html.H6([ (ent219_txt)," ", (ent219_val),]),
+            html.H6([ (ent319_txt)," ", (ent319_val),]),
+            html.Code("Área urbana "),
+            html.H6([ (aurb19_txt)," ", (aurb19_val),]),
+            html.Hr(),
+            html.H4("Perfil de la victima ", className="card-title"), 
+            html.Hr(),
+            html.Code("Grupos de edad con mayor incidencia"),
+            html.H6([ (eda119_txt)," ", (eda119_val),]),
+            html.H6([ (eda219_txt)," ", (eda219_val),]),
+            html.H6([ (eda319_txt)," ", (eda319_val),]),
+            html.Code("Estado civil"),
+            html.H6("Embarazada:"),
+            html.H6([ (emba19_txt)," ", (emba19_val),]), 
+            html.Code("Escolaridad"),
+            html.H6([ (esc119_txt)," ", (esc119_val),]),
+            html.H6([ (esc219_txt)," ", (esc219_val),]),
+            html.H6([ (esc319_txt)," ", (esc319_val),]),
+                        ]
+    ),
+    style={"width": "13rem"},
+),]),]),
     html.Br(),
     
     
