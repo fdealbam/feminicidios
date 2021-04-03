@@ -1,7 +1,7 @@
 ,Variable,Valor
 0,Total anual,6860
 1,Entidad,Entidad_%
-2,México,13.7
+2,Mexico,13.7
 3,Chihuahua,7.1
 4,Guanajuato,6.3
 5,Escolaridad,Escolaridad_%
@@ -9,7 +9,7 @@
 7,Primaria completa,22.9
 8,No especificado,18.5
 9,Lugar,Lugar_%
-10,via pública,50.8
+10,via publica,50.8
 11,Hogar,21.3
 12,Embarazo,Embarazo_%
 13,No especificado ,56.6
@@ -20,13 +20,13 @@
 18,Violencia Familiar,Violencia Familiar_%
 19,Hubo violencia familiar,1.5
 20,Edad Agrupada,Edad Agrupada_%
-21,De 20 a 24 años,14.5
-22,De 25 a 29 años,13.1
-23,De 30 a 34 años,11.6
+21,De 20 a 24 anos,14.5
+22,De 25 a 29 anos,13.1
+23,De 30 a 34 anos,11.6
 24,Ocupación,Ocupación_%
 25,No trabaja,47.2
 26,Ocupaciones insuficientemente especificadas,14.4
-27,Ocupación no especificada,11.1
+27,Ocupacion no especificada,11.1
 28,Parentesco c/agresor,Parentesco c/agresor_%
 29,no especificado,97.8
 30,familia nuclear,1.5
