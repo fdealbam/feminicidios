@@ -660,7 +660,10 @@ body = html.Div([
                
        html.Br(),
        html.Br(),
-    
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
     
 #cintillo 0
     
@@ -706,82 +709,87 @@ body = html.Div([
 # Cintillo párrafos
        html.Br(),
     
-      dbc.Row([
-               dbc.Col(dbc.Container([
-                       html.P(
-                           "En 10 entidades se registraron 82.2% de feminicidios (338)"
-                           " en 2015: Jalisco (62), México (59), Ciudad de México (56),"
-                           "Veracruz (40), Chiapas (36), Sonora (24), Guanajuato (16),"
-                           "Coahuila (16), Morelos (15) y Sinaloa (14).",
-                    className="top",)
-                                ], fluid=True)
-                       
-                      ),
-        
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                           "En 10 entidades se registraron 71.5% de feminicidios (433)"
-                           " en 2016 : Oaxaca (67), Veracruz (58), México (56), Jalisco"
-                           "(48), Ciudad de México (46), Sinaloa (39), Chiapas (32), "
-                           "Sonora (30), Morelos (30) y Tabasco (27).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True)
-                      ),
-          dbc.Col(
-                   dbc.Container([
-                       html.P(
-                           "En 10 entidades se registraron 68.3% de feminicidios (507)"
-                           " en 2017 : Veracruz (100), Sinaloa (82), México (70), Oaxaca"
-                           " (57), Nuevo León (43), Ciudad de México (37), Sonora (32),"
-                           " Michoacán (29), Chiapas (29) y Tabasco (28).",
-                    className="top")
-                                ], fluid=True)
-                                    )
-                      ,
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                           "En 10 entidades se registraron 63.6% de feminicidios (568)"
-                           " en 2018 : México (115), Veracruz (101), Nuevo León (79), "
-                           "Sinaloa (48), Chihuahua (44), Ciudad de México (43), Tabasco"
-                           " (40), Jalisco (33), Guerrero (33) y Puebla (32).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True)
-                      ),
-          dbc.Col(dbc.Container([
-                       html.P(
-                           "En 10 entidades se registraron 66.4% de feminicidios (627)"
-                           " en 2019 : México (122), Veracruz (104), Ciudad de México "
-                           "(72), Nuevo León (67), Jalisco (62), Puebla (58), Morelos "
-                           "(39), Sonora (37), Sinaloa (37) y Chihuahua (29).",
-                    className="top")
-                                ], fluid=True)
-                      ),
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                           "En 10 entidades se registraron 65.8% de feminicidios (618)"
-                           " en 2020 : México (150), Veracruz (84), Nuevo León (67), "
-                           "Jalisco (66), Ciudad de México (64), Puebla (52), Oaxaca "
-                           "(38), Morelos (35), Sonora (31) y Baja California (31).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True),
-                  
-                      ),
-      ]),
-                
+#      dbc.Row([
+#               dbc.Col(dbc.Container([
+#                       html.P(
+#                           "En 10 entidades se registraron 82.2% de feminicidios (338)"
+#                           " en 2015: Jalisco (62), México (59), Ciudad de México (56),"
+#                           "Veracruz (40), Chiapas (36), Sonora (24), Guanajuato (16),"
+#                           "Coahuila (16), Morelos (15) y Sinaloa (14).",
+#                    className="top",)
+#                                ], fluid=True)
+#                       
+#                      ),
+#        
+#          dbc.Col(dbc.Jumbotron([
+#                   dbc.Container([
+#                       html.P(
+#                           "En 10 entidades se registraron 71.5% de feminicidios (433)"
+#                           " en 2016 : Oaxaca (67), Veracruz (58), México (56), Jalisco"
+#                           "(48), Ciudad de México (46), Sinaloa (39), Chiapas (32), "
+#                           "Sonora (30), Morelos (30) y Tabasco (27).",
+#                    className="top")
+#                                ], fluid=True)
+#                                    ], fluid=True)
+#                      ),
+#          dbc.Col(
+#                   dbc.Container([
+#                       html.P(
+#                           "En 10 entidades se registraron 68.3% de feminicidios (507)"
+#                           " en 2017 : Veracruz (100), Sinaloa (82), México (70), Oaxaca"
+#                           " (57), Nuevo León (43), Ciudad de México (37), Sonora (32),"
+#                           " Michoacán (29), Chiapas (29) y Tabasco (28).",
+#                    className="top")
+#                                ], fluid=True)
+#                                    )
+#                      ,
+#          dbc.Col(dbc.Jumbotron([
+#                   dbc.Container([
+#                       html.P(
+#                           "En 10 entidades se registraron 63.6% de feminicidios (568)"
+#                           " en 2018 : México (115), Veracruz (101), Nuevo León (79), "
+#                           "Sinaloa (48), Chihuahua (44), Ciudad de México (43), Tabasco"
+#                           " (40), Jalisco (33), Guerrero (33) y Puebla (32).",
+#                    className="top")
+#                                ], fluid=True)
+#                                    ], fluid=True)
+#                      ),
+#          dbc.Col(dbc.Container([
+#                       html.P(
+#                           "En 10 entidades se registraron 66.4% de feminicidios (627)"
+#                           " en 2019 : México (122), Veracruz (104), Ciudad de México "
+#                           "(72), Nuevo León (67), Jalisco (62), Puebla (58), Morelos "
+#                           "(39), Sonora (37), Sinaloa (37) y Chihuahua (29).",
+#                    className="top")
+#                                ], fluid=True)
+#                      ),
+#          dbc.Col(dbc.Jumbotron([
+#                   dbc.Container([
+#                       html.P(
+#                           "En 10 entidades se registraron 65.8% de feminicidios (618)"
+#                           " en 2020 : México (150), Veracruz (84), Nuevo León (67), "
+#                           "Jalisco (66), Ciudad de México (64), Puebla (52), Oaxaca "
+#                           "(38), Morelos (35), Sonora (31) y Baja California (31).",
+#                    className="top")
+#                                ], fluid=True)
+#                                    ], fluid=True),
+#                  
+#                      ),
+#      ]),
+#                
     
        html.Br(),
-     dbc.Row(
-           [
-               dbc.Col(html.H1([dbc.Badge((def_tot15), className="ml-1",color="light"),
-                               "  "]),
-                       width={'size': 10,  "offset":1 }),
-            ]),
+#     dbc.Row(
+#           [
+#               dbc.Col(html.H1([dbc.Badge((def_tot15), className="ml-1",color="light"),
+#                               "  "]),
+#                       width={'size': 10,  "offset":1 }),
+#            ]),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
        html.Br(),
    
        
@@ -802,8 +810,13 @@ body = html.Div([
         [
             dbc.Col(dcc.Graph(figure=graf_meses, config= "autosize")),
         ]),
-    html.Br(),
-    html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+    
 ##Cintillo mapas y ranking
 
     #títulos
@@ -814,7 +827,6 @@ body = html.Div([
                        
                         width={'size': 10,  "offset":1 }),
             ]),
-
     html.Br(),
     html.Br(),
     
@@ -908,85 +920,86 @@ body = html.Div([
                       ),
       ]),
 
-############################################  MUNICIPIOS ranking (OPCION  2)
-    dbc.Row([
-               dbc.Col(dbc.Container([
-                       html.P(
-                           "Ecatepec de Morelos (56)"
-                           "Chimalhuacán (35)"
-                           "Nezahualcóyotl (31)"
-                           "Toluca (27)"
-                           "Naucalpan de Juárez (22)"
-                           "Ixtapaluca (22)"
-                           "Zumpango (21)"
-                           "Tecámac (19)"
-                           "Cuautitlán Izcalli (19)"
-                           "Valle de Chalco Solidaridad (16)",
-                    className="top",)
-                                ],)
-                       
-                      ),
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                           "Veracruz (49)"
-                           "Xalapa (42)"
-                           "Coatzacoalcos (25)"
-                           "Córdoba (24)"
-                           "Poza Rica de Hidalgo (17)"
-                           "Tuxpan (13)"
-                           "Papantla (12)"
-                           "Tierra Blanca (11)"
-                           "Minatitlán (11)"
-                           "San Andrés Tuxtla (11)",
-                    className="top")
-                                ], )
-                                    ], )
-                      ),
-          dbc.Col(
-                   dbc.Container([
-                       html.P(
-                           "Iztapalapa (68)"
-                           "Gustavo A. Madero (37)"
-                           "Tlalpan (35)"
-                           "Cuauhtémoc (34)"
-                           "Xochimilco (25)"
-                           "Miguel Hidalgo (19)"
-                           "Álvaro Obregón (17)"
-                           "Tláhuac (16)"
-                           "Coyoacán (14)"
-                           "Venustiano Carranza (14)",
-                    className="top")
-                                ],)
-                                    )
-                      ,
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
-                           "Guadalajara (51)"
-                           "Tlajomulco de Zúñiga (38)"
-                           "Zapopan (34)"
-                           "El Salto (24)"
-                           "Tonalá (17)"
-                           "Puerto Vallarta (10)"
-                           "Ocotlán (6)"
-                           "Tequila (6)"
-                           "Mezquitic (6)"
-                           "Ixtlahuacán de los Membrillos (6)",
-                    className="top")
-                                ], )
-                                    ], )
-                      ),
-      ]),
-  
-    dbc.Row([
-               
-           ]),
+#############################################  MUNICIPIOS ranking (OPCION  2)
+#    dbc.Row([
+#               dbc.Col(dbc.Container([
+#                       html.P(
+#                           "Ecatepec de Morelos (56)"
+#                           "Chimalhuacán (35)"
+#                           "Nezahualcóyotl (31)"
+#                           "Toluca (27)"
+#                           "Naucalpan de Juárez (22)"
+#                           "Ixtapaluca (22)"
+#                           "Zumpango (21)"
+#                           "Tecámac (19)"
+#                           "Cuautitlán Izcalli (19)"
+#                           "Valle de Chalco Solidaridad (16)",
+#                    className="top",)
+#                                ],)
+#                       
+#                      ),
+#          dbc.Col(dbc.Jumbotron([
+#                   dbc.Container([
+#                       html.P(
+#                           "Veracruz (49)"
+#                           "Xalapa (42)"
+#                           "Coatzacoalcos (25)"
+#                           "Córdoba (24)"
+#                           "Poza Rica de Hidalgo (17)"
+#                           "Tuxpan (13)"
+#                           "Papantla (12)"
+#                           "Tierra Blanca (11)"
+#                           "Minatitlán (11)"
+#                           "San Andrés Tuxtla (11)",
+#                    className="top")
+#                                ], )
+#                                    ], )
+#                      ),
+#          dbc.Col(
+#                   dbc.Container([
+#                       html.P(
+#                           "Iztapalapa (68)"
+#                           "Gustavo A. Madero (37)"
+#                           "Tlalpan (35)"
+#                           "Cuauhtémoc (34)"
+#                           "Xochimilco (25)"
+#                           "Miguel Hidalgo (19)"
+#                           "Álvaro Obregón (17)"
+#                           "Tláhuac (16)"
+#                           "Coyoacán (14)"
+#                           "Venustiano Carranza (14)",
+#                    className="top")
+#                                ],)
+#                                    )
+#                      ,
+#          dbc.Col(dbc.Jumbotron([
+#                   dbc.Container([
+#                       html.P(
+#                           "Guadalajara (51)"
+#                           "Tlajomulco de Zúñiga (38)"
+#                           "Zapopan (34)"
+#                           "El Salto (24)"
+#                           "Tonalá (17)"
+#                           "Puerto Vallarta (10)"
+#                           "Ocotlán (6)"
+#                           "Tequila (6)"
+#                           "Mezquitic (6)"
+#                           "Ixtlahuacán de los Membrillos (6)",
+#                    className="top")
+#                                ], )
+#                                    ], )
+#                      ),
+#      ]),
+#  
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
    
     
 # Cintillo 3
- html.Br(),
-    html.Br(),
      
        
 #---------Grafica por entidad
@@ -1019,7 +1032,12 @@ body = html.Div([
         ], justify="end", no_gutters=True,),
 
        html.Br(),
-    html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+    
     dbc.Row(
     [
         dbc.Col(html.H2([dbc.Alert("Perfil de Homicidios femeninos", color="primary",# className="alert-link",
@@ -1262,9 +1280,12 @@ body = html.Div([
     ),
     style={"width": "10rem"},
 ),]),]),
-    html.Br(),
-    
-    
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
 
 # nuevo
     
@@ -1310,7 +1331,12 @@ body = html.Div([
     
         
     
-    
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
     
 
     dbc.Row([
