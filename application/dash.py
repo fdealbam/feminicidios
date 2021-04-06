@@ -1010,7 +1010,8 @@ body = html.Div([
                        width={'size': 10,  "offset":1 }),
             ]),
 
-      html.Br(),
+    html.Br(),
+    html.Br(),
     
     dbc.Row(
            [
@@ -1037,12 +1038,18 @@ body = html.Div([
        html.Br(),
        html.Br(),
        html.Br(),
+       html.Br(),
+       html.Br(),
+       html.Br(),
     
     dbc.Row(
     [
         dbc.Col(html.H2([dbc.Alert("Perfil de Homicidios femeninos", color="primary",# className="alert-link",
                                   className="alert-heading"),
-                        ]),width={'size': 10,  "offset":1 })]),
+                        ]),width={'size': 12,  "offset":0 })]),
+    
+    
+    
       dbc.Row(
            [
                dbc.Col(html.H5("2015")),
@@ -1117,7 +1124,7 @@ body = html.Div([
           
         ]
     ),
-    style={"width": "10rem"},
+    style={"width": "20rem"},
 ),]),
         dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1157,7 +1164,7 @@ body = html.Div([
           
         ]
     ),
-    style={"width": "10rem"},
+    style={"width": "20rem"},
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1198,7 +1205,7 @@ body = html.Div([
              
         ]
     ),
-    style={"width": "10rem"},
+    style={"width": "20rem"},
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1238,7 +1245,7 @@ body = html.Div([
             html.H6([ (esc318_txt),": ", (esc318_val),"%",]),
                         ]
     ),
-    style={"width": "10rem"},
+    style={"width": "20rem"},
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1278,7 +1285,7 @@ body = html.Div([
             html.H6([ (esc319_txt),": ", (esc319_val),"%",]),
                         ]
     ),
-    style={"width": "10rem"},
+    style={"width": "20rem"},
 ),]),]),
        html.Br(),
        html.Br(),
