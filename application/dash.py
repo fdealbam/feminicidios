@@ -33,18 +33,74 @@ d2 = today.strftime("Fecha de actualización : %d-%m-%Y")
 
 defunciones15 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def15_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
+defunciones15.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones15["Variable"]= defunciones15["Variable"].replace("MÃ©xico", "México") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("no especificado", "No especificado") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+
+
 defunciones16 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def16_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
-                    )
+                   )
+defunciones16.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones16["Variable"]= defunciones16["Variable"].replace("MÃ©xico", "México") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("De 30 a 34 aÃ±os", "De 30 a 34 años") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("no especificado", "No especificado") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+
+
 defunciones17 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def17_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
+defunciones17.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones17["Variable"]= defunciones17["Variable"].replace("MÃ©xico", "México") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("no especificado", "No especificado") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("De 30 a 34 aÃ±os", "De 30 a 34 años") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+
+
+
 defunciones18 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def18_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
+defunciones18.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones18["Variable"]= defunciones18["Variable"].replace("MÃ©xico", "México") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("no especificado", "No especificado") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("De 30 a 34 aÃ±os", "De 30 a 34 años") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+
 defunciones19 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def19_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
+defunciones19.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones19["Variable"]= defunciones19["Variable"].replace("MÃ©xico", "México") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("no especificado", "No especificado") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("De 30 a 34 aÃ±os", "De 30 a 34 años") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+
+
+
 #defunciones20 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def20_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
 #                    )
+
 def_tot15 =defunciones15.iloc[0]['Valor']
-def15_tot =defunciones15.iloc[0]['Valor']
+def15_tot = defunciones15.iloc[0]['Valor']
 agr15_val = defunciones15.iloc[29]['Valor']
 agr15_txt = defunciones15.iloc[29]['Variable']
 agr215_val  = defunciones15.iloc[30]['Valor']
@@ -180,6 +236,7 @@ esc218_txt  = defunciones18.iloc[7]['Variable']
 esc318_val  = defunciones18.iloc[8]['Valor']
 esc318_txt  = defunciones18.iloc[8]['Variable']
 
+
 def19_tot   = defunciones19.iloc[0]['Valor']
 agr19_val   = defunciones19.iloc[29]['Valor']
 agr19_txt   = defunciones19.iloc[29]['Variable']
@@ -226,6 +283,7 @@ delitos.groupby(['Año','Entidad','Tipo de delito'])['Enero',
 
 fem= pd.read_csv("00.csv")
 
+
 ############################################### separación de años
 
 year15= fem[fem.Año == 2015]
@@ -265,7 +323,6 @@ y20.rename(columns ={'Año20': 'Año', 'Tipo de delito20': 'Tipo de delito','Unn
 y21= year21.add_suffix('21')
 y21.rename(columns ={'Año21': 'Año', 'Tipo de delito21': 'Tipo de delito','Unnamed: 021' : 'Unnamed: 0',
                             'Entidad21': 'Entidad'}, inplace = True)
-
 
 
 ############################################### Concat todos los años
@@ -1048,9 +1105,8 @@ body = html.Div([
                                   className="alert-heading"),
                         ]),width={'size': 12,  "offset":0 })]),
     
-    
-    
-      dbc.Row(
+
+    dbc.Row(
            [
                dbc.Col(html.H5("2015")),
                dbc.Col(html.H5("2016")),
@@ -1065,8 +1121,9 @@ body = html.Div([
       
      dbc.Row(
            [
+               #dbc.Col(html.H3([str(f"{conf_2015:,d}")])),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((def15_tot),className="mb-0",color="light",),]),),
+                                dbc.Badge((def15_tot), className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
                                 dbc.Badge((def16_tot),className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
@@ -1107,7 +1164,7 @@ body = html.Div([
             html.Code("Área urbana "),
             html.H6([ (aurb15_txt),": ", (aurb15_val),"%",]),
             html.Hr(),
-            html.H4("Perfil de la victima ", className="card-title"), 
+            html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
             html.Code("Grupos de edad con mayor incidencia"),
             html.H6([ (eda115_txt),": ", (eda115_val),"%",]),
@@ -1148,7 +1205,7 @@ body = html.Div([
             html.Code("Área urbana "),
             html.H6([ (aurb16_txt),": ", (aurb16_val),"%",]),
             html.Hr(),
-            html.H4("Perfil de la victima ", className="card-title"), 
+            html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
             html.Code("Grupos de edad con mayor incidencia"),
             html.H6([ (eda116_txt),": ", (eda116_val),"%",]),
@@ -1189,7 +1246,7 @@ body = html.Div([
             html.Code("Área urbana "),
             html.H6([ (aurb17_txt),": ", (aurb17_val),"%",]),
             html.Hr(),
-            html.H4("Perfil de la victima ", className="card-title"), 
+            html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
             html.Code("Grupos de edad con mayor incidencia"),
             html.H6([ (eda117_txt),": ", (eda117_val),"%",]),
@@ -1230,7 +1287,7 @@ body = html.Div([
             html.Code("Área urbana "),
             html.H6([ (aurb18_txt),": ", (aurb18_val),"%",]),
             html.Hr(),
-            html.H4("Perfil de la victima ", className="card-title"), 
+            html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
             html.Code("Grupos de edad con mayor incidencia"),
             html.H6([ (eda118_txt),": ", (eda118_val),"%",]),
@@ -1270,7 +1327,7 @@ body = html.Div([
             html.Code("Área urbana "),
             html.H6([ (aurb19_txt),": ", (aurb19_val),"%",]),
             html.Hr(),
-            html.H4("Perfil de la victima ", className="card-title"), 
+            html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
             html.Code("Grupos de edad con mayor incidencia"),
             html.H6([ (eda119_txt),": ", (eda119_val),"%",]),
