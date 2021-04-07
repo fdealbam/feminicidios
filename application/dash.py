@@ -934,7 +934,7 @@ body = html.Div([
     dbc.Row([
                dbc.Col(dbc.Container([
                        html.P(
-                           "Los 10 Municipios con mayor número de casos de feminicidios son:"
+                           "Los 10 municipios con mayor número de casos de feminicidios son:"
                            " Ecatepec de Morelos (56), Chimalhuacán (35), Nezahualcóyotl (31)"
                            ", Toluca (27), Naucalpan de Juárez (22), Ixtapaluca (22), Zumpango"
                            "(21), Tecámac (19), Cuautitlán Izcalli (19), y Valle de Chalco"
@@ -946,7 +946,7 @@ body = html.Div([
           dbc.Col(dbc.Jumbotron([
                    dbc.Container([
                        html.P(
-                           "Los 10 Municipios con mayor número de casos de feminicidios son:"
+                           "Los 10 municipios con mayor número de casos de feminicidios son:"
                            " Veracruz (49), Xalapa (42), Coatzacoalcos (25), Córdoba (24), "
                            "Poza Rica de Hidalgo (17), Tuxpan (13), Papantla (12), Tierra "
                            "Blanca (11), Minatitlán (11), y San Andrés Tuxtla (11).",
@@ -957,7 +957,7 @@ body = html.Div([
           dbc.Col(
                    dbc.Container([
                        html.P(
-                           "Los 10 Municipios con mayor número de casos de feminicidios son:"
+                           "Las 10 alcaldías con mayor número de casos de feminicidios son:"
                            " Iztapalapa (68), Gustavo A. Madero (37), Tlalpan (35), Cuauhtémoc"
                            "(34), Xochimilco (25), Miguel Hidalgo (19), Álvaro Obregón (17),"
                            " Tláhuac (16), Coyoacán (14), y Venustiano Carranza (14).",
@@ -968,7 +968,7 @@ body = html.Div([
           dbc.Col(dbc.Jumbotron([
                    dbc.Container([
                        html.P(
-                           "Los 10 Municipios con mayor número de casos de feminicidios son:"
+                           "Los 10 municipios con mayor número de casos de feminicidios son:"
                            " Guadalajara (51), Tlajomulco de Zúñiga (38), Zapopan (34), "
                            "El Salto (24), Tonalá (17), Puerto Vallarta (10), Ocotlán (6),"
                            " Tequila (6), Mezquitic (6), y Ixtlahuacán de los Membrillos (6).",
@@ -1429,10 +1429,8 @@ body = html.Div([
 
 app.layout = html.Div([body])
 
-#from application.dash import app
-#from settings import config
+from application.dash import app
+from settings import config
 
 if __name__ == "__main__":
     app.run_server()
-
-
