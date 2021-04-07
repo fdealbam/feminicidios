@@ -1,5 +1,4 @@
 
-
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -1372,16 +1371,16 @@ body = html.Div([
                     "Los feminicidios son un problema aún irresuelto y son tema central de la " 
                     "agenda de seguridad nacional. Su gravedad se observa "
                     "en los registros anuales y registros mensuales, que se presentan al "
-                    "inicio de esta visualización."
-                    "Existe mayor atención institucional al fenómeno y fuerte preocupación de la sociedad, " 
-                    "lo que se evidencia en el hecho que todos seamos más vigilantes al respecto. "
+                    "inicio de esta visualización. Además, completamos este análisis con "
+                    "un perfil de homicidios femeninos según año."
+                    "Existe cada vez mayor atención institucional al fenómeno y fuerte preocupación de la sociedad, " 
+                    "esto último se evidencia en el hecho que todos seamos más vigilantes al respecto. "
                     "No obstante, aún hace falta más acción social, sobretodo, más intervención institucional "
                     "para diseñar estrategias efectivas de prevención y promover su denuncia. Es imperante "
                     "acabar con esta violencia de género. "
                     "El presente dashboard (tablero de datos) es un ejercicio institucional con el objeto de "
-                    "informar a la sociedad. La información proviene del Secretariado Ejecutivo Nacional del Sistema Nacional de "
-                    "Seguridad Pública (SENSNSP). El lector debe ser advertido que el período cubierto "
-                    "es del mes de enero de 2015 hasta el mes de enero del 2021. "
+                    "informar a la sociedad. La información proviene, primero, del Secretariado Ejecutivo Nacional del Sistema Nacional de "
+                    "Seguridad Pública (SENSNSP) (2015-2021); segundo, de la Secretaría de Salud y su base de datos sobre defunciones anuales (2015-2019). "
                     "Ademas, esta dashboard seguramente puede ser completado con otras fuentes de información "
                     "gubernamental y por toda aquella información proveniente de organizaciones civiles que " 
                     "dan seguimiento al tema. En ningún caso, este contenido representa algún "
@@ -1394,7 +1393,9 @@ body = html.Div([
                     "Esta información fue tratada con el lenguaje de programación Python y varias de las librerías "
                     "más comunes (Dash, Choropleth, Pandas, Numpy, Geopandas, etc.), que nos ayudan a automatizar "
                     "la recurrencia (request) a la fuente de información y las operaciones necesarias para creargraficas "
-                    "interactivas y mapas presentados. ",
+                    "interactivas y mapas presentados. El volumen de información fue de 230 megabytes de la base de datos "
+                    "del SENSNSP y 2.4 gigabytes de la base de datos de defunciones, provista por la Secretaría de Salud, "
+                    "Dirección General de Información de Salud. ",
                     className="lead"),
                     
             ], fluid=True,
@@ -1428,8 +1429,10 @@ body = html.Div([
 
 app.layout = html.Div([body])
 
-from application.dash import app
-from settings import config
+#from application.dash import app
+#from settings import config
 
 if __name__ == "__main__":
     app.run_server()
+
+
