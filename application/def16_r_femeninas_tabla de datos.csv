@@ -1,0 +1,40 @@
+,Variable,Valor
+0,Total anual,5626
+1,Entidad,Entidad_%
+2,México,15.0
+3,Guerrero,8.8
+4,Chihuahua,6.0
+5,Ciudad de México,5.2
+6,Veracruz de Ignacio de la Llave,5.0
+7,Escolaridad,Escolaridad_%
+8,Secundaria completa,21.5
+9,Primaria completa,16.4
+10,No especificado,12.2
+11,Lugar,Lugar_%
+12,Vía pública,48.5
+13,Hogar,24.0
+14,Embarazo,Embarazo_%
+15,"Si, o en fase posterior",2.6
+16,No,22.0
+17,No especificado ,59.5
+18,Area Urbana,Area Urbana_%
+19,Urbano,75.8
+20,Violencia Familiar,Violencia Familiar_%
+21,Violencia familiar o de fuera,5.2
+22,No especificado,94.8
+23,Edad Agrupada,Edad Agrupada_%
+24,De 20 a 39 años,38.9
+25,De 40 a 55 años,19.6
+26,De 35 a 39 años,9.9
+27,Ocupación,Ocupación_%
+28,No trabaja,47.8
+29,Ocupaciones insuficientemente especificadas,14.4
+30,Ocupación no especificada,11.5
+31,Parentesco c/agresor,Parentesco c/agresor_%
+32,No especificado,94.8
+33,Familia nuclear,3.1
+34,Ninguno,1.5
+35,Estado Civil,Civil_%
+36,Soltera,36.6
+37,Casada,20.1
+38,Unión libre,18.0
