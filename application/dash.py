@@ -1,5 +1,4 @@
 
-
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -36,6 +35,8 @@ d2 = today.strftime("Fecha de actualización : %d-%m-%Y")
 defunciones15 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def15_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
 defunciones15.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones15["Variable"]= defunciones15["Variable"].replace("Ciudad de MÃ©xico", "Ciudad de México") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("Veracruz de Ignacio de la Llave", "Veracruz") #####################CDMX 
 defunciones15["Variable"]= defunciones15["Variable"].replace("MÃ©xico", "México") #####################CDMX 
 defunciones15["Variable"]= defunciones15["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
 defunciones15["Variable"]= defunciones15["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
@@ -49,6 +50,8 @@ defunciones15["Variable"]= defunciones15["Variable"].replace("UniÃ³n libre", "
 defunciones16 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def16_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                    )
 defunciones16.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones16["Variable"]= defunciones16["Variable"].replace("Ciudad de MÃ©xico", "Ciudad de México") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("Veracruz de Ignacio de la Llave", "Veracruz") #####################CDMX 
 defunciones16["Variable"]= defunciones16["Variable"].replace("MÃ©xico", "México") #####################CDMX 
 defunciones16["Variable"]= defunciones16["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
 defunciones16["Variable"]= defunciones16["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
@@ -65,6 +68,8 @@ defunciones16["Variable"]= defunciones16["Variable"].replace("UniÃ³n libre", "
 defunciones17 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def17_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
 defunciones17.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones17["Variable"]= defunciones17["Variable"].replace("Ciudad de MÃ©xico", "Ciudad de México") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("Veracruz de Ignacio de la Llave", "Veracruz") #####################CDMX 
 defunciones17["Variable"]= defunciones17["Variable"].replace("MÃ©xico", "México") #####################CDMX 
 defunciones17["Variable"]= defunciones17["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
 defunciones17["Variable"]= defunciones17["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
@@ -80,6 +85,8 @@ defunciones17["Variable"]= defunciones17["Variable"].replace("UniÃ³n libre", "
 defunciones18 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def18_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
 defunciones18.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones18["Variable"]= defunciones18["Variable"].replace("Ciudad de MÃ©xico", "Ciudad de México") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("Veracruz de Ignacio de la Llave", "Veracruz") #####################CDMX 
 defunciones18["Variable"]= defunciones18["Variable"].replace("MÃ©xico", "México") #####################CDMX 
 defunciones18["Variable"]= defunciones18["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
 defunciones18["Variable"]= defunciones18["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
@@ -94,6 +101,8 @@ defunciones18["Variable"]= defunciones18["Variable"].replace("UniÃ³n libre", "
 defunciones19 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def19_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
 defunciones19.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones19["Variable"]= defunciones19["Variable"].replace("Ciudad de MÃ©xico", "Ciudad de México") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("Veracruz de Ignacio de la Llave", "Veracruz") #####################CDMX 
 defunciones19["Variable"]= defunciones19["Variable"].replace("MÃ©xico", "México") #####################CDMX 
 defunciones19["Variable"]= defunciones19["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
 defunciones19["Variable"]= defunciones19["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
@@ -139,7 +148,7 @@ ent315_val = defunciones15.iloc[4]['Valor']
 ent315_txt = defunciones15.iloc[4]['Variable']
 ent415_val = defunciones15.iloc[5]['Valor']
 ent415_txt = defunciones15.iloc[5]['Variable']
-ent515_txt = defunciones15.iloc[6]['Variable']
+ent515_val = defunciones15.iloc[6]['Valor']
 ent515_txt = defunciones15.iloc[6]['Variable']
 
 eda115_val = defunciones15.iloc[24]['Valor']
@@ -203,7 +212,7 @@ ent316_val = defunciones16.iloc[4]['Valor']
 ent316_txt = defunciones16.iloc[4]['Variable']
 ent416_val = defunciones16.iloc[5]['Valor']
 ent416_txt = defunciones16.iloc[5]['Variable']
-ent516_txt = defunciones16.iloc[6]['Variable']
+ent516_val = defunciones16.iloc[6]['Valor']
 ent516_txt = defunciones16.iloc[6]['Variable']
 
 eda116_val = defunciones16.iloc[24]['Valor']
@@ -266,7 +275,7 @@ ent317_val = defunciones17.iloc[4]['Valor']
 ent317_txt = defunciones17.iloc[4]['Variable']
 ent417_val = defunciones17.iloc[5]['Valor']
 ent417_txt = defunciones17.iloc[5]['Variable']
-ent517_txt = defunciones17.iloc[6]['Variable']
+ent517_val = defunciones17.iloc[6]['Valor']
 ent517_txt = defunciones17.iloc[6]['Variable']
 
 eda117_val = defunciones17.iloc[24]['Valor']
@@ -328,7 +337,7 @@ ent318_val = defunciones18.iloc[4]['Valor']
 ent318_txt = defunciones18.iloc[4]['Variable']
 ent418_val = defunciones18.iloc[5]['Valor']
 ent418_txt = defunciones18.iloc[5]['Variable']
-ent518_txt = defunciones18.iloc[6]['Variable']
+ent518_val = defunciones18.iloc[6]['Valor']
 ent518_txt = defunciones18.iloc[6]['Variable']
 
 eda118_val = defunciones18.iloc[24]['Valor']
@@ -390,7 +399,7 @@ ent319_val = defunciones19.iloc[4]['Valor']
 ent319_txt = defunciones19.iloc[4]['Variable']
 ent419_val = defunciones19.iloc[5]['Valor']
 ent419_txt = defunciones19.iloc[5]['Variable']
-ent519_txt = defunciones19.iloc[6]['Variable']
+ent519_val = defunciones19.iloc[6]['Valor']
 ent519_txt = defunciones19.iloc[6]['Variable']
 
 eda119_val = defunciones19.iloc[24]['Valor']
@@ -1252,6 +1261,8 @@ body = html.Div([
             html.H6([ (ent115_txt),": ", (ent115_val),"%",]),
             html.H6([ (ent215_txt),": ", (ent215_val),"%",]),
             html.H6([ (ent315_txt),": ", (ent315_val),"%",]),
+            html.H6([ (ent415_txt),": ", (ent415_val),"%",]),
+            html.H6([ (ent515_txt),": ", (ent515_val),"%",]),                
             html.Code("Área urbana "),
             html.H6([ (aurb15_txt),": ", (aurb15_val),"%",]),
             html.Hr(),
@@ -1299,6 +1310,8 @@ body = html.Div([
             html.H6([ (ent116_txt),": ", (ent116_val),"%",]),
             html.H6([ (ent216_txt),": ", (ent216_val),"%",]),
             html.H6([ (ent316_txt),": ", (ent316_val),"%",]),
+            html.H6([ (ent416_txt),": ", (ent416_val),"%",]),
+            html.H6([ (ent516_txt),": ", (ent516_val),"%",]),                
             html.Code("Área urbana "),
             html.H6([ (aurb16_txt),": ", (aurb16_val),"%",]),
             html.Hr(),
@@ -1346,6 +1359,8 @@ body = html.Div([
             html.H6([ (ent117_txt),": ", (ent117_val),"%",]),
             html.H6([ (ent217_txt),": ", (ent217_val),"%",]),
             html.H6([ (ent317_txt),": ", (ent317_val),"%",]),
+            html.H6([ (ent417_txt),": ", (ent417_val),"%",]),
+            html.H6([ (ent517_txt),": ", (ent517_val),"%",]),                
             html.Code("Área urbana "),
             html.H6([ (aurb17_txt),": ", (aurb17_val),"%",]),
             html.Hr(),
@@ -1395,6 +1410,8 @@ body = html.Div([
             html.H6([ (ent118_txt),": ", (ent118_val),"%",]),
             html.H6([ (ent218_txt),": ", (ent218_val),"%",]),
             html.H6([ (ent318_txt),": ", (ent318_val),"%",]),
+            html.H6([ (ent418_txt),": ", (ent418_val),"%",]),
+            html.H6([ (ent518_txt),": ", (ent518_val),"%",]),
             html.Code("Área urbana "),
             html.H6([ (aurb18_txt),": ", (aurb18_val),"%",]),
             html.Hr(),
@@ -1441,6 +1458,8 @@ body = html.Div([
             html.H6([ (ent119_txt),": ", (ent119_val),"%",]),
             html.H6([ (ent219_txt),": ", (ent219_val),"%",]),
             html.H6([ (ent319_txt),": ", (ent319_val),"%",]),
+            html.H6([ (ent419_txt),": ", (ent419_val),"%",]),
+            html.H6([ (ent519_txt),": ", (ent519_val),"%",]),                
             html.Code("Área urbana "),
             html.H6([ (aurb19_txt),": ", (aurb19_val),"%",]),
             html.Hr(),
