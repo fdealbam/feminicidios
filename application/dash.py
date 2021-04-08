@@ -36,38 +36,43 @@ defunciones15 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminici
                     )
 defunciones15.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
 defunciones15["Variable"]= defunciones15["Variable"].replace("MÃ©xico", "México") #####################CDMX 
-defunciones15["Variable"]= defunciones15["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
-defunciones15["Variable"]= defunciones15["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
-defunciones15["Variable"]= defunciones15["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
-defunciones15["Variable"]= defunciones15["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("De 20 a 39 aÃ±os", "De 20 a 39 años") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("De 40 a 55 aÃ±os", "De 40 a 55 años") #####################CDMX 
 defunciones15["Variable"]= defunciones15["Variable"].replace("no especificado", "No especificado") #####################CDMX 
 defunciones15["Variable"]= defunciones15["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+defunciones15["Variable"]= defunciones15["Variable"].replace("UniÃ³n libre", "Unión libre") #####################CDMX 
 
 
 defunciones16 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def16_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                    )
 defunciones16.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
 defunciones16["Variable"]= defunciones16["Variable"].replace("MÃ©xico", "México") #####################CDMX 
-defunciones16["Variable"]= defunciones16["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
-defunciones16["Variable"]= defunciones16["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
-defunciones16["Variable"]= defunciones16["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
-defunciones16["Variable"]= defunciones16["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
-defunciones16["Variable"]= defunciones16["Variable"].replace("De 30 a 34 aÃ±os", "De 30 a 34 años") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("De 20 a 39 aÃ±os", "De 20 a 39 años") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("De 40 a 55 aÃ±os", "De 40 a 55 años") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("De 55 a 74 aÃ±os", "De 55 a 74 años") #####################CDMX 
 defunciones16["Variable"]= defunciones16["Variable"].replace("no especificado", "No especificado") #####################CDMX 
 defunciones16["Variable"]= defunciones16["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+defunciones16["Variable"]= defunciones16["Variable"].replace("UniÃ³n libre", "Unión libre") #####################CDMX 
+
+
 
 
 defunciones17 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def17_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
 defunciones17.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
 defunciones17["Variable"]= defunciones17["Variable"].replace("MÃ©xico", "México") #####################CDMX 
-defunciones17["Variable"]= defunciones17["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
-defunciones17["Variable"]= defunciones17["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
-defunciones17["Variable"]= defunciones17["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
-defunciones17["Variable"]= defunciones17["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("De 20 a 39 aÃ±os", "De 20 a 39 años") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("De 40 a 55 aÃ±os", "De 40 a 55 años") #####################CDMX 
 defunciones17["Variable"]= defunciones17["Variable"].replace("no especificado", "No especificado") #####################CDMX 
 defunciones17["Variable"]= defunciones17["Variable"].replace("De 30 a 34 aÃ±os", "De 30 a 34 años") #####################CDMX 
 defunciones17["Variable"]= defunciones17["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+defunciones17["Variable"]= defunciones17["Variable"].replace("UniÃ³n libre", "Unión libre") #####################CDMX 
 
 
 
@@ -75,206 +80,350 @@ defunciones18 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminici
                     )
 defunciones18.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
 defunciones18["Variable"]= defunciones18["Variable"].replace("MÃ©xico", "México") #####################CDMX 
-defunciones18["Variable"]= defunciones18["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
-defunciones18["Variable"]= defunciones18["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
-defunciones18["Variable"]= defunciones18["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
-defunciones18["Variable"]= defunciones18["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("De 20 a 39 aÃ±os", "De 20 a 39 años") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("De 40 a 55 aÃ±os", "De 40 a 55 años") #####################CDMX 
 defunciones18["Variable"]= defunciones18["Variable"].replace("no especificado", "No especificado") #####################CDMX 
 defunciones18["Variable"]= defunciones18["Variable"].replace("De 30 a 34 aÃ±os", "De 30 a 34 años") #####################CDMX 
 defunciones18["Variable"]= defunciones18["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+defunciones18["Variable"]= defunciones18["Variable"].replace("UniÃ³n libre", "Unión libre") #####################CDMX 
+
 
 defunciones19 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def19_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
                     )
 defunciones19.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
 defunciones19["Variable"]= defunciones19["Variable"].replace("MÃ©xico", "México") #####################CDMX 
-defunciones19["Variable"]= defunciones19["Variable"].replace("via pÃºblica", "Vía pública") #####################CDMX 
-defunciones19["Variable"]= defunciones19["Variable"].replace("De 25 a 29 aÃ±os", "De 25 a 29 años") #####################CDMX 
-defunciones19["Variable"]= defunciones19["Variable"].replace("De 20 a 24 aÃ±os", "De 20 a 24 años") #####################CDMX 
-defunciones19["Variable"]= defunciones19["Variable"].replace("De 35 a 39 aÃ±os", "De 35 a 39 años") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("De 20 a 39 aÃ±os", "De 20 a 39 años") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("De 40 a 55 aÃ±os", "De 40 a 55 años") #####################CDMX 
 defunciones19["Variable"]= defunciones19["Variable"].replace("no especificado", "No especificado") #####################CDMX 
 defunciones19["Variable"]= defunciones19["Variable"].replace("De 30 a 34 aÃ±os", "De 30 a 34 años") #####################CDMX 
 defunciones19["Variable"]= defunciones19["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+defunciones19["Variable"]= defunciones19["Variable"].replace("UniÃ³n libre", "Unión libre") #####################CDMX 
 
 
 
 #defunciones20 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def20_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
 #                    )
-
+# 2015_______________________________________________________<<<
 def_tot15 =defunciones15.iloc[0]['Valor']
 def15_tot = defunciones15.iloc[0]['Valor']
-agr15_val = defunciones15.iloc[29]['Valor']
-agr15_txt = defunciones15.iloc[29]['Variable']
-agr215_val  = defunciones15.iloc[30]['Valor']
-agr215_txt  = defunciones15.iloc[30]['Variable']
-viofm15_val = defunciones15.iloc[19]['Valor']
-viofm15_txt = defunciones15.iloc[19]['Variable']
-lug115_val = defunciones15.iloc[10]['Valor']
-lug115_txt = defunciones15.iloc[10]['Variable']
-lug215_val = defunciones15.iloc[11]['Valor']
-lug215_txt = defunciones15.iloc[11]['Variable']
-aurb15_val = defunciones15.iloc[17]['Valor']
-aurb15_txt = defunciones15.iloc[17]['Variable']
+agr15_val = defunciones15.iloc[32]['Valor']
+agr15_txt = defunciones15.iloc[32]['Variable']
+agr215_val  = defunciones15.iloc[33]['Valor']
+agr215_txt  = defunciones15.iloc[33]['Variable']
+agr315_val  = defunciones15.iloc[34]['Valor']
+agr315_txt  = defunciones15.iloc[34]['Variable']
+
+viofm115_val = defunciones15.iloc[21]['Valor']
+viofm115_txt = defunciones15.iloc[21]['Variable']
+viofm215_val = defunciones15.iloc[22]['Valor']
+viofm215_txt = defunciones15.iloc[22]['Variable']
+
+lug115_val = defunciones15.iloc[12]['Valor']
+lug115_txt = defunciones15.iloc[12]['Variable']
+lug215_val = defunciones15.iloc[13]['Valor']
+lug215_txt = defunciones15.iloc[13]['Variable']
+
+aurb15_val = defunciones15.iloc[19]['Valor']
+aurb15_txt = defunciones15.iloc[19]['Variable']
+
 ent115_val = defunciones15.iloc[2]['Valor']
 ent115_txt = defunciones15.iloc[2]['Variable']
 ent215_val = defunciones15.iloc[3]['Valor']
 ent215_txt = defunciones15.iloc[3]['Variable']
 ent315_val = defunciones15.iloc[4]['Valor']
 ent315_txt = defunciones15.iloc[4]['Variable']
-eda115_val = defunciones15.iloc[21]['Valor']
-eda115_txt = defunciones15.iloc[21]['Variable']
-eda215_val = defunciones15.iloc[22]['Valor']
-eda215_txt = defunciones15.iloc[22]['Variable']
-eda315_val = defunciones15.iloc[23]['Valor']
-eda315_txt = defunciones15.iloc[23]['Variable']
-emba15_val = defunciones15.iloc[14]['Valor']
-emba15_txt = defunciones15.iloc[14]['Variable']
-esc115_val = defunciones15.iloc[6]['Valor']
-esc115_txt = defunciones15.iloc[6]['Variable']
-esc215_val = defunciones15.iloc[7]['Valor']
-esc215_txt = defunciones15.iloc[7]['Variable']
-esc315_val = defunciones15.iloc[8]['Valor']
-esc315_txt = defunciones15.iloc[8]['Variable']
+ent415_val = defunciones15.iloc[5]['Valor']
+ent415_txt = defunciones15.iloc[5]['Variable']
+ent515_txt = defunciones15.iloc[6]['Variable']
+ent515_txt = defunciones15.iloc[6]['Variable']
 
-def16_tot   = defunciones16.iloc[0]['Valor']
-agr16_val   = defunciones16.iloc[29]['Valor']
-agr16_txt   = defunciones16.iloc[29]['Variable']
-agr216_val  = defunciones16.iloc[30]['Valor']
-agr216_txt  = defunciones16.iloc[30]['Variable']
-viofm16_val = defunciones16.iloc[19]['Valor']
-viofm16_txt = defunciones16.iloc[19]['Variable']
-lug116_val  = defunciones16.iloc[10]['Valor']
-lug116_txt  = defunciones16.iloc[10]['Variable']
-lug216_val  = defunciones16.iloc[11]['Valor']
-lug216_txt  = defunciones16.iloc[11]['Variable']
-aurb16_val  = defunciones16.iloc[17]['Valor']
-aurb16_txt  = defunciones16.iloc[17]['Variable']
-ent116_val  = defunciones16.iloc[2]['Valor']
-ent116_txt  = defunciones16.iloc[2]['Variable']
-ent216_val  = defunciones16.iloc[3]['Valor']
-ent216_txt  = defunciones16.iloc[3]['Variable']
-ent316_val  = defunciones16.iloc[4]['Valor']
-ent316_txt  = defunciones16.iloc[4]['Variable']
-eda116_val  = defunciones16.iloc[21]['Valor']
-eda116_txt  = defunciones16.iloc[21]['Variable']
-eda216_val  = defunciones16.iloc[22]['Valor']
-eda216_txt  = defunciones16.iloc[22]['Variable']
-eda316_val  = defunciones16.iloc[23]['Valor']
-eda316_txt  = defunciones16.iloc[23]['Variable']
-emba16_val  = defunciones16.iloc[14]['Valor']
-emba16_txt  = defunciones16.iloc[14]['Variable']
-esc116_val  = defunciones16.iloc[6]['Valor']
-esc116_txt  = defunciones16.iloc[6]['Variable']
-esc216_val  = defunciones16.iloc[7]['Valor']
-esc216_txt  = defunciones16.iloc[7]['Variable']
-esc316_val  = defunciones16.iloc[8]['Valor']
-esc316_txt  = defunciones16.iloc[8]['Variable']
+eda115_val = defunciones15.iloc[24]['Valor']
+eda115_txt = defunciones15.iloc[24]['Variable']
+eda215_val = defunciones15.iloc[25]['Valor']
+eda215_txt = defunciones15.iloc[25]['Variable']
+eda315_val = defunciones15.iloc[26]['Valor']
+eda315_txt = defunciones15.iloc[26]['Variable']
 
-def17_tot   = defunciones17.iloc[0]['Valor']
-agr17_val   = defunciones17.iloc[29]['Valor']
-agr17_txt   = defunciones17.iloc[29]['Variable']
-agr217_val  = defunciones17.iloc[30]['Valor']
-agr217_txt  = defunciones17.iloc[30]['Variable']
-viofm17_val = defunciones17.iloc[19]['Valor']
-viofm17_txt = defunciones17.iloc[19]['Variable']
-lug117_val  = defunciones17.iloc[10]['Valor']
-lug117_txt  = defunciones17.iloc[10]['Variable']
-lug217_val  = defunciones17.iloc[11]['Valor']
-lug217_txt  = defunciones17.iloc[11]['Variable']
-aurb17_val  = defunciones17.iloc[17]['Valor']
-aurb17_txt  = defunciones17.iloc[17]['Variable']
-ent117_val  = defunciones17.iloc[2]['Valor']
-ent117_txt  = defunciones17.iloc[2]['Variable']
-ent217_val  = defunciones17.iloc[3]['Valor']
-ent217_txt  = defunciones17.iloc[3]['Variable']
-ent317_val  = defunciones17.iloc[4]['Valor']
-ent317_txt  = defunciones17.iloc[4]['Variable']
-eda117_val  = defunciones17.iloc[21]['Valor']
-eda117_txt  = defunciones17.iloc[21]['Variable']
-eda217_val  = defunciones17.iloc[22]['Valor']
-eda217_txt  = defunciones17.iloc[22]['Variable']
-eda317_val  = defunciones17.iloc[23]['Valor']
-eda317_txt  = defunciones17.iloc[23]['Variable']
-emba17_val  = defunciones17.iloc[14]['Valor']
-emba17_txt  = defunciones17.iloc[14]['Variable']
-esc117_val  = defunciones17.iloc[6]['Valor']
-esc117_txt  = defunciones17.iloc[6]['Variable']
-esc217_val  = defunciones17.iloc[7]['Valor']
-esc217_txt  = defunciones17.iloc[7]['Variable']
-esc317_val  = defunciones17.iloc[8]['Valor']
-esc317_txt  = defunciones17.iloc[8]['Variable']
+emba115_val = defunciones15.iloc[15]['Valor']
+emba115_txt = defunciones15.iloc[15]['Variable']
+emba215_val = defunciones15.iloc[16]['Valor']
+emba215_txt = defunciones15.iloc[16]['Variable']
+emba315_val = defunciones15.iloc[17]['Valor']
+emba315_txt = defunciones15.iloc[17]['Variable']
 
-def18_tot   = defunciones18.iloc[0]['Valor']
-agr18_val   = defunciones18.iloc[29]['Valor']
-agr18_txt   = defunciones18.iloc[29]['Variable']
-agr218_val  = defunciones18.iloc[30]['Valor']
-agr218_txt  = defunciones18.iloc[30]['Variable']
-viofm18_val = defunciones18.iloc[19]['Valor']
-viofm18_txt = defunciones18.iloc[19]['Variable']
-lug118_val  = defunciones18.iloc[10]['Valor']
-lug118_txt  = defunciones18.iloc[10]['Variable']
-lug218_val  = defunciones18.iloc[11]['Valor']
-lug218_txt  = defunciones18.iloc[11]['Variable']
-aurb18_val  = defunciones18.iloc[17]['Valor']
-aurb18_txt  = defunciones18.iloc[17]['Variable']
-ent118_val  = defunciones18.iloc[2]['Valor']
-ent118_txt  = defunciones18.iloc[2]['Variable']
-ent218_val  = defunciones18.iloc[3]['Valor']
-ent218_txt  = defunciones18.iloc[3]['Variable']
-ent318_val  = defunciones18.iloc[4]['Valor']
-ent318_txt  = defunciones18.iloc[4]['Variable']
-eda118_val  = defunciones18.iloc[21]['Valor']
-eda118_txt  = defunciones18.iloc[21]['Variable']
-eda218_val  = defunciones18.iloc[22]['Valor']
-eda218_txt  = defunciones18.iloc[22]['Variable']
-eda318_val  = defunciones18.iloc[23]['Valor']
-eda318_txt  = defunciones18.iloc[23]['Variable']
-emba18_val  = defunciones18.iloc[14]['Valor']
-emba18_txt  = defunciones18.iloc[14]['Variable']
-esc118_val  = defunciones18.iloc[6]['Valor']
-esc118_txt  = defunciones18.iloc[6]['Variable']
-esc218_val  = defunciones18.iloc[7]['Valor']
-esc218_txt  = defunciones18.iloc[7]['Variable']
-esc318_val  = defunciones18.iloc[8]['Valor']
-esc318_txt  = defunciones18.iloc[8]['Variable']
+esc115_val = defunciones15.iloc[8]['Valor']
+esc115_txt = defunciones15.iloc[8]['Variable']
+esc215_val = defunciones15.iloc[9]['Valor']
+esc215_txt = defunciones15.iloc[9]['Variable']
+esc315_val = defunciones15.iloc[10]['Valor']
+esc315_txt = defunciones15.iloc[10]['Variable']
+
+civl115_val = defunciones15.iloc[36]['Valor']
+civl115_txt = defunciones15.iloc[36]['Variable']
+civl215_val = defunciones15.iloc[37]['Valor']
+civl215_txt = defunciones15.iloc[37]['Variable']
+civl315_val = defunciones15.iloc[38]['Valor']
+civl315_txt = defunciones15.iloc[38]['Variable']
 
 
-def19_tot   = defunciones19.iloc[0]['Valor']
-agr19_val   = defunciones19.iloc[29]['Valor']
-agr19_txt   = defunciones19.iloc[29]['Variable']
-agr219_val  = defunciones19.iloc[30]['Valor']
-agr219_txt  = defunciones19.iloc[30]['Variable']
-viofm19_val = defunciones19.iloc[19]['Valor']
-viofm19_txt = defunciones19.iloc[19]['Variable']
-lug119_val  = defunciones19.iloc[10]['Valor']
-lug119_txt  = defunciones19.iloc[10]['Variable']
-lug219_val  = defunciones19.iloc[11]['Valor']
-lug219_txt  = defunciones19.iloc[11]['Variable']
-aurb19_val  = defunciones19.iloc[17]['Valor']
-aurb19_txt  = defunciones19.iloc[17]['Variable']
-ent119_val  = defunciones19.iloc[2]['Valor']
-ent119_txt  = defunciones19.iloc[2]['Variable']
-ent219_val  = defunciones19.iloc[3]['Valor']
-ent219_txt  = defunciones19.iloc[3]['Variable']
-ent319_val  = defunciones19.iloc[4]['Valor']
-ent319_txt  = defunciones19.iloc[4]['Variable']
-eda119_val  = defunciones19.iloc[21]['Valor']
-eda119_txt  = defunciones19.iloc[21]['Variable']
-eda219_val  = defunciones19.iloc[22]['Valor']
-eda219_txt  = defunciones19.iloc[22]['Variable']
-eda319_val  = defunciones19.iloc[23]['Valor']
-eda319_txt  = defunciones19.iloc[23]['Variable']
-emba19_val  = defunciones19.iloc[14]['Valor']
-emba19_txt  = defunciones19.iloc[14]['Variable']
-esc119_val  = defunciones19.iloc[6]['Valor']
-esc119_txt  = defunciones19.iloc[6]['Variable']
-esc219_val  = defunciones19.iloc[7]['Valor']
-esc219_txt  = defunciones19.iloc[7]['Variable']
-esc319_val  = defunciones19.iloc[8]['Valor']
-esc319_txt  = defunciones19.iloc[8]['Variable']
+
+#2016_______________________________________________________<<<
+def_tot16 =defunciones16.iloc[0]['Valor']
+def16_tot = defunciones16.iloc[0]['Valor']
+agr16_val = defunciones16.iloc[32]['Valor']
+agr16_txt = defunciones16.iloc[32]['Variable']
+agr216_val  = defunciones16.iloc[33]['Valor']
+agr216_txt  = defunciones16.iloc[33]['Variable']
+agr316_val  = defunciones16.iloc[34]['Valor']
+agr316_txt  = defunciones16.iloc[34]['Variable']
+
+viofm116_val = defunciones16.iloc[21]['Valor']
+viofm116_txt = defunciones16.iloc[21]['Variable']
+viofm216_val = defunciones16.iloc[22]['Valor']
+viofm216_txt = defunciones16.iloc[22]['Variable']
+
+lug116_val = defunciones16.iloc[12]['Valor']
+lug116_txt = defunciones16.iloc[12]['Variable']
+lug216_val = defunciones16.iloc[13]['Valor']
+lug216_txt = defunciones16.iloc[13]['Variable']
+
+aurb16_val = defunciones16.iloc[19]['Valor']
+aurb16_txt = defunciones16.iloc[19]['Variable']
+
+ent116_val = defunciones16.iloc[2]['Valor']
+ent116_txt = defunciones16.iloc[2]['Variable']
+ent216_val = defunciones16.iloc[3]['Valor']
+ent216_txt = defunciones16.iloc[3]['Variable']
+ent316_val = defunciones16.iloc[4]['Valor']
+ent316_txt = defunciones16.iloc[4]['Variable']
+ent416_val = defunciones16.iloc[5]['Valor']
+ent416_txt = defunciones16.iloc[5]['Variable']
+ent516_txt = defunciones16.iloc[6]['Variable']
+ent516_txt = defunciones16.iloc[6]['Variable']
+
+eda116_val = defunciones16.iloc[24]['Valor']
+eda116_txt = defunciones16.iloc[24]['Variable']
+eda216_val = defunciones16.iloc[25]['Valor']
+eda216_txt = defunciones16.iloc[25]['Variable']
+eda316_val = defunciones16.iloc[26]['Valor']
+eda316_txt = defunciones16.iloc[26]['Variable']
+
+emba116_val = defunciones16.iloc[15]['Valor']
+emba116_txt = defunciones16.iloc[15]['Variable']
+emba216_val = defunciones16.iloc[16]['Valor']
+emba216_txt = defunciones16.iloc[16]['Variable']
+emba316_val = defunciones16.iloc[17]['Valor']
+emba316_txt = defunciones16.iloc[17]['Variable']
+
+
+esc116_val = defunciones16.iloc[8]['Valor']
+esc116_txt = defunciones16.iloc[8]['Variable']
+esc216_val = defunciones16.iloc[9]['Valor']
+esc216_txt = defunciones16.iloc[9]['Variable']
+esc316_val = defunciones16.iloc[10]['Valor']
+esc316_txt = defunciones16.iloc[10]['Variable']
+
+civl116_val = defunciones16.iloc[36]['Valor']
+civl116_txt = defunciones16.iloc[36]['Variable']
+civl216_val = defunciones16.iloc[37]['Valor']
+civl216_txt = defunciones16.iloc[37]['Variable']
+civl316_val = defunciones16.iloc[38]['Valor']
+civl316_txt = defunciones16.iloc[38]['Variable']
+
+#2017_______________________________________________________<<<
+def_tot17 =defunciones17.iloc[0]['Valor']
+def17_tot = defunciones17.iloc[0]['Valor']
+agr17_val = defunciones17.iloc[32]['Valor']
+agr17_txt = defunciones17.iloc[32]['Variable']
+agr217_val  = defunciones17.iloc[33]['Valor']
+agr217_txt  = defunciones17.iloc[33]['Variable']
+agr317_val  = defunciones17.iloc[34]['Valor']
+agr317_txt  = defunciones17.iloc[34]['Variable']
+
+viofm117_val = defunciones17.iloc[21]['Valor']
+viofm117_txt = defunciones17.iloc[21]['Variable']
+viofm217_val = defunciones17.iloc[22]['Valor']
+viofm217_txt = defunciones17.iloc[22]['Variable']
+
+lug117_val = defunciones17.iloc[12]['Valor']
+lug117_txt = defunciones17.iloc[12]['Variable']
+lug217_val = defunciones17.iloc[13]['Valor']
+lug217_txt = defunciones17.iloc[13]['Variable']
+
+aurb17_val = defunciones17.iloc[19]['Valor']
+aurb17_txt = defunciones17.iloc[19]['Variable']
+
+ent117_val = defunciones17.iloc[2]['Valor']
+ent117_txt = defunciones17.iloc[2]['Variable']
+ent217_val = defunciones17.iloc[3]['Valor']
+ent217_txt = defunciones17.iloc[3]['Variable']
+ent317_val = defunciones17.iloc[4]['Valor']
+ent317_txt = defunciones17.iloc[4]['Variable']
+ent417_val = defunciones17.iloc[5]['Valor']
+ent417_txt = defunciones17.iloc[5]['Variable']
+ent517_txt = defunciones17.iloc[6]['Variable']
+ent517_txt = defunciones17.iloc[6]['Variable']
+
+eda117_val = defunciones17.iloc[24]['Valor']
+eda117_txt = defunciones17.iloc[24]['Variable']
+eda217_val = defunciones17.iloc[25]['Valor']
+eda217_txt = defunciones17.iloc[25]['Variable']
+eda317_val = defunciones17.iloc[26]['Valor']
+eda317_txt = defunciones17.iloc[26]['Variable']
+
+emba117_val = defunciones17.iloc[15]['Valor']
+emba117_txt = defunciones17.iloc[15]['Variable']
+emba217_val = defunciones17.iloc[16]['Valor']
+emba217_txt = defunciones17.iloc[16]['Variable']
+emba317_val = defunciones17.iloc[17]['Valor']
+emba317_txt = defunciones17.iloc[17]['Variable']
+
+esc117_val = defunciones17.iloc[8]['Valor']
+esc117_txt = defunciones17.iloc[8]['Variable']
+esc217_val = defunciones17.iloc[9]['Valor']
+esc217_txt = defunciones17.iloc[9]['Variable']
+esc317_val = defunciones17.iloc[10]['Valor']
+esc317_txt = defunciones17.iloc[10]['Variable']
+
+civl117_val = defunciones17.iloc[36]['Valor']
+civl117_txt = defunciones17.iloc[36]['Variable']
+civl217_val = defunciones17.iloc[37]['Valor']
+civl217_txt = defunciones17.iloc[37]['Variable']
+civl317_val = defunciones17.iloc[38]['Valor']
+civl317_txt = defunciones17.iloc[38]['Variable']
+
+#2018_______________________________________________________<<<
+def_tot18 =defunciones18.iloc[0]['Valor']
+def18_tot = defunciones18.iloc[0]['Valor']
+agr18_val = defunciones18.iloc[32]['Valor']
+agr18_txt = defunciones18.iloc[32]['Variable']
+agr218_val  = defunciones18.iloc[33]['Valor']
+agr218_txt  = defunciones18.iloc[33]['Variable']
+agr318_val  = defunciones18.iloc[34]['Valor']
+agr318_txt  = defunciones18.iloc[34]['Variable']
+
+viofm118_val = defunciones18.iloc[21]['Valor']
+viofm118_txt = defunciones18.iloc[21]['Variable']
+viofm218_val = defunciones18.iloc[22]['Valor']
+viofm218_txt = defunciones18.iloc[22]['Variable']
+
+lug118_val = defunciones18.iloc[12]['Valor']
+lug118_txt = defunciones18.iloc[12]['Variable']
+lug218_val = defunciones18.iloc[13]['Valor']
+lug218_txt = defunciones18.iloc[13]['Variable']
+
+aurb18_val = defunciones18.iloc[19]['Valor']
+aurb18_txt = defunciones18.iloc[19]['Variable']
+
+ent118_val = defunciones18.iloc[2]['Valor']
+ent118_txt = defunciones18.iloc[2]['Variable']
+ent218_val = defunciones18.iloc[3]['Valor']
+ent218_txt = defunciones18.iloc[3]['Variable']
+ent318_val = defunciones18.iloc[4]['Valor']
+ent318_txt = defunciones18.iloc[4]['Variable']
+ent418_val = defunciones18.iloc[5]['Valor']
+ent418_txt = defunciones18.iloc[5]['Variable']
+ent518_txt = defunciones18.iloc[6]['Variable']
+ent518_txt = defunciones18.iloc[6]['Variable']
+
+eda118_val = defunciones18.iloc[24]['Valor']
+eda118_txt = defunciones18.iloc[24]['Variable']
+eda218_val = defunciones18.iloc[25]['Valor']
+eda218_txt = defunciones18.iloc[25]['Variable']
+eda318_val = defunciones18.iloc[26]['Valor']
+eda318_txt = defunciones18.iloc[26]['Variable']
+
+emba118_val = defunciones18.iloc[15]['Valor']
+emba118_txt = defunciones18.iloc[15]['Variable']
+emba218_val = defunciones18.iloc[16]['Valor']
+emba218_txt = defunciones18.iloc[16]['Variable']
+emba318_val = defunciones18.iloc[17]['Valor']
+emba318_txt = defunciones18.iloc[17]['Variable']
+
+esc118_val = defunciones18.iloc[8]['Valor']
+esc118_txt = defunciones18.iloc[8]['Variable']
+esc218_val = defunciones18.iloc[9]['Valor']
+esc218_txt = defunciones18.iloc[9]['Variable']
+esc318_val = defunciones18.iloc[10]['Valor']
+esc318_txt = defunciones18.iloc[10]['Variable']
+
+civl118_val = defunciones18.iloc[36]['Valor']
+civl118_txt = defunciones18.iloc[36]['Variable']
+civl218_val = defunciones18.iloc[37]['Valor']
+civl218_txt = defunciones18.iloc[37]['Variable']
+civl318_val = defunciones18.iloc[38]['Valor']
+civl318_txt = defunciones18.iloc[38]['Variable']
+
+#2019_______________________________________________________<<<
+def_tot19 =defunciones19.iloc[0]['Valor']
+def19_tot = defunciones19.iloc[0]['Valor']
+agr19_val = defunciones19.iloc[32]['Valor']
+agr19_txt = defunciones19.iloc[32]['Variable']
+agr219_val  = defunciones19.iloc[33]['Valor']
+agr219_txt  = defunciones19.iloc[33]['Variable']
+agr319_val  = defunciones19.iloc[34]['Valor']
+agr319_txt  = defunciones19.iloc[34]['Variable']
+
+viofm119_val = defunciones19.iloc[21]['Valor']
+viofm119_txt = defunciones19.iloc[21]['Variable']
+viofm219_val = defunciones19.iloc[22]['Valor']
+viofm219_txt = defunciones19.iloc[22]['Variable']
+
+lug119_val = defunciones19.iloc[12]['Valor']
+lug119_txt = defunciones19.iloc[12]['Variable']
+lug219_val = defunciones19.iloc[13]['Valor']
+lug219_txt = defunciones19.iloc[13]['Variable']
+
+aurb19_val = defunciones19.iloc[19]['Valor']
+aurb19_txt = defunciones19.iloc[19]['Variable']
+
+ent119_val = defunciones19.iloc[2]['Valor']
+ent119_txt = defunciones19.iloc[2]['Variable']
+ent219_val = defunciones19.iloc[3]['Valor']
+ent219_txt = defunciones19.iloc[3]['Variable']
+ent319_val = defunciones19.iloc[4]['Valor']
+ent319_txt = defunciones19.iloc[4]['Variable']
+ent419_val = defunciones19.iloc[5]['Valor']
+ent419_txt = defunciones19.iloc[5]['Variable']
+ent519_txt = defunciones19.iloc[6]['Variable']
+ent519_txt = defunciones19.iloc[6]['Variable']
+
+eda119_val = defunciones19.iloc[24]['Valor']
+eda119_txt = defunciones19.iloc[24]['Variable']
+eda219_val = defunciones19.iloc[25]['Valor']
+eda219_txt = defunciones19.iloc[25]['Variable']
+eda319_val = defunciones19.iloc[26]['Valor']
+eda319_txt = defunciones19.iloc[26]['Variable']
+
+emba119_val = defunciones19.iloc[15]['Valor']
+emba119_txt = defunciones19.iloc[15]['Variable']
+emba219_val = defunciones19.iloc[16]['Valor']
+emba219_txt = defunciones19.iloc[16]['Variable']
+emba319_val = defunciones19.iloc[17]['Valor']
+emba319_txt = defunciones19.iloc[17]['Variable']
+
+esc119_val = defunciones19.iloc[8]['Valor']
+esc119_txt = defunciones19.iloc[8]['Variable']
+esc219_val = defunciones19.iloc[9]['Valor']
+esc219_txt = defunciones19.iloc[9]['Variable']
+esc319_val = defunciones19.iloc[10]['Valor']
+esc319_txt = defunciones19.iloc[10]['Variable']
+
+civl119_val = defunciones19.iloc[36]['Valor']
+civl119_txt = defunciones19.iloc[36]['Variable']
+civl219_val = defunciones19.iloc[37]['Valor']
+civl219_txt = defunciones19.iloc[37]['Variable']
+civl319_val = defunciones19.iloc[38]['Valor']
+civl319_txt = defunciones19.iloc[38]['Variable']
+
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
-delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/feminicidios2015_2021.csv?raw=true")
+delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/feminicidios2015_2021.csv")
 delitos.drop('Unnamed: 0',1, inplace=True)
 
 delitos.groupby(['Año','Entidad','Tipo de delito'])['Enero', 
@@ -978,76 +1127,7 @@ body = html.Div([
                       ),
       ]),
 
-#############################################  MUNICIPIOS ranking (OPCION  2)
-#    dbc.Row([
-#               dbc.Col(dbc.Container([
-#                       html.P(
-#                           "Ecatepec de Morelos (56)"
-#                           "Chimalhuacán (35)"
-#                           "Nezahualcóyotl (31)"
-#                           "Toluca (27)"
-#                           "Naucalpan de Juárez (22)"
-#                           "Ixtapaluca (22)"
-#                           "Zumpango (21)"
-#                           "Tecámac (19)"
-#                           "Cuautitlán Izcalli (19)"
-#                           "Valle de Chalco Solidaridad (16)",
-#                    className="top",)
-#                                ],)
-#                       
-#                      ),
-#          dbc.Col(dbc.Jumbotron([
-#                   dbc.Container([
-#                       html.P(
-#                           "Veracruz (49)"
-#                           "Xalapa (42)"
-#                           "Coatzacoalcos (25)"
-#                           "Córdoba (24)"
-#                           "Poza Rica de Hidalgo (17)"
-#                           "Tuxpan (13)"
-#                           "Papantla (12)"
-#                           "Tierra Blanca (11)"
-#                           "Minatitlán (11)"
-#                           "San Andrés Tuxtla (11)",
-#                    className="top")
-#                                ], )
-#                                    ], )
-#                      ),
-#          dbc.Col(
-#                   dbc.Container([
-#                       html.P(
-#                           "Iztapalapa (68)"
-#                           "Gustavo A. Madero (37)"
-#                           "Tlalpan (35)"
-#                           "Cuauhtémoc (34)"
-#                           "Xochimilco (25)"
-#                           "Miguel Hidalgo (19)"
-#                           "Álvaro Obregón (17)"
-#                           "Tláhuac (16)"
-#                           "Coyoacán (14)"
-#                           "Venustiano Carranza (14)",
-#                    className="top")
-#                                ],)
-#                                    )
-#                      ,
-#          dbc.Col(dbc.Jumbotron([
-#                   dbc.Container([
-#                       html.P(
-#                           "Guadalajara (51)"
-#                           "Tlajomulco de Zúñiga (38)"
-#                           "Zapopan (34)"
-#                           "El Salto (24)"
-#                           "Tonalá (17)"
-#                           "Puerto Vallarta (10)"
-#                           "Ocotlán (6)"
-#                           "Tequila (6)"
-#                           "Mezquitic (6)"
-#                           "Ixtlahuacán de los Membrillos (6)",
-#                    className="top")
-#                                ], )
-#                                    ], )
-#                      ),
-#      ]),
+
 #  
        html.Br(),
        html.Br(),
@@ -1108,7 +1188,7 @@ body = html.Div([
     ]),
     dbc.Row(
     [
-        dbc.Col(html.H6("Fuente: Datos anuales de Defunciones, Secretaría de Salud, DGIS, marzo 2021"),
+        dbc.Col(html.H6("Fuente: Datos de defunciones (2015-2019), Secretaría de Salud, DGIS, marzo 2021"),
                         width={'size': 6,  "offset":6 }),
      ], justify= "end"),
     
@@ -1132,19 +1212,19 @@ body = html.Div([
            [
                #dbc.Col(html.H3([str(f"{conf_2015:,d}")])),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((def15_tot), className="mb-0",color="light",),]),),
+                                dbc.Badge((f'{int(def15_tot):,}'), className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((def16_tot),className="mb-0",color="light",),]),),
+                                dbc.Badge((f'{int(def16_tot):,}'),className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((def17_tot),className="mb-0",color="light",),]),),
+                                dbc.Badge((f'{int(def17_tot):,}'),className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((def18_tot),className="mb-0",color="light",),]),),
+                                dbc.Badge((f'{int(def18_tot):,}'),className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((def19_tot),className="mb-0",color="light",),]),),
+                                dbc.Badge((f'{int(def19_tot):,}'),className="mb-0",color="light",),]),),
                #dbc.Col(html.H1([" ", 
                #                 dbc.Badge((def_tot20),className="mb-0",color="light",),]),),
             ]),
-    html.Br(),
+    html.Br(),  
    
 
 
@@ -1156,17 +1236,18 @@ body = html.Div([
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
-            html.H5([ (agr15_txt),": ", (agr15_val),"%",]),
-            html.H5([ (agr215_txt),": ", (agr215_val),"%",]),
+            html.H6([ (agr15_txt),": ", (agr15_val),"%",]),
+            html.H6([ (agr215_txt),": ", (agr215_val),"%",]),
             html.Code("¿Hubo violencia?", className="card-text"), 
-            html.H6([ (viofm15_txt),": ", (viofm15_val),"%",]),
+            html.H6([ (viofm115_txt),": ", (viofm115_val),"%",]),
+            html.H6([ (viofm215_txt),": ", (viofm215_val),"%",]),                
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug115_txt),": ", (lug115_val),"%",]),
             html.H6([ (lug215_txt),": ", (lug215_val),"%",]),
             html.Hr(),
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
-            html.Code("Entidades con más casos:"),
+            html.Code("¿Dónde ocurren más?"),
             html.H6([ (ent115_txt),": ", (ent115_val),"%",]),
             html.H6([ (ent215_txt),": ", (ent215_val),"%",]),
             html.H6([ (ent315_txt),": ", (ent315_val),"%",]),
@@ -1175,6 +1256,10 @@ body = html.Div([
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
+            html.Code("Estado civil"),
+            html.H6([ (civl115_txt),": ", (civl115_val),"%",]),
+            html.H6([ (civl215_txt),": ", (civl215_val),"%",]),
+            html.H6([ (civl315_txt),": ", (civl315_val),"%",]),
             html.Code("¿Qué rangos de edad tenían?"),
             html.H6([ (eda115_txt),": ", (eda115_val),"%",]),
             html.H6([ (eda215_txt),": ", (eda215_val),"%",]),
@@ -1200,14 +1285,15 @@ body = html.Div([
             html.H6([ (agr16_txt),": ", (agr16_val),"%",]),
             html.H6([ (agr216_txt),": ", (agr216_val),"%",]),
             html.Code("¿Hubo violencia?", className="card-text"), 
-            html.H6([ (viofm16_txt),": ", (viofm16_val),"%",]),
+            html.H6([ (viofm116_txt),": ", (viofm116_val),"%",]),
+            html.H6([ (viofm216_txt),": ", (viofm216_val),"%",]),                
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug116_txt),": ", (lug116_val),"%",]),
             html.H6([ (lug216_txt),": ", (lug216_val),"%",]),
             html.Hr(),
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
-            html.Code("Entidades con más casos:"),
+            html.Code("¿Dónde ocurren más?"),
             html.H6([ (ent116_txt),": ", (ent116_val),"%",]),
             html.H6([ (ent216_txt),": ", (ent216_val),"%",]),
             html.H6([ (ent316_txt),": ", (ent316_val),"%",]),
@@ -1216,6 +1302,10 @@ body = html.Div([
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
+            html.Code("Estado civil"),
+            html.H6([ (civl116_txt),": ", (civl116_val),"%",]),
+            html.H6([ (civl216_txt),": ", (civl216_val),"%",]),
+            html.H6([ (civl316_txt),": ", (civl316_val),"%",]),
             html.Code("¿Qué rangos de edad tenían?"),
             html.H6([ (eda116_txt),": ", (eda116_val),"%",]),
             html.H6([ (eda216_txt),": ", (eda216_val),"%",]),
@@ -1241,14 +1331,15 @@ body = html.Div([
             html.H6([ (agr17_txt),": ", (agr17_val),"%",]),
             html.H6([ (agr217_txt),": ", (agr217_val),"%",]),
             html.Code("¿Hubo violencia?", className="card-text"), 
-            html.H6([ (viofm17_txt),": ", (viofm17_val),"%",]),
+            html.H6([ (viofm117_txt),": ", (viofm117_val),"%",]),
+            html.H6([ (viofm217_txt),": ", (viofm217_val),"%",]),                
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug117_txt),": ", (lug117_val),"%",]),
             html.H6([ (lug217_txt),": ", (lug217_val),"%",]),
             html.Hr(),
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
-            html.Code("Entidades con más casos:"),
+            html.Code("¿Dónde ocurren más?"),
             html.H6([ (ent117_txt),": ", (ent117_val),"%",]),
             html.H6([ (ent217_txt),": ", (ent217_val),"%",]),
             html.H6([ (ent317_txt),": ", (ent317_val),"%",]),
@@ -1257,6 +1348,10 @@ body = html.Div([
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
+            html.Code("Estado civil"),
+            html.H6([ (civl117_txt),": ", (civl117_val),"%",]),
+            html.H6([ (civl217_txt),": ", (civl217_val),"%",]),
+            html.H6([ (civl317_txt),": ", (civl317_val),"%",]),
             html.Code("¿Qué rangos de edad tenían?"),
             html.H6([ (eda117_txt),": ", (eda117_val),"%",]),
             html.H6([ (eda217_txt),": ", (eda217_val),"%",]),
@@ -1282,14 +1377,16 @@ body = html.Div([
             html.H6([ (agr18_txt),": ", (agr18_val),"%",]),
             html.H6([ (agr218_txt),": ", (agr218_val),"%",]),
             html.Code("¿Hubo violencia?", className="card-text"), 
-            html.H6([ (viofm18_txt),": ", (viofm18_val),"%",]),
+            html.H6([ (viofm118_txt),": ", (viofm118_val),"%",]),
+            html.H6([ (viofm218_txt),": ", (viofm218_val),"%",]),                
+
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug118_txt),": ", (lug118_val),"%",]),
             html.H6([ (lug218_txt),": ", (lug218_val),"%",]),
             html.Hr(),
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
-            html.Code("Entidades con más casos:"),
+            html.Code("¿Dónde ocurren más?"),
             html.H6([ (ent118_txt),": ", (ent118_val),"%",]),
             html.H6([ (ent218_txt),": ", (ent218_val),"%",]),
             html.H6([ (ent318_txt),": ", (ent318_val),"%",]),
@@ -1298,6 +1395,10 @@ body = html.Div([
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
+            html.Code("Estado civil"),
+            html.H6([ (civl118_txt),": ", (civl118_val),"%",]),
+            html.H6([ (civl218_txt),": ", (civl218_val),"%",]),
+            html.H6([ (civl318_txt),": ", (civl318_val),"%",]),
             html.Code("¿Qué rangos de edad tenían?"),
             html.H6([ (eda118_txt),": ", (eda118_val),"%",]),
             html.H6([ (eda218_txt),": ", (eda218_val),"%",]),
@@ -1322,14 +1423,15 @@ body = html.Div([
             html.H6([ (agr19_txt),": ", (agr19_val),"%",]),
             html.H6([ (agr219_txt),": ", (agr219_val),"%",]),
             html.Code("¿Hubo violencia?", className="card-text"), 
-            html.H6([ (viofm19_txt)," ", (viofm19_val),"%",]),
+            html.H6([ (viofm119_txt),": ", (viofm119_val),"%",]),
+            html.H6([ (viofm219_txt),": ", (viofm219_val),"%",]),                
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug119_txt),": ", (lug119_val),"%",]),
             html.H6([ (lug219_txt),": ", (lug219_val),"%",]),
             html.Hr(),
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
-            html.Code("Entidades con más casos:"),
+            html.Code("¿Dónde ocurren más?"),
             html.H6([ (ent119_txt),": ", (ent119_val),"%",]),
             html.H6([ (ent219_txt),": ", (ent219_val),"%",]),
             html.H6([ (ent319_txt),": ", (ent319_val),"%",]),
@@ -1338,6 +1440,10 @@ body = html.Div([
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
+            html.Code("Estado civil"),
+            html.H6([ (civl119_txt),": ", (civl119_val),"%",]),
+            html.H6([ (civl219_txt),": ", (civl219_val),"%",]),
+            html.H6([ (civl319_txt),": ", (civl319_val),"%",]),
             html.Code("¿Qué rangos de edad tenían?"),
             html.H6([ (eda119_txt),": ", (eda119_val),"%",]),
             html.H6([ (eda219_txt),": ", (eda219_val),"%",]),
