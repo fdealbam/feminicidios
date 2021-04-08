@@ -1,0 +1,43 @@
+,Variable,Valor
+0,Total anual,7786
+1,Entidad,Entidad_%
+2,México,12.1
+3,Guanajuato,10.3
+4,Chihuahua,7.0
+5,Baja California,6.7
+6,Jalisco,6.7
+7,Escolaridad,Escolaridad_%
+8,Secundaria completa,25.4
+9,Primaria completa,17.4
+10,Bachillerato o Preparatoria completo,11.4
+11,Lugar,Lugar_%
+12,Vía pública,51.3
+13,Hogar,18.8
+14,Embarazo,Embarazo_%
+15,"Si, o en fase posterior",2.0
+16,No,32.2
+17,No especificado ,52.8
+18,Area Urbana,Area Urbana_%
+19,Urbano,77.8
+20,Violencia Familiar,Violencia Familiar_%
+21,Violencia familiar o de fuera,0.9
+22,No especificado,99.1
+23,Edad Agrupada,Edad Agrupada_%
+24,De 20 a 39 años,53.1
+25,De 40 a 55 años,18.8
+26,De 15 a 19 años,9.6
+27,De 55 a 74 años,7.9
+28,Edad no  especificada,4.1
+29,Ocupación,Ocupación_%
+30,No trabaja,47.0
+31,Trabaja,26.2
+32,No especificada,24.7
+33,Parentesco c/agresor,Parentesco c/agresor_%
+34,No especificado,99.1
+35,Familia nuclear,0.6
+36,Sin parentesco,0.3
+37,Estado Civil,Civil_%
+38,Soltera,43.2
+39,Casada,17.2
+40,Unión libre,17.1
+41,Estado civil no especificado,10.4
