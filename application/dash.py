@@ -1,3 +1,4 @@
+
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -882,6 +883,7 @@ graf_totfem.update_layout(
 mytitle=' '
 tabtitle='Feminicidios'
 sourceurl='https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-incidencia-delictiva?state=published'
+autores = ('https://raw.githubusercontent.com/winik-pg/exercises_pythoncitos/master/Autores.docx')
 
 
 server = flask.Flask(__name__)
@@ -1231,7 +1233,7 @@ body = html.Div([
     dbc.Row(
     [
         dbc.Col(html.H6("Fuente: Datos de defunciones (2015-2019), Secretaría de Salud, DGIS, marzo 2021"),
-                        width={'size': 5,  "offset":7 }),
+                        width={'size': 6,  "offset":6 }),
      ], justify= "end"),
     
        html.Br(),
@@ -1245,7 +1247,7 @@ body = html.Div([
                dbc.Col(html.H5("2018")),
                dbc.Col(html.H5("2019")),
               # dbc.Col(html.H5("2020")),
-           ], justify= "center"),
+           ], justify= "start"),
     
    
 
@@ -1254,19 +1256,18 @@ body = html.Div([
            [
                #dbc.Col(html.H3([str(f"{conf_2015:,d}")])),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def15_tot):,}'), className="mr-1", color="primary",),]),),
-                                #dbc.Button((f'{int(def15_tot):,}'), color="dark", size="xlg", className="mr-2")])),
+                                dbc.Badge((f'{int(def15_tot):,}'), className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def16_tot):,}'),className="mb-0",color="primary",),]),),
+                                dbc.Badge((f'{int(def16_tot):,}'),className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def17_tot):,}'),className="mb-0",color="primary",),]),),
+                                dbc.Badge((f'{int(def17_tot):,}'),className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def18_tot):,}'),className="mb-0",color="primary",),]),),
+                                dbc.Badge((f'{int(def18_tot):,}'),className="mb-0",color="light",),]),),
                dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def19_tot):,}'),className="mb-0",color="primary",),]),),
+                                dbc.Badge((f'{int(def19_tot):,}'),className="mb-0",color="light",),]),),
                #dbc.Col(html.H1([" ", 
                #                 dbc.Badge((def_tot20),className="mb-0",color="light",),]),),
-            ], justify= "center"),
+            ]),
     html.Br(),  
    
 
@@ -1386,7 +1387,7 @@ body = html.Div([
 
         ]
     ),
-    style={"width": "20rem"},
+    style={"width": "16rem"},
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1443,7 +1444,7 @@ body = html.Div([
  
         ]
     ),
-    style={"width": "20rem"},
+    style={"width": "16rem"},
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1499,7 +1500,7 @@ body = html.Div([
             #html.H6([ (ocu318_txt),": ", (ocu318_val),"%",]),
                         ]
     ),
-    style={"width": "20rem"},
+    style={"width": "16rem"},
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
@@ -1556,7 +1557,7 @@ body = html.Div([
  
                         ]
     ),
-    style={"width": "20rem"},
+    style={"width": "15rem"},
 ),]),]),
        html.Br(),
        html.Br(),
@@ -1597,7 +1598,7 @@ body = html.Div([
                 html.P(
                     "Esta información fue tratada con el lenguaje de programación Python y varias de las librerías "
                     "más comunes (Dash, Choropleth, Pandas, Numpy, Geopandas, etc.), que nos ayudan a automatizar "
-                    "la recurrencia (request) a la fuente de información y las operaciones necesarias para crear graficas "
+                    "la recurrencia (request) a la fuente de información y las operaciones necesarias para creargraficas "
                     "interactivas y mapas presentados. El volumen de información fue de 230 megabytes de la base de datos "
                     "del SENSNSP y 2.4 gigabytes de la base de datos de defunciones, provista por la Secretaría de Salud, "
                     "Dirección General de Información de Salud. ",
@@ -1608,8 +1609,11 @@ body = html.Div([
     ],
     fluid=True,
     ),    
-  
     
+        
+    
+       
+       
        html.Br(),
        html.Br(),
        html.Br(),
@@ -1624,25 +1628,26 @@ body = html.Div([
                            " Secretaría de Servicios Parlamentarios, "
                            " México, 2021 "),
                   width={'size': 3, 'offset': 0}),
+
                ], justify="start",),
-    
-    html.Br(),
-    html.Br(),
-    html.Br(),
-   
-    html.Div([
-        html.H5([dbc.Badge("Equipo que desarrolló", 
+    dbc.Row([    
+           dbc.Col(html.H5([dbc.Badge("Equipo responsable", 
                           href="https://raw.githubusercontent.com/fdealbam/feminicidios/main/Autores.pdf",
-                          color="light",
-                          className="ml-1")]),
-        html.H5([dbc.Badge("Consultores", 
-                          href="https://raw.githubusercontent.com/fdealbam/feminicidios/main/Consultores.pdf",
-                          color="light",
-                          className="ml-1")]),
-    ],style={'textAlign': 'center',},),
+                          #color="light",
+                          #className="ml-1")
+                                     )]),
+                  width={'size': 3,  "offset": 4}),
+                       ], justify="start",),
+    html.Br(),
+    html.Br(),
+    html.Br(),
+
+    
+
     
     html.Br(),
-            ])
+    
+])
 
 
 app.layout = html.Div([body])
