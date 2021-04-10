@@ -1631,7 +1631,7 @@ body = html.Div([
     html.Br(),
    
     html.Div([
-        html.H5([dbc.Badge("Desarrolladores", 
+        html.H5([dbc.Badge("Equipo que desarrolló", 
                           href="https://raw.githubusercontent.com/fdealbam/feminicidios/main/Autores.pdf",
                           color="light",
                           className="ml-1")]),
