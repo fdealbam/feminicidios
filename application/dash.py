@@ -950,12 +950,12 @@ body = html.Div([
     
 # Cintillo 1.1
         dbc.Row([
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20feminicidio%20def15_r_femeninas.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20feminicidio%20def16_r_femeninas.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20feminicidio%20def17_r_femeninas.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20feminicidio%20def18_r_femeninas.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20feminicidio%20def19_r_femeninas.jpeg?raw=true")),
-               #dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20feminicidio%20def20_r_femeninas.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2015.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2016.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2017.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2018.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2019.jpeg?raw=true")),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2020.jpeg?raw=true")),
            ]),
 # Cintillo párrafos
        html.Br(),
