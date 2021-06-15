@@ -466,7 +466,7 @@ civl419_txt = defunciones19.iloc[41]['Variable']
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
-delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/feminicidios2015_2021.csv")
+delitos = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/feminicidios2015_2021.csv")
 delitos.drop('Unnamed: 0',1, inplace=True)
 
 delitos.groupby(['Año','Entidad','Tipo de delito'])['Enero', 
@@ -546,7 +546,7 @@ femi15_21 = ff[[
  'Enero20','Febrero20','Marzo20','Abril20','Mayo20','Junio20','Julio20',
  'Agosto20','Septiembre20','Octubre20','Noviembre20','Diciembre20',
     
- 'Enero21','Febrero21','Marzo21',#'Abril21','Mayo21','Junio21','Julio21',
+ 'Enero21','Febrero21','Marzo21','Abril21',#'Mayo21','Junio21','Julio21',
 # 'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21'
              ]]
 
@@ -572,7 +572,7 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
                                'Junio20', 'Julio20', 'Agosto20', 'Septiembre20', 'Octubre20',
                                'Noviembre20', 'Diciembre20',]].sum(axis=1)
 
-femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21',# 'Abril21', 'Mayo21',
+femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21',# 'Mayo21',
                                    #'Junio21','Julio21','Agosto21','Septiembre21','Octubre21',
                                    #'Noviembre21','Diciembre21'
                                   ]].sum(axis=1)
@@ -608,7 +608,7 @@ pagra = ff[[
  'Enero20', 'Febrero20', 'Marzo20', 'Abril20', 'Mayo20', 'Junio20', 'Julio20', 'Agosto20',
     'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20',
 
- 'Enero21', 'Febrero21', 'Marzo21', #'Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
+ 'Enero21', 'Febrero21', 'Marzo21', 'Abril21', #'Mayo21', #'Junio21',# 'Julio21',# 'Agosto21',
   #  'Septiembre21','Octubre21','Noviembre21','Diciembre21'
             ]]
 
@@ -864,14 +864,6 @@ graf_totfem.update_layout(
     )
 
 
-######################################################### MAPAS 3estados con más feminicidios
-
-#concat2 = fem_filter1[fem_filter1.Entidad == "Veracruz de Ignacio de la Llave"]
-#concat.plot("NOM_ENT", cmap= "Oranges", legend=True, k=5)
-#plt.axis("off")
-#plt.savefig("ver.png", dpi= 120)
-#plt.show()
-
 
 ####################################
 
@@ -927,115 +919,23 @@ body = html.Div([
 
       html.Br(),
     
-     dbc.Row(
-           [
-               dbc.Col(html.H5("2015")),
-               dbc.Col(html.H5("2016")),
-               dbc.Col(html.H5("2017")),
-               dbc.Col(html.H5("2018")),
-               dbc.Col(html.H5("2019")),
-               dbc.Col(html.H5("2020")),
+     dbc.Row([
+         dbc.Col([html.H5("2015"),html.H1(conf_2015),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2015.jpeg?raw=true"),]),
+         dbc.Col([html.H5("2016"),html.H1(conf_2016),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2016.jpeg?raw=true"),]),
+         dbc.Col([html.H5("2017"),html.H1(conf_2017),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2017.jpeg?raw=true"),]),
+         dbc.Col([html.H5("2018"),html.H1(conf_2018),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2018.jpeg?raw=true"),]),
+         dbc.Col([html.H5("2019"),html.H1(conf_2019),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2019.jpeg?raw=true"),]),
+         dbc.Col([html.H5("2020"),html.H1(conf_2020),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2020.jpeg?raw=true"),]),
            ], justify= "start"),
+
     
-#Cintillo 1
-    dbc.Row(
-           [
-               dbc.Col(html.H1(conf_2015)),
-               dbc.Col(html.H1(conf_2016)),
-               dbc.Col(html.H1(conf_2017)),
-               dbc.Col(html.H1(conf_2018)),
-               dbc.Col(html.H1(conf_2019)),
-               dbc.Col(html.H1(conf_2020)),
-            ],justify= "start"),
-    
-# Cintillo 1.1
-        dbc.Row([
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2015.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2016.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2017.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2018.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2019.jpeg?raw=true")),
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2020.jpeg?raw=true")),
-           ]),
-# Cintillo párrafos
+
        html.Br(),
     
-#      dbc.Row([
-#               dbc.Col(dbc.Container([
-#                       html.P(
-#                           "En 10 entidades se registraron 82.2% de feminicidios (338)"
-#                           " en 2015: Jalisco (62), México (59), Ciudad de México (56),"
-#                           "Veracruz (40), Chiapas (36), Sonora (24), Guanajuato (16),"
-#                           "Coahuila (16), Morelos (15) y Sinaloa (14).",
-#                    className="top",)
-#                                ], fluid=True)
-#                       
-#                      ),
-#        
-#          dbc.Col(dbc.Jumbotron([
-#                   dbc.Container([
-#                       html.P(
-#                           "En 10 entidades se registraron 71.5% de feminicidios (433)"
-#                           " en 2016 : Oaxaca (67), Veracruz (58), México (56), Jalisco"
-#                           "(48), Ciudad de México (46), Sinaloa (39), Chiapas (32), "
-#                           "Sonora (30), Morelos (30) y Tabasco (27).",
-#                    className="top")
-#                                ], fluid=True)
-#                                    ], fluid=True)
-#                      ),
-#          dbc.Col(
-#                   dbc.Container([
-#                       html.P(
-#                           "En 10 entidades se registraron 68.3% de feminicidios (507)"
-#                           " en 2017 : Veracruz (100), Sinaloa (82), México (70), Oaxaca"
-#                           " (57), Nuevo León (43), Ciudad de México (37), Sonora (32),"
-#                           " Michoacán (29), Chiapas (29) y Tabasco (28).",
-#                    className="top")
-#                                ], fluid=True)
-#                                    )
-#                      ,
-#          dbc.Col(dbc.Jumbotron([
-#                   dbc.Container([
-#                       html.P(
-#                           "En 10 entidades se registraron 63.6% de feminicidios (568)"
-#                           " en 2018 : México (115), Veracruz (101), Nuevo León (79), "
-#                           "Sinaloa (48), Chihuahua (44), Ciudad de México (43), Tabasco"
-#                           " (40), Jalisco (33), Guerrero (33) y Puebla (32).",
-#                    className="top")
-#                                ], fluid=True)
-#                                    ], fluid=True)
-#                      ),
-#          dbc.Col(dbc.Container([
-#                       html.P(
-#                           "En 10 entidades se registraron 66.4% de feminicidios (627)"
-#                           " en 2019 : México (122), Veracruz (104), Ciudad de México "
-#                           "(72), Nuevo León (67), Jalisco (62), Puebla (58), Morelos "
-#                           "(39), Sonora (37), Sinaloa (37) y Chihuahua (29).",
-#                    className="top")
-#                                ], fluid=True)
-#                      ),
-#          dbc.Col(dbc.Jumbotron([
-#                   dbc.Container([
-#                       html.P(
-#                           "En 10 entidades se registraron 65.8% de feminicidios (618)"
-#                           " en 2020 : México (150), Veracruz (84), Nuevo León (67), "
-#                           "Jalisco (66), Ciudad de México (64), Puebla (52), Oaxaca "
-#                           "(38), Morelos (35), Sonora (31) y Baja California (31).",
-#                    className="top")
-#                                ], fluid=True)
-#                                    ], fluid=True),
-#                  
-#                      ),
-#      ]),
-#                
+
     
        html.Br(),
-#     dbc.Row(
-#           [
-#               dbc.Col(html.H1([dbc.Badge((def_tot15), className="ml-1",color="light"),
-#                               "  "]),
-#                       width={'size': 10,  "offset":1 }),
-#            ]),
+
        html.Br(),
        html.Br(),
        html.Br(),
@@ -1052,7 +952,7 @@ body = html.Div([
                                        width={'size': 11,  "offset":1 })]),
        dbc.Row(
            [        
-               dbc.Col(html.H5("(hasta marzo 2021)"),
+               dbc.Col(html.H5("(hasta abril 2021)"),
                                        width={ 'size': 3, "offset":1 }),
 
             ]),
@@ -1083,44 +983,30 @@ body = html.Div([
     
      dbc.Row(
            [
-               dbc.Col(html.H3("México", ),
-                       #width=1, 
-                       lg={'size': 1,  "offset": 1, }
-                      ),
-               
-               dbc.Col(html.H3("Veracruz"),
-                        #width=1, 
-                       lg={'size': 1,  "offset": 1, }
-                      ),
-               
-               dbc.Col(html.H3("Ciudad de México"),
-                       # width=1, 
-                       lg={'size': 3,  "offset": 2, }
-                      ),
+               dbc.Col([html.H3("México"),
+                        dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mx2.jpeg?raw=true"),
                       
-               dbc.Col(html.H3("Jalisco"),
-                       # width=1, 
-                       lg={'size': 1,  "offset": 1, }
-                      ),
+                      # style={'size': 1,  "offset": 1, }
+                       ]),
+               
+               dbc.Col([html.H3("Veracruz"),
+                     dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/ver2.jpeg?raw=true"),
+                      # style={'size': 1,  "offset": 1, }
+                       ]),
+               
+               dbc.Col([html.H3("Ciudad de México"),
+                       dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/cdmx2.jpeg?raw=true"),
+                     #  style={'size': 3,  "offset": 2, }
+                       ]),
+                      
+               dbc.Col([html.H3("Jalisco"),
+                       dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/jal2.jpeg?raw=true"),
+                      # style={'size': 1,  "offset": 1, }
+                       ]),
            ], #, justify= "end", 
     align= "center"),
 
-    
-    dbc.Row([
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mx2.jpeg?raw=true"),
-                      #width=4,lg={'size': 3,  "offset": 3, }
-                      ),
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/ver2.jpeg?raw=true"),
-                      #width=4,lg={'size': 3,  "offset": 3, }
-                      ),
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/cdmx2.jpeg?raw=true"),
-                      #width=4,lg={'size': 3,  "offset": 3, }
-                      ),
-               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/jal2.jpeg?raw=true"),
-                      #width=4,lg={'size': 3,  "offset": 3, }
-                      ),
-           ], no_gutters=True),
-       
+
 
     #################################################################  MUNICIPIOS ranking    
 
@@ -1657,4 +1543,3 @@ from settings import config
 
 if __name__ == "__main__":
     app.run_server()
-
