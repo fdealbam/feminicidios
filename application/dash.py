@@ -1,4 +1,6 @@
 
+# feminicidios
+
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -879,7 +881,7 @@ autores = ('https://raw.githubusercontent.com/winik-pg/exercises_pythoncitos/mas
 
 
 server = flask.Flask(__name__)
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes. FLATLY], server=server)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes. LUX], server=server)
 
 body = html.Div([
 # Cintillo 000
@@ -910,26 +912,78 @@ body = html.Div([
     
 #cintillo 0
     
-     dbc.Row(
+       dbc.Row(
            [
                dbc.Col(html.H1(["Casos ", 
                                 dbc.Badge("anuales", color="info", className="mr-1")]),
                         width={'size': 8,  "offset":1 }),
             ]),
 
-      html.Br(),
+       html.Br(),
     
-     dbc.Row([
-         dbc.Col([html.H5("2015"),html.H1(conf_2015),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2015.jpeg?raw=true"),]),
-         dbc.Col([html.H5("2016"),html.H1(conf_2016),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2016.jpeg?raw=true"),]),
-         dbc.Col([html.H5("2017"),html.H1(conf_2017),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2017.jpeg?raw=true"),]),
-         dbc.Col([html.H5("2018"),html.H1(conf_2018),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2018.jpeg?raw=true"),]),
-         dbc.Col([html.H5("2019"),html.H1(conf_2019),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2019.jpeg?raw=true"),]),
-         dbc.Col([html.H5("2020"),html.H1(conf_2020),dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2020.jpeg?raw=true"),]),
-           ], justify= "start"),
-
+# prueba recuadros
     
+       dbc.Row([
+       dbc.Col(dbc.Button(([html.H5("2015", style={"font-size": 18,"color": "black","background-color": "white"}),
+                            html.H1(conf_2015, style={"font-size": 64, "color": "black","background-color": "white"}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2015.jpeg?raw=true", 
+                                        style={"background-color":"white"}),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+    
+       dbc.Col(dbc.Button(([html.H5("2016", style= {"font-size": 18,"color": "black","background-color": "white",}),
+                            html.H1(conf_2016,style= {"font-size": 64, "color": "black","background-color": "white",}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2016.jpeg?raw=true",                               style= {"background-color": "white"}),
+               ]),style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        'width': '250px',
+                         #'margin-left': '-390px'
+                        }, disabled=True)),
 
+        dbc.Col(dbc.Button(([html.H5("2017", style= {"font-size": 18,"color": "black","background-color": "white",}),
+                            html.H1(conf_2017,style= {"font-size": 64, "color": "black","background-color": "white",}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2017.jpeg?raw=true",                               style= {"background-color": "white"}),
+               ]),style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        'width': '250px',
+                         #'margin-left': '-90px'
+                        }, disabled=True)),
+
+       dbc.Col(dbc.Button(([html.H5("2018", style= {"font-size": 18,"color": "black","background-color": "white",}),
+                            html.H1(conf_2018,style= {"font-size": 64, "color": "black","background-color": "white",}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2018.jpeg?raw=true",                               style= {"background-color": "white"}),
+               ]),style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        'width': '250px',
+                         #'margin-left': '-390px'
+                        }, disabled=True)),
+           
+       dbc.Col(dbc.Button(([html.H5("2019", style= {"font-size": 18,"color": "black","background-color": "white",}),
+                            html.H1(conf_2019,style= {"font-size": 64, "color": "black","background-color": "white",}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2019.jpeg?raw=true",                               style= {"background-color": "white"}),
+               ]),style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        'width': '250px',
+                         #'margin-left': '-390px'
+                        }, disabled=True)),
+       dbc.Col(dbc.Button(([html.H5("2020", style= {"font-size": 18,"color": "black","background-color": "white",}),
+                            html.H1(conf_2020,style= {"font-size": 64, "color": "red","background-color": "white",}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2020.jpeg?raw=true",                               style= {"background-color": "white"}),
+               ]),style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        'width': '250px',
+                         #'margin-left': '-390px'
+                        }, disabled=True)),
+           
+    ],style={ "background-color": "white",
+              #"box-shadow": "10px 20px 30px black",
+              'margin-left': '50px'}),
+    
+    
+ 
        html.Br(),
     
 
@@ -1536,10 +1590,16 @@ body = html.Div([
 ])
 
 
-app.layout = html.Div([body])
+app.layout = html.Div([body],
+                              style={'width': '1800px'})
 
-from application.dash import app
-from settings import config
+                     
+                     
+
+#from application.dash import app
+#from settings import config
 
 if __name__ == "__main__":
     app.run_server()
+    
+    
