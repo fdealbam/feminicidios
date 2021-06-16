@@ -1,4 +1,5 @@
 
+
 # feminicidios
 
 import dash
@@ -1047,7 +1048,7 @@ body = html.Div([
                            ", Toluca (27), Naucalpan de Juárez (22), Ixtapaluca (22), Zumpango"
                            "(21), Tecámac (19), Cuautitlán Izcalli (19), y Valle de Chalco"
                            "Solidaridad (16).",
-                       style={'font-size': 16, }),
+                       style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                          'margin-left': '300px',
@@ -1062,7 +1063,7 @@ body = html.Div([
                            " Veracruz (49), Xalapa (42), Coatzacoalcos (25), Córdoba (24), "
                            "Poza Rica de Hidalgo (17), Tuxpan (13), Papantla (12), Tierra "
                            "Blanca (11), Minatitlán (11), y San Andrés Tuxtla (11).",
-                         style={'font-size': 16 }),
+                       style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
                        ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                         # 'margin-left': '10px',
@@ -1086,7 +1087,8 @@ html.Br(),
                            " Iztapalapa (68), Gustavo A. Madero (37), Tlalpan (35), Cuauhtémoc"
                            "(34), Xochimilco (25), Miguel Hidalgo (19), Álvaro Obregón (17),"
                            " Tláhuac (16), Coyoacán (14), y Venustiano Carranza (14).",
-                                   style={'font-size': 16, })]),
+                       style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
+                              ]),
                              style={"background-color":"white",
                                     "box-shadow": "10px 20px 30px black",
                                     'margin-left': '300px',
@@ -1100,7 +1102,7 @@ html.Br(),
                            " Guadalajara (51), Tlajomulco de Zúñiga (38), Zapopan (34), "
                            "El Salto (24), Tonalá (17), Puerto Vallarta (10), Ocotlán (6),"
                            " Tequila (6), Mezquitic (6), y Ixtlahuacán de los Membrillos (6).",
-                      style={'font-size': 16, }),
+                       style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                         # 'margin-left': '10px',
