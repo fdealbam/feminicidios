@@ -1,6 +1,5 @@
 
 
-
 # feminicidios
 
 import dash
@@ -895,7 +894,7 @@ body = html.Div([
            dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/0entrada/blob/ce2cda9ccf7732861b8494b36562ebe9c8c642a6/application/static/logo%20cesopycamara.jpeg?raw=true"),
                         width=5, md={'size': 2,  "offset": 2, }),
             
-           dbc.Col(html.H6(" Centro de Estudios Sociales y de Opinión Pública," 
+           dbc.Col(html.H5(" Centro de Estudios Sociales y de Opinión Pública," 
                            " Cámara de Diputados"
                            " México, 2021 "),
                   width={'size': 3, 'offset': 0}),
@@ -1008,7 +1007,7 @@ body = html.Div([
                          #'margin-left': '-390px'
                         }, disabled=True)),
            
-    ],style={ "background-color": "white",
+    ],style={ "background-color": "lightgray",
               #"box-shadow": "10px 20px 30px black",
               'margin-left': '50px'}),
     
@@ -1019,7 +1018,7 @@ body = html.Div([
        dbc.Row([
                dbc.Col(html.P("Fuente: SENSNSP"),
                         style={#"margin-left": "90px", 
-                               "font-size": 22, "text-align": "right"}),
+                               "font-size": 22, "text-align": "right", "margin-right":"50px"}),
            ], justify= "right"),
        html.Br(),
        html.Br(),
@@ -1049,7 +1048,7 @@ body = html.Div([
        dbc.Row([
                dbc.Col(html.P("Fuente: SENSNSP"),
                         style={#"margin-left": "90px", 
-                               "font-size": 22, "text-align": "right"}),
+                               "font-size": 22, "text-align": "right", "margin-right":"50px"}),
            ], justify= "right"),
        html.Br(),
        html.Br(),
@@ -1284,7 +1283,7 @@ html.Br(),
             html.H6([ (ent315_txt),": ", (ent315_val),"%",],style={"text-align":"left", "font-size": 20,}),
             html.H6([ (ent415_txt),": ", (ent415_val),"%",],style={"text-align":"left", "font-size": 20,}),
             html.H6([ (ent515_txt),": ", (ent515_val),"%",],style={"text-align":"left", "font-size": 20,}),
-        ]), disabled=True,)], style={"margin-left":"20px","width": "27em"}),
+        ]), disabled=True,)], style={"margin-left":"18px","width": "21em"}),
         
         dbc.Col([dbc.Button(([
             html.H6("2016", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1293,7 +1292,7 @@ html.Br(),
             html.H6([ (ent316_txt),": ", (ent316_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent416_txt),": ", (ent416_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent516_txt),": ", (ent516_val),"%",],style={"text-align":"left",  "font-size": 20,}),
-        ]), disabled=True,)], style={"margin-left":"-40px","width": "27em"}),
+        ]), disabled=True,)], style={"margin-left":"-20px","width": "21em"}),
         
         dbc.Col([dbc.Button(([  
             html.P("2017", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1302,7 +1301,7 @@ html.Br(),
             html.H6([ (ent317_txt),": ", (ent317_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent417_txt),": ", (ent417_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent517_txt),": ", (ent517_val),"%",],style={"text-align":"left",  "font-size": 20,}),                
-        ]), disabled=True,)], style={"margin-left":"-40px","width": "27em"}),
+        ]), disabled=True,)], style={"margin-left":"-20px","width": "26em"}),
 
         dbc.Col([dbc.Button(([    
             html.P("2018", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1311,7 +1310,7 @@ html.Br(),
             html.H6([ (ent318_txt),": ", (ent318_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent418_txt),": ", (ent418_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent518_txt),": ", (ent518_val),"%",],style={"text-align":"left",  "font-size": 20,}),
-        ]), disabled=True,)], style={"margin-left":"-40px","width": "27em"}),
+        ]), disabled=True,)], style={"margin-left":"-40px","width": "26em"}),
 
         dbc.Col([dbc.Button(([  
             html.P("2019", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1320,7 +1319,7 @@ html.Br(),
             html.H6([ (ent319_txt),": ", (ent319_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent419_txt),": ", (ent419_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent519_txt),": ", (ent519_val),"%",],style={"text-align":"left",  "font-size": 20,}),                
-        ]), disabled=True,)], style={"margin-left":"-40px","width": "27em"}),
+        ]), disabled=True,)], style={"margin-left":"-40px","width": "26em"}),
     ]),   
                
             
@@ -1334,6 +1333,7 @@ html.Br(),
             dbc.CardBody([   
            
             html.H4("Modus Operandi", className="card-title"),
+                
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
             html.H6([ (agr15_txt),": ", (agr15_val),"%",]),
@@ -1656,7 +1656,8 @@ html.Br(),
 
 
 app.layout = html.Div([body],
-                              style={'width': '1800px'})
+                              style={'width': '1850px',
+                                    "background-color": "lightgray"})
 
                      
                      
