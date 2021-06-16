@@ -1,5 +1,6 @@
 
 
+
 # feminicidios
 
 import dash
@@ -955,7 +956,7 @@ body = html.Div([
        dbc.Row([
        dbc.Col(dbc.Button(([html.H5("2015", style={"font-size": 18,"color": "black","background-color": "white"}),
                             html.H1(conf_2015, style={"font-size": 64, "color": "black","background-color": "white"}),
-                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2015.jpeg?raw=true", 
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2015.png?raw=true", 
                                         style={"background-color":"white"}),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
@@ -965,7 +966,7 @@ body = html.Div([
     
        dbc.Col(dbc.Button(([html.H5("2016", style= {"font-size": 18,"color": "black","background-color": "white",}),
                             html.H1(conf_2016,style= {"font-size": 64, "color": "black","background-color": "white",}),
-                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2016.jpeg?raw=true",                               style= {"background-color": "white"}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2016.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                         'width': '250px',
@@ -974,7 +975,7 @@ body = html.Div([
 
         dbc.Col(dbc.Button(([html.H5("2017", style= {"font-size": 18,"color": "black","background-color": "white",}),
                             html.H1(conf_2017,style= {"font-size": 64, "color": "black","background-color": "white",}),
-                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2017.jpeg?raw=true",                               style= {"background-color": "white"}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2017.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                         'width': '250px',
@@ -983,7 +984,7 @@ body = html.Div([
 
        dbc.Col(dbc.Button(([html.H5("2018", style= {"font-size": 18,"color": "black","background-color": "white",}),
                             html.H1(conf_2018,style= {"font-size": 64, "color": "black","background-color": "white",}),
-                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2018.jpeg?raw=true",                               style= {"background-color": "white"}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2018.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                         'width': '250px',
@@ -992,7 +993,7 @@ body = html.Div([
            
        dbc.Col(dbc.Button(([html.H5("2019", style= {"font-size": 18,"color": "black","background-color": "white",}),
                             html.H1(conf_2019,style= {"font-size": 64, "color": "black","background-color": "white",}),
-                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2019.jpeg?raw=true",                               style= {"background-color": "white"}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2019.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                         'width': '250px',
@@ -1000,7 +1001,7 @@ body = html.Div([
                         }, disabled=True)),
        dbc.Col(dbc.Button(([html.H5("2020", style= {"font-size": 18,"color": "black","background-color": "white",}),
                             html.H1(conf_2020,style= {"font-size": 64, "color": "red","background-color": "white",}),
-                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20Feminicidio%20Total2020.jpeg?raw=true",                               style= {"background-color": "white"}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2020.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                         'width': '250px',
