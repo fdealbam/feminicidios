@@ -1,7 +1,4 @@
 # feminicidios
-
-# feminicidios
-
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -1245,7 +1242,7 @@ html.Br(),
            
             dbc.Col(dbc.Button(([html.H4("2019", style={"font-size": 18,"color": "black","background-color": "white"}),
                             html.Br(),
-                                 html.P((f'{int(def19_tot):,}'),style={"font-size":"60px","color":"gray",}),
+                                 html.P((f'{int(def19_tot):,}'),style={"font-size":"60px","color":"red",}),
                             
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
@@ -1255,23 +1252,78 @@ html.Br(),
            
        ]),
 html.Br(),
-       dbc.Row([
-        dbc.Col([dbc.Card(
-            dbc.CardBody([
-            #html.H4("2015", className="card-title"),
-            #html.P((f'{int(def15_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            #html.Hr(),
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent115_txt),": ", (ent115_val),"%",]),
-            html.H6([ (ent215_txt),": ", (ent215_val),"%",]),
-            html.H6([ (ent315_txt),": ", (ent315_val),"%",]),
-            html.H6([ (ent415_txt),": ", (ent415_val),"%",]),
-            html.H6([ (ent515_txt),": ", (ent515_val),"%",]),                
-            html.Code("Área urbana "),
-            html.H6([ (aurb15_txt),": ", (aurb15_val),"%",]),
-            html.Hr(),
+    html.Br(),
+    html.Br(),
+    html.Hr(),
+#     dbc.Row(
+#           [ dbc.Col(html.P("Mayor incidencia"),
+#                        style={"font-size": 40, "text-align": "left",
+#                               "margin-left": "50px"}),
+#           ]),
+    
+     dbc.Row(
+           [ dbc.Col(html.P("Entidades con más decesos femeninos según año"),
+                        style={"font-size": 42, "text-align": "left",
+                               "margin-left": "50px", "color":"red"}),
+           ]),
+      
+    dbc.Row([
+        dbc.Col([dbc.Button(([
+            html.P("2015", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
+            html.H6([ (ent115_txt),": ", (ent115_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent215_txt),": ", (ent215_val),"%",],style={"text-align":"left", "font-size": 20,}),
+            html.H6([ (ent315_txt),": ", (ent315_val),"%",],style={"text-align":"left", "font-size": 20,}),
+            html.H6([ (ent415_txt),": ", (ent415_val),"%",],style={"text-align":"left", "font-size": 20,}),
+            html.H6([ (ent515_txt),": ", (ent515_val),"%",],style={"text-align":"left", "font-size": 20,}),
+        ]), disabled=True,)], style={"margin-left":"20px","width": "27em"}),
+        
+        dbc.Col([dbc.Button(([
+            html.H6("2016", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
+            html.H6([ (ent116_txt),": ", (ent116_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent216_txt),": ", (ent216_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent316_txt),": ", (ent316_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent416_txt),": ", (ent416_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent516_txt),": ", (ent516_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+        ]), disabled=True,)], style={"margin-left":"-40px","width": "27em"}),
+        
+        dbc.Col([dbc.Button(([  
+            html.P("2017", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
+            html.H6([ (ent117_txt),": ", (ent117_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent217_txt),": ", (ent217_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent317_txt),": ", (ent317_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent417_txt),": ", (ent417_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent517_txt),": ", (ent517_val),"%",],style={"text-align":"left",  "font-size": 20,}),                
+        ]), disabled=True,)], style={"margin-left":"-40px","width": "27em"}),
+
+        dbc.Col([dbc.Button(([    
+            html.P("2018", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
+            html.H6([ (ent118_txt),": ", (ent118_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent218_txt),": ", (ent218_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent318_txt),": ", (ent318_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent418_txt),": ", (ent418_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent518_txt),": ", (ent518_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+        ]), disabled=True,)], style={"margin-left":"-40px","width": "27em"}),
+
+        dbc.Col([dbc.Button(([  
+            html.P("2019", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
+            html.H6([ (ent119_txt),": ", (ent119_val),"%",],style={"text-align":"left",  "font-size": 20,"color":"red"}),
+            html.H6([ (ent219_txt),": ", (ent219_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent319_txt),": ", (ent319_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent419_txt),": ", (ent419_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent519_txt),": ", (ent519_val),"%",],style={"text-align":"left",  "font-size": 20,}),                
+        ]), disabled=True,)], style={"margin-left":"-40px","width": "27em"}),
+    ]),   
+               
+            
+     html.Br(),
+    html.Br(),
+     dbc.Row(
+           [       
+            
+            
+          dbc.Col([dbc.Card(
+            dbc.CardBody([   
+           
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1307,10 +1359,7 @@ html.Br(),
             html.H6([ (esc215_txt),": ", (esc215_val),"%",]),
             html.H6([ (esc315_txt),": ", (esc315_val),"%",]),
             
-            #html.Code("Ocupación"),
-            #html.H6([ (ocu115_txt),": ", (ocu115_val),"%",]),
-            #html.H6([ (ocu215_txt),": ", (ocu215_val),"%",]),
-            #html.H6([ (ocu315_txt),": ", (ocu315_val),"%",]),
+     
 
 
           
@@ -1320,20 +1369,9 @@ html.Br(),
 ),]),
         dbc.Col([dbc.Card(
             dbc.CardBody([
-            # html.H4("2016", className="card-title"),
-            #html.P((f'{int(def16_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            #html.Hr(),
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent116_txt),": ", (ent116_val),"%",]),
-            html.H6([ (ent216_txt),": ", (ent216_val),"%",]),
-            html.H6([ (ent316_txt),": ", (ent316_val),"%",]),
-            html.H6([ (ent416_txt),": ", (ent416_val),"%",]),
-            html.H6([ (ent516_txt),": ", (ent516_val),"%",]),                
-            html.Code("Área urbana "),
-            html.H6([ (aurb16_txt),": ", (aurb16_val),"%",]),
-            html.Hr(),
+           
+           
+         
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1368,11 +1406,7 @@ html.Br(),
             html.H6([ (esc116_txt),": ", (esc116_val),"%",]),
             html.H6([ (esc216_txt),": ", (esc216_val),"%",]),
             html.H6([ (esc316_txt),": ", (esc316_val),"%",]),
-            
-            #html.Code("Ocupación"),
-            #html.H6([ (ocu116_txt),": ", (ocu116_val),"%",]),
-            #html.H6([ (ocu216_txt),": ", (ocu216_val),"%",]),
-            #html.H6([ (ocu316_txt),": ", (ocu316_val),"%",]),
+     
 
         ]
     ),
@@ -1381,20 +1415,9 @@ html.Br(),
          dbc.Col([dbc.Card(
             dbc.CardBody([
             
-            #html.H4("2017", className="card-title"),
-            #html.P((f'{int(def17_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            #html.Hr(),
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent117_txt),": ", (ent117_val),"%",]),
-            html.H6([ (ent217_txt),": ", (ent217_val),"%",]),
-            html.H6([ (ent317_txt),": ", (ent317_val),"%",]),
-            html.H6([ (ent417_txt),": ", (ent417_val),"%",]),
-            html.H6([ (ent517_txt),": ", (ent517_val),"%",]),                
-            html.Code("Área urbana "),
-            html.H6([ (aurb17_txt),": ", (aurb17_val),"%",]),
-            html.Hr(),
+            
+            
+            
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1430,10 +1453,7 @@ html.Br(),
             html.H6([ (esc217_txt),": ", (esc217_val),"%",]),
             html.H6([ (esc317_txt),": ", (esc317_val),"%",]),
             
-            #html.Code("Ocupación"),
-            #html.H6([ (ocu117_txt),": ", (ocu117_val),"%",]),
-            #html.H6([ (ocu217_txt),": ", (ocu217_val),"%",]),
-            #html.H6([ (ocu317_txt),": ", (ocu317_val),"%",]),
+        
  
         ]
     ),
@@ -1441,21 +1461,10 @@ html.Br(),
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
-            #html.H4("2018", className="card-title"),
-            #html.P((f'{int(def18_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            #html.Hr(),
+        
          
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent118_txt),": ", (ent118_val),"%",]),
-            html.H6([ (ent218_txt),": ", (ent218_val),"%",]),
-            html.H6([ (ent318_txt),": ", (ent318_val),"%",]),
-            html.H6([ (ent418_txt),": ", (ent418_val),"%",]),
-            html.H6([ (ent518_txt),": ", (ent518_val),"%",]),
-            html.Code("Área urbana "),
-            html.H6([ (aurb18_txt),": ", (aurb18_val),"%",]),
-            html.Hr(),
+            
+         
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1501,21 +1510,9 @@ html.Br(),
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
-            # html.H4("2019", className="card-title"),
-            #html.P((f'{int(def19_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            #html.Hr(),
-           
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent119_txt),": ", (ent119_val),"%",]),
-            html.H6([ (ent219_txt),": ", (ent219_val),"%",]),
-            html.H6([ (ent319_txt),": ", (ent319_val),"%",]),
-            html.H6([ (ent419_txt),": ", (ent419_val),"%",]),
-            html.H6([ (ent519_txt),": ", (ent519_val),"%",]),                
-            html.Code("Área urbana "),
-            html.H6([ (aurb19_txt),": ", (aurb19_val),"%",]),
-            html.Hr(),
+            
+            
+            
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1655,8 +1652,8 @@ app.layout = html.Div([body],
                      
                      
 
-from application.dash import app
-from settings import config
+#from application.dash import app
+#from settings import config
 
 if __name__ == "__main__":
     app.run_server()
