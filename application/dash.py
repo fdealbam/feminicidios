@@ -1016,7 +1016,7 @@ body = html.Div([
        html.Br(),
        html.Br(),
        dbc.Row([
-               dbc.Col(html.P("Fuente: Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SENSNSP)"),
+               dbc.Col(html.P("Fuente: SENSNSP"),
                         style={#"margin-left": "90px", 
                                "font-size": 22, "text-align": "right"}),
            ], justify= "right"),
@@ -1046,7 +1046,7 @@ body = html.Div([
        html.Br(),
        html.Br(),
        dbc.Row([
-               dbc.Col(html.P("Fuente: Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SENSNSP)"),
+               dbc.Col(html.P("Fuente: SENSNSP"),
                         style={#"margin-left": "90px", 
                                "font-size": 22, "text-align": "right"}),
            ], justify= "right"),
