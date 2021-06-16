@@ -1035,90 +1035,88 @@ body = html.Div([
     html.Br(),
     html.Br(),
     
-     dbc.Row(
-           [
-               dbc.Col([html.H3("México"),
-                        dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/mx2.jpeg?raw=true"),
-                      
-                      # style={'size': 1,  "offset": 1, }
-                       ]),
-               
-               dbc.Col([html.H3("Veracruz"),
-                     dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/ver2.jpeg?raw=true"),
-                      # style={'size': 1,  "offset": 1, }
-                       ]),
-               
-               dbc.Col([html.H3("Ciudad de México"),
-                       dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/cdmx2.jpeg?raw=true"),
-                     #  style={'size': 3,  "offset": 2, }
-                       ]),
-                      
-               dbc.Col([html.H3("Jalisco"),
-                       dbc.CardImg(src="https://github.com/Aeelen-Miranda/feminicidios/blob/main/application/static/jal2.jpeg?raw=true"),
-                      # style={'size': 1,  "offset": 1, }
-                       ]),
-           ], #, justify= "end", 
-    align= "center"),
-
-
-
-    #################################################################  MUNICIPIOS ranking    
-
-    dbc.Row([
-               dbc.Col(dbc.Container([
-                       html.P(
+    #4 CUADROS
+    
+     dbc.Row([
+       dbc.Col(dbc.Button(([html.P("México", style={"font-size": 30,"color": "black","background-color": "white"}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/mx2.jpeg?raw=true",
+                                        style={"background-color":"white"}),
+                            html.P(
                            "Los 10 municipios con mayor número de casos de feminicidios son:"
                            " Ecatepec de Morelos (56), Chimalhuacán (35), Nezahualcóyotl (31)"
                            ", Toluca (27), Naucalpan de Juárez (22), Ixtapaluca (22), Zumpango"
                            "(21), Tecámac (19), Cuautitlán Izcalli (19), y Valle de Chalco"
                            "Solidaridad (16).",
-                    className="top",)
-                                ], fluid=True)
-                       
-                      ),
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
+                       style={'font-size': 16, }),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '300px',
+                        'width': '450px'
+                         }, disabled=True)),
+    
+     
+         dbc.Col(dbc.Button(([html.H3("Veracruz",style={"font-size": 30,"color": "black","background-color": "white"}),
+                     dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/ver2.jpeg?raw=true"),
+                        html.P(
                            "Los 10 municipios con mayor número de casos de feminicidios son:"
                            " Veracruz (49), Xalapa (42), Coatzacoalcos (25), Córdoba (24), "
                            "Poza Rica de Hidalgo (17), Tuxpan (13), Papantla (12), Tierra "
                            "Blanca (11), Minatitlán (11), y San Andrés Tuxtla (11).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True)
-                      ),
-          dbc.Col(
-                   dbc.Container([
-                       html.P(
+                         style={'font-size': 16 }),
+                       ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        # 'margin-left': '10px',
+                        'width': '450px'
+                         }, disabled=True)),
+     ]),
+               
+
+html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    
+    #################################################################  MUNICIPIOS ranking    
+          dbc.Row([
+          dbc.Col(dbc.Button(([html.P("Ciudad de México",style={"font-size": 30,"color": "black","background-color": "white"}),
+                        dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/cdmx2.jpeg?raw=true",
+                                        style={"background-color":"white"}),
+                               html.P(
                            "Las 10 alcaldías con mayor número de casos de feminicidios son:"
                            " Iztapalapa (68), Gustavo A. Madero (37), Tlalpan (35), Cuauhtémoc"
                            "(34), Xochimilco (25), Miguel Hidalgo (19), Álvaro Obregón (17),"
                            " Tláhuac (16), Coyoacán (14), y Venustiano Carranza (14).",
-                    className="top")
-                                ], fluid=True)
-                                    )
-                      ,
-          dbc.Col(dbc.Jumbotron([
-                   dbc.Container([
-                       html.P(
+                                   style={'font-size': 16, })]),
+                             style={"background-color":"white",
+                                    "box-shadow": "10px 20px 30px black",
+                                    'margin-left': '300px',
+                                    'width': '450px'
+                         }, disabled=True)),
+          dbc.Col(dbc.Button(([html.H3("Jalisco",style={"font-size": 30,"color": "black","background-color": "white"}),
+                       dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/jal2.jpeg?raw=true",
+                                        style={"background-color":"white"}),
+                               html.P(
                            "Los 10 municipios con mayor número de casos de feminicidios son:"
                            " Guadalajara (51), Tlajomulco de Zúñiga (38), Zapopan (34), "
                            "El Salto (24), Tonalá (17), Puerto Vallarta (10), Ocotlán (6),"
                            " Tequila (6), Mezquitic (6), y Ixtlahuacán de los Membrillos (6).",
-                    className="top")
-                                ], fluid=True)
-                                    ], fluid=True)
-                      ),
-      ]),
+                      style={'font-size': 16, }),
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        # 'margin-left': '10px',
+                        'width': '450px'
+                         }, disabled=True)),
+          ]),
+  
 
 
 #  
        html.Br(),
        html.Br(),
-       html.Br(),
-       html.Br(),
-       html.Br(),
-       html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Br(),
    
     
 # Cintillo 3
@@ -1178,45 +1176,27 @@ body = html.Div([
     
        html.Br(),
        html.Br(),
-        
-    dbc.Row(
-           [
-               dbc.Col(html.H5("2015")),
-               dbc.Col(html.H5("2016")),
-               dbc.Col(html.H5("2017")),
-               dbc.Col(html.H5("2018")),
-               dbc.Col(html.H5("2019")),
-              # dbc.Col(html.H5("2020")),
-           ], justify= "start"),
-    
-   
 
-      
-     dbc.Row(
-           [
-               #dbc.Col(html.H3([str(f"{conf_2015:,d}")])),
-               dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def15_tot):,}'), className="mb-0",color="light",),]),),
-               dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def16_tot):,}'),className="mb-0",color="light",),]),),
-               dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def17_tot):,}'),className="mb-0",color="light",),]),),
-               dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def18_tot):,}'),className="mb-0",color="light",),]),),
-               dbc.Col(html.H1([" ", 
-                                dbc.Badge((f'{int(def19_tot):,}'),className="mb-0",color="light",),]),),
-               #dbc.Col(html.H1([" ", 
-               #                 dbc.Badge((def_tot20),className="mb-0",color="light",),]),),
-            ]),
-    html.Br(),  
-   
 
 
 
        dbc.Row([
         dbc.Col([dbc.Card(
             dbc.CardBody([
-            
+            html.H4("2015", className="card-title"),
+            html.P((f'{int(def15_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            html.Hr(),
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Hr(),
+            html.Code("¿Dónde ocurren más?"),
+            html.H6([ (ent115_txt),": ", (ent115_val),"%",]),
+            html.H6([ (ent215_txt),": ", (ent215_val),"%",]),
+            html.H6([ (ent315_txt),": ", (ent315_val),"%",]),
+            html.H6([ (ent415_txt),": ", (ent415_val),"%",]),
+            html.H6([ (ent515_txt),": ", (ent515_val),"%",]),                
+            html.Code("Área urbana "),
+            html.H6([ (aurb15_txt),": ", (aurb15_val),"%",]),
+            html.Hr(),
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1229,17 +1209,6 @@ body = html.Div([
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug115_txt),": ", (lug115_val),"%",]),
             html.H6([ (lug215_txt),": ", (lug215_val),"%",]),
-            html.Hr(),
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent115_txt),": ", (ent115_val),"%",]),
-            html.H6([ (ent215_txt),": ", (ent215_val),"%",]),
-            html.H6([ (ent315_txt),": ", (ent315_val),"%",]),
-            html.H6([ (ent415_txt),": ", (ent415_val),"%",]),
-            html.H6([ (ent515_txt),": ", (ent515_val),"%",]),                
-            html.Code("Área urbana "),
-            html.H6([ (aurb15_txt),": ", (aurb15_val),"%",]),
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
@@ -1262,6 +1231,7 @@ body = html.Div([
             html.H6([ (esc115_txt),": ", (esc115_val),"%",]),
             html.H6([ (esc215_txt),": ", (esc215_val),"%",]),
             html.H6([ (esc315_txt),": ", (esc315_val),"%",]),
+            
             #html.Code("Ocupación"),
             #html.H6([ (ocu115_txt),": ", (ocu115_val),"%",]),
             #html.H6([ (ocu215_txt),": ", (ocu215_val),"%",]),
@@ -1271,10 +1241,24 @@ body = html.Div([
           
         ]
     ),
-    style={"width": "20rem"},
+    style={"width": "16rem"},
 ),]),
         dbc.Col([dbc.Card(
             dbc.CardBody([
+             html.H4("2016", className="card-title"),
+            html.P((f'{int(def16_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            html.Hr(),
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Hr(),
+            html.Code("¿Dónde ocurren más?"),
+            html.H6([ (ent116_txt),": ", (ent116_val),"%",]),
+            html.H6([ (ent216_txt),": ", (ent216_val),"%",]),
+            html.H6([ (ent316_txt),": ", (ent316_val),"%",]),
+            html.H6([ (ent416_txt),": ", (ent416_val),"%",]),
+            html.H6([ (ent516_txt),": ", (ent516_val),"%",]),                
+            html.Code("Área urbana "),
+            html.H6([ (aurb16_txt),": ", (aurb16_val),"%",]),
+            html.Hr(),
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1287,17 +1271,6 @@ body = html.Div([
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug116_txt),": ", (lug116_val),"%",]),
             html.H6([ (lug216_txt),": ", (lug216_val),"%",]),
-            html.Hr(),
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent116_txt),": ", (ent116_val),"%",]),
-            html.H6([ (ent216_txt),": ", (ent216_val),"%",]),
-            html.H6([ (ent316_txt),": ", (ent316_val),"%",]),
-            html.H6([ (ent416_txt),": ", (ent416_val),"%",]),
-            html.H6([ (ent516_txt),": ", (ent516_val),"%",]),                
-            html.Code("Área urbana "),
-            html.H6([ (aurb16_txt),": ", (aurb16_val),"%",]),
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
@@ -1320,6 +1293,7 @@ body = html.Div([
             html.H6([ (esc116_txt),": ", (esc116_val),"%",]),
             html.H6([ (esc216_txt),": ", (esc216_val),"%",]),
             html.H6([ (esc316_txt),": ", (esc316_val),"%",]),
+            
             #html.Code("Ocupación"),
             #html.H6([ (ocu116_txt),": ", (ocu116_val),"%",]),
             #html.H6([ (ocu216_txt),": ", (ocu216_val),"%",]),
@@ -1332,6 +1306,20 @@ body = html.Div([
          dbc.Col([dbc.Card(
             dbc.CardBody([
             
+            html.H4("2017", className="card-title"),
+            html.P((f'{int(def17_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            html.Hr(),
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Hr(),
+            html.Code("¿Dónde ocurren más?"),
+            html.H6([ (ent117_txt),": ", (ent117_val),"%",]),
+            html.H6([ (ent217_txt),": ", (ent217_val),"%",]),
+            html.H6([ (ent317_txt),": ", (ent317_val),"%",]),
+            html.H6([ (ent417_txt),": ", (ent417_val),"%",]),
+            html.H6([ (ent517_txt),": ", (ent517_val),"%",]),                
+            html.Code("Área urbana "),
+            html.H6([ (aurb17_txt),": ", (aurb17_val),"%",]),
+            html.Hr(),
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1344,17 +1332,6 @@ body = html.Div([
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug117_txt),": ", (lug117_val),"%",]),
             html.H6([ (lug217_txt),": ", (lug217_val),"%",]),
-            html.Hr(),
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent117_txt),": ", (ent117_val),"%",]),
-            html.H6([ (ent217_txt),": ", (ent217_val),"%",]),
-            html.H6([ (ent317_txt),": ", (ent317_val),"%",]),
-            html.H6([ (ent417_txt),": ", (ent417_val),"%",]),
-            html.H6([ (ent517_txt),": ", (ent517_val),"%",]),                
-            html.Code("Área urbana "),
-            html.H6([ (aurb17_txt),": ", (aurb17_val),"%",]),
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
@@ -1377,6 +1354,7 @@ body = html.Div([
             html.H6([ (esc117_txt),": ", (esc117_val),"%",]),
             html.H6([ (esc217_txt),": ", (esc217_val),"%",]),
             html.H6([ (esc317_txt),": ", (esc317_val),"%",]),
+            
             #html.Code("Ocupación"),
             #html.H6([ (ocu117_txt),": ", (ocu117_val),"%",]),
             #html.H6([ (ocu217_txt),": ", (ocu217_val),"%",]),
@@ -1388,7 +1366,21 @@ body = html.Div([
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
-            
+            html.H4("2018", className="card-title"),
+            html.P((f'{int(def18_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            html.Hr(),
+         
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Hr(),
+            html.Code("¿Dónde ocurren más?"),
+            html.H6([ (ent118_txt),": ", (ent118_val),"%",]),
+            html.H6([ (ent218_txt),": ", (ent218_val),"%",]),
+            html.H6([ (ent318_txt),": ", (ent318_val),"%",]),
+            html.H6([ (ent418_txt),": ", (ent418_val),"%",]),
+            html.H6([ (ent518_txt),": ", (ent518_val),"%",]),
+            html.Code("Área urbana "),
+            html.H6([ (aurb18_txt),": ", (aurb18_val),"%",]),
+            html.Hr(),
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1401,17 +1393,6 @@ body = html.Div([
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug118_txt),": ", (lug118_val),"%",]),
             html.H6([ (lug218_txt),": ", (lug218_val),"%",]),
-            html.Hr(),
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent118_txt),": ", (ent118_val),"%",]),
-            html.H6([ (ent218_txt),": ", (ent218_val),"%",]),
-            html.H6([ (ent318_txt),": ", (ent318_val),"%",]),
-            html.H6([ (ent418_txt),": ", (ent418_val),"%",]),
-            html.H6([ (ent518_txt),": ", (ent518_val),"%",]),
-            html.Code("Área urbana "),
-            html.H6([ (aurb18_txt),": ", (aurb18_val),"%",]),
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
@@ -1434,6 +1415,7 @@ body = html.Div([
             html.H6([ (esc118_txt),": ", (esc118_val),"%",]),
             html.H6([ (esc218_txt),": ", (esc218_val),"%",]),
             html.H6([ (esc318_txt),": ", (esc318_val),"%",]),
+              
             #html.Code("Ocupación"),
             #html.H6([ (ocu118_txt),": ", (ocu118_val),"%",]),
             #html.H6([ (ocu218_txt),": ", (ocu218_val),"%",]),
@@ -1444,7 +1426,21 @@ body = html.Div([
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
-            
+             html.H4("2019", className="card-title"),
+            html.P((f'{int(def19_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            html.Hr(),
+           
+            html.H4("Mayor incidencia", className="card-title"),
+            html.Hr(),
+            html.Code("¿Dónde ocurren más?"),
+            html.H6([ (ent119_txt),": ", (ent119_val),"%",]),
+            html.H6([ (ent219_txt),": ", (ent219_val),"%",]),
+            html.H6([ (ent319_txt),": ", (ent319_val),"%",]),
+            html.H6([ (ent419_txt),": ", (ent419_val),"%",]),
+            html.H6([ (ent519_txt),": ", (ent519_val),"%",]),                
+            html.Code("Área urbana "),
+            html.H6([ (aurb19_txt),": ", (aurb19_val),"%",]),
+            html.Hr(),
             html.H4("Modus Operandi", className="card-title"),
             html.Hr(),
             html.Code("Parentesco con agresor", className="card-text"),
@@ -1457,17 +1453,6 @@ body = html.Div([
             html.Code("¿Dónde ocurrió? "),
             html.H6([ (lug119_txt),": ", (lug119_val),"%",]),
             html.H6([ (lug219_txt),": ", (lug219_val),"%",]),
-            html.Hr(),
-            html.H4("Mayor incidencia", className="card-title"),
-            html.Hr(),
-            html.Code("¿Dónde ocurren más?"),
-            html.H6([ (ent119_txt),": ", (ent119_val),"%",]),
-            html.H6([ (ent219_txt),": ", (ent219_val),"%",]),
-            html.H6([ (ent319_txt),": ", (ent319_val),"%",]),
-            html.H6([ (ent419_txt),": ", (ent419_val),"%",]),
-            html.H6([ (ent519_txt),": ", (ent519_val),"%",]),                
-            html.Code("Área urbana "),
-            html.H6([ (aurb19_txt),": ", (aurb19_val),"%",]),
             html.Hr(),
             html.H4("Perfil de la víctima ", className="card-title"), 
             html.Hr(),
@@ -1497,7 +1482,7 @@ body = html.Div([
  
                         ]
     ),
-    style={"width": "15rem"},
+    style={"width": "16rem"},
 ),]),]),
        html.Br(),
        html.Br(),
@@ -1586,8 +1571,9 @@ body = html.Div([
 
     
     html.Br(),
-    
-])
+                  
+                  
+                  ])
 
 
 app.layout = html.Div([body],
