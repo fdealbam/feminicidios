@@ -1,5 +1,7 @@
 # feminicidios
 
+# feminicidios
+
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -884,14 +886,37 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes. LUX], server=server)
 
 body = html.Div([
 # Cintillo 000
+    
+   html.Br(),
+    
+   dbc.Row([
+                                    #https://github.com/fdealbam/CamaraDiputados/blob/b11ef31e8e0f73e1a4a06ce60402563e1bd0122e/application/static/logocamara.jfif
+           dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/0entrada/blob/ce2cda9ccf7732861b8494b36562ebe9c8c642a6/application/static/logo%20cesopycamara.jpeg?raw=true"),
+                        width=5, md={'size': 2,  "offset": 2, }),
+            
+           dbc.Col(html.H6(" Centro de Estudios Sociales y de Opinión Pública," 
+                           " Cámara de Diputados"
+                           " México, 2021 "),
+                  width={'size': 3, 'offset': 0}),
+               ], justify="end",),
+            
+   
+   
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    
+    
         dbc.Row(
            [
-               dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
-                        width={'size': 1,  "offset": 1}),
-               dbc.Col(html.H1("Feminicidios en México (2015-2020)"),
-                        width={'size' : "auto", "offset": 0}),
+               #dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
+               #         width={'size': 1,  "offset": 1}),
+               dbc.Col(html.P("Feminicidios en México (2015-2020)"),
+                        style={"font-size": 86, "text-align": "center"}),
            ], justify= "start"),
 
+    
 #Cintillo 00    
     dbc.Row(
            [
@@ -902,6 +927,9 @@ body = html.Div([
                         width={'size': 5,  "offset":2 }),
             ]),
                
+       html.Br(),
+       html.Br(),
+       html.Br(),
        html.Br(),
        html.Br(),
        html.Br(),
@@ -1012,7 +1040,7 @@ body = html.Div([
    
     dbc.Row(
         [
-            dbc.Col(dcc.Graph(figure=graf_meses, config= "autosize")),
+            dbc.Col(dcc.Graph(figure=graf_meses, config= "autosize", style={"margin-left":"50px"})),
         ]),
        html.Br(),
        html.Br(),
@@ -1145,7 +1173,7 @@ html.Br(),
    
     dbc.Row(
         [
-            dbc.Col(dcc.Graph(figure=graf_totfem , config= "autosize")),
+            dbc.Col(dcc.Graph(figure=graf_totfem , config= "autosize", style={"margin-left":"50px"})),
                    #lg={'size': 5,  "offset": 0,}),
             
             dbc.Col(dcc.Graph(figure= graf_tasafem, config= "autosize")),
@@ -1177,15 +1205,62 @@ html.Br(),
        html.Br(),
        html.Br(),
 
-
-
-
+       dbc.Row([
+       dbc.Col(dbc.Button(([html.H4("2015", style={"font-size": 18,"color": "black","background-color": "white"}),
+                            html.Br(),
+                            html.P((f'{int(def15_tot):,}'),style={"font-size":"60px","color":"gray",}),
+                            
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+            dbc.Col(dbc.Button(([html.H4("2016", style={"font-size": 18,"color": "black","background-color": "white"}),
+                            html.Br(),
+                                 html.P((f'{int(def16_tot):,}'),style={"font-size":"60px","color":"gray",}),
+                            
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+            dbc.Col(dbc.Button(([html.H4("2017", style={"font-size": 18,"color": "black","background-color": "white"}),
+                           html.Br(),
+                                 html.P((f'{int(def17_tot):,}'),style={"font-size":"60px","color":"gray",}),
+                            
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+            dbc.Col(dbc.Button(([html.H4("2018", style={"font-size": 18,"color": "black","background-color": "white"}),
+                            html.Br(),
+                                 html.P((f'{int(def18_tot):,}'),style={"font-size":"60px","color":"gray",}),
+                            
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+           
+            dbc.Col(dbc.Button(([html.H4("2019", style={"font-size": 18,"color": "black","background-color": "white"}),
+                            html.Br(),
+                                 html.P((f'{int(def19_tot):,}'),style={"font-size":"60px","color":"gray",}),
+                            
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+           
+       ]),
+html.Br(),
        dbc.Row([
         dbc.Col([dbc.Card(
             dbc.CardBody([
-            html.H4("2015", className="card-title"),
-            html.P((f'{int(def15_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            html.Hr(),
+            #html.H4("2015", className="card-title"),
+            #html.P((f'{int(def15_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            #html.Hr(),
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
             html.Code("¿Dónde ocurren más?"),
@@ -1245,9 +1320,9 @@ html.Br(),
 ),]),
         dbc.Col([dbc.Card(
             dbc.CardBody([
-             html.H4("2016", className="card-title"),
-            html.P((f'{int(def16_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            html.Hr(),
+            # html.H4("2016", className="card-title"),
+            #html.P((f'{int(def16_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            #html.Hr(),
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
             html.Code("¿Dónde ocurren más?"),
@@ -1306,9 +1381,9 @@ html.Br(),
          dbc.Col([dbc.Card(
             dbc.CardBody([
             
-            html.H4("2017", className="card-title"),
-            html.P((f'{int(def17_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            html.Hr(),
+            #html.H4("2017", className="card-title"),
+            #html.P((f'{int(def17_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            #html.Hr(),
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
             html.Code("¿Dónde ocurren más?"),
@@ -1366,9 +1441,9 @@ html.Br(),
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
-            html.H4("2018", className="card-title"),
-            html.P((f'{int(def18_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            html.Hr(),
+            #html.H4("2018", className="card-title"),
+            #html.P((f'{int(def18_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            #html.Hr(),
          
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
@@ -1426,9 +1501,9 @@ html.Br(),
 ),]),
          dbc.Col([dbc.Card(
             dbc.CardBody([
-             html.H4("2019", className="card-title"),
-            html.P((f'{int(def19_tot):,}'),style={"font-size":"60px","color":"gray",}),
-            html.Hr(),
+            # html.H4("2019", className="card-title"),
+            #html.P((f'{int(def19_tot):,}'),style={"font-size":"60px","color":"gray",}),
+            #html.Hr(),
            
             html.H4("Mayor incidencia", className="card-title"),
             html.Hr(),
@@ -1483,7 +1558,7 @@ html.Br(),
                         ]
     ),
     style={"width": "16rem"},
-),]),]),
+),]),], style={"margin-left": "10px"}),
        html.Br(),
        html.Br(),
        html.Br(),
@@ -1531,7 +1606,7 @@ html.Br(),
                     
             ], fluid=True,
         )
-    ], style= {"margin-left":"100px"},
+    ], style= {"margin-left":"50px"},
     fluid=True,
     ),    
     
@@ -1541,26 +1616,26 @@ html.Br(),
        
        html.Br(),
        html.Br(),
-       html.Br(),
+   html.Br(),
     
-
-    dbc.Row([
+   dbc.Row([
                                     #https://github.com/fdealbam/CamaraDiputados/blob/b11ef31e8e0f73e1a4a06ce60402563e1bd0122e/application/static/logocamara.jfif
-           dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
-                        width=4, lg={'size': 1,  "offset": 3, }),
+           dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/0entrada/blob/ce2cda9ccf7732861b8494b36562ebe9c8c642a6/application/static/logo%20cesopycamara.jpeg?raw=true"),
+                        width=5, md={'size': 2,  "offset": 1, }),
             
-           dbc.Col(html.H6(" S e c r e t a r í a   G e n e r a l," 
-                           " Secretaría de Servicios Parlamentarios, "
+           dbc.Col(html.H6(" Centro de Estudios Sociales y de Opinión Pública," 
+                           " Cámara de Diputados"
                            " México, 2021 "),
                   width={'size': 3, 'offset': 0}),
-
                ], justify="start",),
-    dbc.Row([    
-           dbc.Col(html.H5([dbc.Badge("Equipo responsable", 
+            
+     dbc.Row([    
+           dbc.Col(html.P([dbc.Badge("Equipo responsable", style={"font-size":20},
                           href="https://innovation-learning.herokuapp.com/",
                                      )]),
-                  width={'size': 3,  "offset": 4}),
+                  width={'size': 3,  "offset": 3}),
                        ], justify="start",),
+   
     html.Br(),
     html.Br(),
     html.Br(),
@@ -1580,8 +1655,8 @@ app.layout = html.Div([body],
                      
                      
 
-#from application.dash import app
-#from settings import config
+from application.dash import app
+from settings import config
 
 if __name__ == "__main__":
     app.run_server()
