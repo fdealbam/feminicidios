@@ -1,4 +1,7 @@
+
+
 # feminicidios
+
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -909,7 +912,7 @@ body = html.Div([
            [
                #dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
                #         width={'size': 1,  "offset": 1}),
-               dbc.Col(html.P("Feminicidios en México (2015-2020)"),
+               dbc.Col(html.P("Feminicidios y decesos femeninos"),
                         style={"font-size": 86, "text-align": "center"}),
            ], justify= "start"),
 
@@ -920,8 +923,6 @@ body = html.Div([
                dbc.Col(html.H6(d2),           #Fecha de actualización
                width={'size' : "auto",
                       'offset' : 2}), 
-               dbc.Col(html.H6("Fuente: Datos abiertos de incidencia delictiva, SENSNSP"),
-                        width={'size': 5,  "offset":2 }),
             ]),
                
        html.Br(),
@@ -931,9 +932,13 @@ body = html.Div([
        html.Br(),
        html.Br(),
        html.Br(),
+       dbc.Row(
+           [
+               dbc.Col(html.P("Feminicidios (2015-2020)"),
+                        style={"margin-left": "90px", "font-size": 46, "text-align": "left"}),
+           ], justify= "start"),
        html.Br(),
        html.Br(),
-    
 #cintillo 0
     
        dbc.Row(
@@ -1007,15 +1012,14 @@ body = html.Div([
               'margin-left': '50px'}),
     
     
- 
-       html.Br(),
-    
-
     
        html.Br(),
-
        html.Br(),
-       html.Br(),
+       dbc.Row([
+               dbc.Col(html.P("Fuente: Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SENSNSP)"),
+                        style={#"margin-left": "90px", 
+                               "font-size": 22, "text-align": "right"}),
+           ], justify= "right"),
        html.Br(),
        html.Br(),
        html.Br(),
@@ -1041,7 +1045,11 @@ body = html.Div([
         ]),
        html.Br(),
        html.Br(),
-       html.Br(),
+       dbc.Row([
+               dbc.Col(html.P("Fuente: Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública (SENSNSP)"),
+                        style={#"margin-left": "90px", 
+                               "font-size": 22, "text-align": "right"}),
+           ], justify= "right"),
        html.Br(),
        html.Br(),
        html.Br(),
