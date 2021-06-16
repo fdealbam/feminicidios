@@ -1,5 +1,3 @@
-
-
 # feminicidios
 
 import dash
@@ -1101,7 +1099,7 @@ html.Br(),
                            "Los 10 municipios con mayor número de casos de feminicidios son:"
                            " Guadalajara (51), Tlajomulco de Zúñiga (38), Zapopan (34), "
                            "El Salto (24), Tonalá (17), Puerto Vallarta (10), Ocotlán (6),"
-                           " Tequila (6), Mezquitic (6), y Ixtlahuacán de los Membrillos (6).",
+                           " Tequila (6), Mezquitic (6), y Ixtlahuacán de los Membrillos (6)                     .",
                        style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
@@ -1533,7 +1531,7 @@ html.Br(),
                     
             ], fluid=True,
         )
-    ],
+    ], style= {"margin-left":"100px"},
     fluid=True,
     ),    
     
