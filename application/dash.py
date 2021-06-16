@@ -1557,9 +1557,7 @@ html.Br(),
                ], justify="start",),
     dbc.Row([    
            dbc.Col(html.H5([dbc.Badge("Equipo responsable", 
-                          href="https://raw.githubusercontent.com/fdealbam/feminicidios/main/Autores.pdf",
-                          #color="light",
-                          #className="ml-1")
+                          href="https://innovation-learning.herokuapp.com/",
                                      )]),
                   width={'size': 3,  "offset": 4}),
                        ], justify="start",),
