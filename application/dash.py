@@ -1,6 +1,8 @@
 
 # feminicidios
 
+# feminicidios
+
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -912,7 +914,8 @@ body = html.Div([
                #dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
                #         width={'size': 1,  "offset": 1}),
                dbc.Col(html.P("Feminicidios y decesos femeninos"),
-                        style={"font-size": 86, "text-align": "center"}),
+                        style={"font-size": 86, "text-align": "center",
+                              "text-shadow": "10px 20px 30px black",}),
            ], justify= "start"),
 
     
@@ -1003,12 +1006,14 @@ body = html.Div([
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                         'width': '250px',
-                         #'margin-left': '-390px'
+                        'margin-right': '20px'
                         }, disabled=True)),
            
     ],style={ "background-color": "lightgray",
               #"box-shadow": "10px 20px 30px black",
-              'margin-left': '50px'}),
+             #'margin-left': '50px'
+            }
+             ),
     
     
     
@@ -1194,12 +1199,16 @@ html.Br(),
        html.Br(),
        html.Br(),
     
-    dbc.Row(
-    [
-        dbc.Col(html.H2([dbc.Alert("Perfil de decesos femeninos", color="primary",# className="alert-link",
-                                  className="alert-heading"),
-                        ]),width={'size': 12,  "offset":0 }),
-    ]),
+        dbc.Row(
+           [
+               #dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/CamaraDiputados/blob/main/application/static/logocamara.jfif?raw=true"),
+               #         width={'size': 1,  "offset": 1}),
+               dbc.Col(html.P("Decesos femeninos"),
+                        style={"font-size": 56, "text-align": "left",
+                              "text-shadow": "10px 20px 30px black",}),
+           ], justify= "start"),
+    
+
     dbc.Row(
     [
         dbc.Col(html.H6("Fuente: Datos de defunciones (2015-2019), Secretaría de Salud, DGIS, marzo 2021"),
@@ -1291,7 +1300,8 @@ html.Br(),
             html.H6([ (ent316_txt),": ", (ent316_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent416_txt),": ", (ent416_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent516_txt),": ", (ent516_val),"%",],style={"text-align":"left",  "font-size": 20,}),
-        ]), disabled=True,)], style={"margin-left":"-20px","width": "21em"}),
+        ]), disabled=True,)], style={#"margin-left":"-20px",
+                                     "width": "21em"}),
         
         dbc.Col([dbc.Button(([  
             html.P("2017", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1300,7 +1310,8 @@ html.Br(),
             html.H6([ (ent317_txt),": ", (ent317_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent417_txt),": ", (ent417_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent517_txt),": ", (ent517_val),"%",],style={"text-align":"left",  "font-size": 20,}),                
-        ]), disabled=True,)], style={"margin-left":"-20px","width": "26em"}),
+        ]), disabled=True,)], style={#"margin-left":"-20px",
+            "width": "26em"}),
 
         dbc.Col([dbc.Button(([    
             html.P("2018", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1309,7 +1320,8 @@ html.Br(),
             html.H6([ (ent318_txt),": ", (ent318_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent418_txt),": ", (ent418_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent518_txt),": ", (ent518_val),"%",],style={"text-align":"left",  "font-size": 20,}),
-        ]), disabled=True,)], style={"margin-left":"-40px","width": "26em"}),
+        ]), disabled=True,)], style={#"margin-left":"-40px",
+            "width": "26em"}),
 
         dbc.Col([dbc.Button(([  
             html.P("2019", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1318,7 +1330,8 @@ html.Br(),
             html.H6([ (ent319_txt),": ", (ent319_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent419_txt),": ", (ent419_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent519_txt),": ", (ent519_val),"%",],style={"text-align":"left",  "font-size": 20,}),                
-        ]), disabled=True,)], style={"margin-left":"-40px","width": "26em"}),
+        ]), disabled=True,)], style={#"margin-left":"-40px",
+            "width": "26em"}),
     ]),   
                
             
@@ -1335,7 +1348,7 @@ html.Br(),
                dbc.Col([dbc.Button(([  
             html.P("2015", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
             html.P("Parentesco con agresor", style={"text-align":"left",  "font-size": 20,"color":"red"}), 
-            html.H6([ (agr15_txt),": ",       (agr15_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (agr15_txt),": ",       (agr15_val),"%",],style={"text-align":"left","font-family": "Arial",  "font-size": 20,}),
             html.H6([ (agr215_txt),": ",     (agr215_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (agr315_txt),": ",     (agr315_val),"%",],style={"text-align":"left",  "font-size": 20,}),
     html.Br(),
@@ -1520,7 +1533,7 @@ html.Br(),
             html.H6([ (civl418_txt),": ", (civl418_val),"%",],style={"text-align":"left",  "font-size": 20,}),
     html.Br(),
             html.P("¿Qué rangos de edad tenían?", style={"text-align":"left",   "font-size": 20,"color":"red"}),
-            html.H6([ (eda118_txt),": ", (eda118_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (eda118_txt),": ", (eda118_val),"%",],style={"text-transform": "lowercase","text-align":"left",  "font-size": 20,}),
             html.H6([ (eda218_txt),": ", (eda218_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (eda318_txt),": ", (eda318_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (eda418_txt),": ", (eda418_val),"%",],style={"text-align":"left",  "font-size": 20,}),
@@ -1560,7 +1573,7 @@ html.Br(),
             html.H6([ (emba119_txt),": ", (emba119_val),"%",],style={"text-align":"left",  "font-size": 20,}), 
     html.Br(),            
             html.P("Escolaridad", style={"text-align":"left",   "font-size": 20,"color":"red"}),
-            html.H6([ (esc119_txt),": ", (esc119_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (esc119_txt),": ", (esc119_val),"%",],className="lead",style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (esc219_txt),": ", (esc219_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (esc319_txt),": ", (esc319_val),"%",],style={"text-align":"left",  "font-size": 20,})
         ]), disabled=True)],style={"margin-right":"20px","width": "28em"}),
@@ -1844,7 +1857,8 @@ html.Br(),
                     
             ], fluid=True,
         )
-    ], style= {"margin-left":"50px"},
+    ], style= {"margin-left":"50px",
+              "margin-right":"20px"},
     fluid=True,
     ),    
     
@@ -1894,8 +1908,8 @@ app.layout = html.Div([body],
                      
                      
 
-#from application.dash import app
-#from settings import config
+from application.dash import app
+from settings import config
 
 if __name__ == "__main__":
     app.run_server()
