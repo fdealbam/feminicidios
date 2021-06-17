@@ -1196,7 +1196,7 @@ html.Br(),
     
     dbc.Row(
     [
-        dbc.Col(html.H2([dbc.Alert("Perfil de Homicidios femeninos", color="primary",# className="alert-link",
+        dbc.Col(html.H2([dbc.Alert("Perfil de decesos femeninos", color="primary",# className="alert-link",
                                   className="alert-heading"),
                         ]),width={'size': 12,  "offset":0 }),
     ]),
