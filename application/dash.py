@@ -1196,7 +1196,7 @@ html.Br(),
     
     dbc.Row(
     [
-        dbc.Col(html.H2([dbc.Alert("Perfil de Homicidios femeninos", color="primary",# className="alert-link",
+        dbc.Col(html.H2([dbc.Alert("Perfil de decesos femeninos", color="primary",# className="alert-link",
                                   className="alert-heading"),
                         ]),width={'size': 12,  "offset":0 }),
     ]),
@@ -1311,7 +1311,7 @@ html.Br(),
             html.H6([ (ent518_txt),": ", (ent518_val),"%",],style={"text-align":"left",  "font-size": 20,}),
         ]), disabled=True,)], style={"margin-left":"-40px","width": "26em"}),
 
-        dbc.Col([dbc.Button(([  
+        dbc.Col([dbc.Button(([  per
             html.P("2019", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
             html.H6([ (ent119_txt),": ", (ent119_val),"%",],style={"text-align":"left",  "font-size": 20,"color":"red"}),
             html.H6([ (ent219_txt),": ", (ent219_val),"%",],style={"text-align":"left",  "font-size": 20,}),
