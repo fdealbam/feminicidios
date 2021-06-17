@@ -932,16 +932,20 @@ body = html.Div([
             [
                 #html.H4("Consideraciones generales "),
                 html.P(
-                    "Los feminicidios y los decesos femeninos son un problema aún irresuelto y son tema central de la " 
-                    "agenda legislativa, pero alcanzan relevancia central en la agenda seguridad nacional también. "
-                    "En este dashboard analítico sobre el problema, presentamos datos de esos dos fenómenos: en el caso de los " 
-                    "feminicidios, su gravedad se observa en los casos anuales y casos mensuales, así como la presentación de cuatro " 
-                    "entidades con más incidencias; finalmente, comparamos los rankings por entidad según sumas del periódo 2015 al 2021 "
+                    "Los feminicidios y los decesos femeninos son problemas aún irresueltos y son tema central de la " 
+                    "agenda legislativa, pero hoy alcanzan relevancia en la agenda seguridad pública del país, también. "
+                    "Este dashboard analítico se compone de dos secciones. "
+                    "En la primera sección tratamos los feminicidios, observamos su gravedad en los casos según intervalos "
+                    "anuales o mensuales; incluimos el análisis detallado de cuatro entidades con más incidencias de este "
+                    "delito; finalmente, comparamos los rankings por entidad según sumas del periódo 2015 al 2021 "
                     "con las tasas por entidad del mismo intervalo. " 
-                    "En cuanto a los decesos femeninos, se analizan las entidades de mayor incidencia por año, el modus operandi, el perfil de las víctimas "
-                    "y el perfil del agresor. "
-                    "Hoy existen cada vez mayor atención institucional a estos fenómeno y son fuerte preocupación de la sociedad, " 
-                    "esto último se evidencia en el hecho que todos seamos más vigilantes al respecto. "
+                    "En la segunda sección, como contraste a las cifras de los feminicidios, analizamos los decesos femeninos, "
+                    "porque es otro rubro que permite ver la insuficiencia de los datos sobre este fenómeno. En ese sentido, "
+                    "inicialmente presentamos las cinco entidades con mayor incidencia anual de decesos femeninos, enseguida "
+                    "presentamos las diferencias anuales en el modus operandi y del perfil de las víctimas. "
+                    
+                    "Hoy existen cada vez mayor atención institucional para atender la violencia contra las mujeres y son fuerte "
+                    "preocupación de la sociedad, esto último se evidencia en el hecho que todos seamos más vigilantes al respecto. "
                     "No obstante, aún hace falta más acción social, sobretodo, más intervención institucional "
                     "para diseñar estrategias efectivas de prevención y promover su denuncia. Es imperativo "
                     "acabar con esta violencia de género. "
@@ -1491,8 +1495,10 @@ html.Br(),
             html.P("Escolaridad", style={"text-align":"left",   "font-size": 20,"color":"red"}),
             html.H6([ (esc115_txt),": ", (esc115_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (esc215_txt),": ", (esc215_val),"%",],style={"text-align":"left",  "font-size": 20,}),
-            html.H6([ (esc315_txt),": ", (esc315_val),"%",],style={"text-align":"left",  "font-size": 20,})
+            html.H6([ (esc315_txt),": ", (esc315_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            #html.H6([ (esc315_txt),": ", (esc315_val),"%",],style={"text-align":"left",  "color": "white",}),
         ]), disabled=True)],style={"margin-left":"14px","width": "28em"}),
+
         
         dbc.Col([dbc.Button(([
             html.P("2016", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1678,7 +1684,7 @@ html.Br(),
 
 
 app.layout = html.Div([body],
-                              style={'width': '1850px',
+                              style={'width': '1900px',
                                     "background-color": "lightgray"})
 
                      
@@ -1690,3 +1696,5 @@ app.layout = html.Div([body],
 if __name__ == "__main__":
     app.run_server()
     
+    
+ 
