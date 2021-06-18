@@ -1,4 +1,5 @@
 
+
 # feminicidios
 
 import dash
@@ -1628,21 +1629,27 @@ html.Br(),
                 html.Br(),
                 html.H4("Metodología "),
                 html.P(
-                    "El presente dashboard  es un ejercicio institucional con el objeto de "
-                    "informar a los diputados y diputados y público interesado. "
-                    "Como se indica en cada caso. la información proviene, primero, del Secretariado Ejecutivo Nacional del Sistema Nacional de "
-                    "Seguridad Pública (SENSNSP) (2015-2021); segundo, de la Secretaría de Salud y su base de datos sobre defunciones anuales (2015-2019). "
-                    "Ademas, esta dashboard seguramente puede ser completado con otras fuentes de información "
-                    "gubernamental y por toda aquella información proveniente de organizaciones civiles que " 
-                    "dan seguimiento al tema. En ningún caso, este contenido representa algún "
+                    "El presente dashboard es un ejercicio institucional con el objeto de "
+                    "informar a los diputados y diputados y público interesado sobre un tema "
+                    "de vital importancia en la vida política. "
+                    "La metodología que hemos empleado para analizar los datos la detallamos enseguida. "
+                    "Como se indica en cada caso, la información sobre los feminicidios proviene del Secretariado "
+                    "Ejecutivo Nacional del Sistema Nacional de Seguridad Pública (SENSNSP) (2015-2021); "
+                    "segundo, la información sobre los decesos femeninos proviene de la Secretaría de Salud y su base "
+                    "de datos sobre defunciones anuales, del año 2015 al 2019. "
+                    "Este dashboard seguramente será completado progresivamente con otras fuentes de información "
+                    "tanto gubernamental, como aquella proveniente de organizaciones civiles que " 
+                    "dan seguimiento al tema. "
+                    "En ningún caso, este contenido representa algún "
                     "posicionamiento partidista, personal o institucional, mucho menos opinión o postura alguna "
                     "sobre el fenómeno." 
-                    "Esta información fue tratada con el lenguaje de programación Python y varias de las librerías "
-                    "más comunes (Dash, Choropleth, Pandas, Numpy, Geopandas, etc.), que nos ayudan a automatizar "
-                    "la recurrencia (request) a la fuente de información y las operaciones necesarias para creargraficas "
-                    "interactivas y mapas presentados. El volumen de información fue de 230 megabytes de la base de datos "
-                    "del SENSNSP y 2.4 gigabytes de la base de datos de defunciones, provista por la Secretaría de Salud, "
-                    "Dirección General de Información de Salud. ",
+                    "En los aspectos técnicos, esta información fue tratada con el lenguaje de programación Python "
+                    "y varias de las librerías más comunes (Dash, Choropleth, Pandas, Numpy, Geopandas, etc.), "
+                    "que nos ayudan a automatizar la recurrencia (request) a la fuente de información en tiempo real "
+                    "y las operaciones necesarias para crear graficas y mapas interactivos. "
+                    "El volumen de información manejado fue de 230 megabytes en de la base de datos del SENSNSP "
+                    "y de 2.4 gigabytes de la base de datos de defunciones, provista por la Secretaría de Salud, "
+                    "Dirección General de Información de Salud, 2020",
                     style= {"font-size":22,})], 
            
         style= {"margin-left":"100px", "margin-right":"100px", "text-align":"justify"},
@@ -1696,5 +1703,3 @@ app.layout = html.Div([body],
 if __name__ == "__main__":
     app.run_server()
     
-    
- 
