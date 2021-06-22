@@ -549,7 +549,7 @@ femi15_21 = ff[[
  'Enero20','Febrero20','Marzo20','Abril20','Mayo20','Junio20','Julio20',
  'Agosto20','Septiembre20','Octubre20','Noviembre20','Diciembre20',
     
- 'Enero21','Febrero21','Marzo21','Abril21',#'Mayo21','Junio21','Julio21',
+ 'Enero21','Febrero21','Marzo21','Abril21','Mayo21',#'Junio21','Julio21',
 # 'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21'
              ]]
 
@@ -575,7 +575,7 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
                                'Junio20', 'Julio20', 'Agosto20', 'Septiembre20', 'Octubre20',
                                'Noviembre20', 'Diciembre20',]].sum(axis=1)
 
-femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21',# 'Mayo21',
+femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21','Mayo21',
                                    #'Junio21','Julio21','Agosto21','Septiembre21','Octubre21',
                                    #'Noviembre21','Diciembre21'
                                   ]].sum(axis=1)
@@ -611,7 +611,7 @@ pagra = ff[[
  'Enero20', 'Febrero20', 'Marzo20', 'Abril20', 'Mayo20', 'Junio20', 'Julio20', 'Agosto20',
     'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20',
 
- 'Enero21', 'Febrero21', 'Marzo21', 'Abril21', #'Mayo21', #'Junio21',# 'Julio21',# 'Agosto21',
+ 'Enero21', 'Febrero21', 'Marzo21', 'Abril21', 'Mayo21', #'Junio21',# 'Julio21',# 'Agosto21',
   #  'Septiembre21','Octubre21','Noviembre21','Diciembre21'
             ]]
 
@@ -991,7 +991,7 @@ body = html.Div([
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                          'margin-left': '10px',
-                        'width': '250px'
+                        'width': '200px'
                          }, disabled=True)),
     
        dbc.Col(dbc.Button(([html.H5("2016", style= {"font-size": 18,"color": "black","background-color": "white",}),
@@ -999,7 +999,7 @@ body = html.Div([
                             dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2016.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                        'width': '250px',
+                        'width': '200px',
                          #'margin-left': '-390px'
                         }, disabled=True)),
 
@@ -1008,7 +1008,7 @@ body = html.Div([
                             dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2017.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                        'width': '250px',
+                        'width': '200px',
                          #'margin-left': '-90px'
                         }, disabled=True)),
 
@@ -1017,7 +1017,7 @@ body = html.Div([
                             dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2018.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                        'width': '250px',
+                        'width': '200px',
                          #'margin-left': '-390px'
                         }, disabled=True)),
            
@@ -1026,7 +1026,7 @@ body = html.Div([
                             dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2019.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                        'width': '250px',
+                        'width': '200px',
                          #'margin-left': '-390px'
                         }, disabled=True)),
        dbc.Col(dbc.Button(([html.H5("2020", style= {"font-size": 18,"color": "black","background-color": "white",}),
@@ -1034,7 +1034,15 @@ body = html.Div([
                             dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2020.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                        'width': '250px',
+                        'width': '200px',
+                         #'margin-left': '-390px'
+                        }, disabled=True)),
+        dbc.Col(dbc.Button(([html.H5("2021", style= {"font-size": 18,"color": "black","background-color": "white",}),
+                            html.H1(conf_2021,style= {"font-size": 64, "color": "red","background-color": "white",}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2021.png?raw=true",                               style= {"background-color": "white"}),
+               ]),style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                        'width': '200px',
                          #'margin-left': '-390px'
                         }, disabled=True)),
            
@@ -1065,7 +1073,7 @@ body = html.Div([
                                        width={'size': 11,  "offset":1 })]),
        dbc.Row(
            [        
-               dbc.Col(html.H5("(hasta abril 2021)"),
+               dbc.Col(html.H5("(hasta mayo 2021)"),
                                        width={ 'size': 3, "offset":1 }),
 
             ]),
