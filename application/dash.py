@@ -866,7 +866,11 @@ graf_totfem.update_layout(
   #  height=600
     )
 
-
+tabla1 = pd.read_csv('https://raw.githubusercontent.com/fdealbam/violenciadegenero/main/Tabla1.csv')              
+tabla1_f = tabla1[tabla1['Tipo de delito']== 'Feminicidio' ]
+tabla1_f.reset_index(inplace=True,)
+FEMINICID = tabla1_f.iloc[0]['GRAND TOTAL']
+FEMINICID = tabla1_f.iloc[0]['tasa_acumulada']
 
 ####################################
 
@@ -933,8 +937,14 @@ body = html.Div([
             [
                 #html.H4("Consideraciones generales "),
                 html.P(
-                    "Los feminicidios y los decesos femeninos son problemas aún irresueltos y son tema central de la " 
-                    "agenda legislativa, pero hoy alcanzan relevancia en la agenda seguridad pública del país, también. "
+                   "La violencia familiar tiene la más alta incidencia entre los delitos de género en el país."+
+      " Entre 2015 y 2021 se registraron "+ str(f"{int(TOTFEMINICID):,}") +" casos, lo que representa una tasa de "+
+       str(TASAFEMINICID) +" delitos por cada 100 mil habitantes. "+
+      "En este dashboard analítico observamos su gravedad según intervalos anuales e intervalos mensuales"+
+      "; también incluimos un análisis detallado de las cuatro entidades con más incidencias en este delito"+
+      "; finalmente, comparamos los rankings por entidad según sumas acumuladas respecto a las tasas, ambas "+
+      "por entidad y ambas del periódo 2015 al 2021."
+                  
                     "Este dashboard analítico se compone de dos secciones. "
                     "En la primera sección tratamos los feminicidios, observamos su gravedad en los casos según intervalos "
                     "anuales o mensuales; incluimos el análisis detallado de cuatro entidades con más incidencias de este "
