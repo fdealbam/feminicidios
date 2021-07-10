@@ -936,9 +936,9 @@ body = html.Div([
        dbc.Row(
             [
                 #html.H4("Consideraciones generales "),
-                html.P(
-                   "La violencia familiar tiene la más alta incidencia entre los delitos de género en el país."+
-      " Entre 2015 y 2021 se registraron "+ str(f"{int(TOTFEMINICID):,}") +" casos, lo que representa una tasa de "+
+                html.P("Los feminicidios y los decesos femeninos son problemas aún irresueltos y son tema central de la " 
+                    "agenda legislativa, pero hoy alcanzan relevancia en la agenda seguridad pública del país, también. "
+                      " Entre 2015 y 2021 se registraron "+ str(f"{int(TOTFEMINICID):,}") +" casos, lo que representa una tasa de "+
        str(TASAFEMINICID) +" delitos por cada 100 mil habitantes. "+
       "En este dashboard analítico observamos su gravedad según intervalos anuales e intervalos mensuales"+
       "; también incluimos un análisis detallado de las cuatro entidades con más incidencias en este delito"+
