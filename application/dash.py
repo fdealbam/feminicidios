@@ -869,8 +869,8 @@ graf_totfem.update_layout(
 tabla1 = pd.read_csv('https://raw.githubusercontent.com/fdealbam/violenciadegenero/main/Tabla1.csv')              
 tabla1_f = tabla1[tabla1['Tipo de delito']== 'Feminicidio' ]
 tabla1_f.reset_index(inplace=True,)
-FEMINICID = tabla1_f.iloc[0]['GRAND TOTAL']
-FEMINICID = tabla1_f.iloc[0]['tasa_acumulada']
+TOTFEMINICID = tabla1_f.iloc[0]['GRAND TOTAL']
+TASAFEMINICID = tabla1_f.iloc[0]['tasa_acumulada']
 
 ####################################
 
