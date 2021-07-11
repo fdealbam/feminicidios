@@ -936,7 +936,7 @@ body = html.Div([
        dbc.Row(
             [
                 #html.H4("Consideraciones generales "),
-                html.P("Los feminicidios y los decesos femeninos son problemas  irresueltos y ocupan un lugar central e la agenda legislativa. "
+                html.P("Los feminicidios y los decesos femeninos son problemas  irresueltos que ocupan un lugar central en la agenda legislativa. "
                       " Entre 2015 y 2021 se registraron "+ str(f"{int(TOTFEMINICID):,}") +" casos, lo que representa una tasa de "+
        str(TASAFEMINICID) +" delitos por cada 100 mil habitantes. "+
       
