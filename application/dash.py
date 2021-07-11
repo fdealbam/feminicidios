@@ -955,11 +955,7 @@ body = html.Div([
                     "inicialmente presentamos las cinco entidades con mayor incidencia anual de decesos femeninos, enseguida "
                     "presentamos las diferencias anuales en el modus operandi y del perfil de las víctimas. "
                     
-                    "Hoy existen cada vez mayor atención institucional para atender la violencia contra las mujeres y son fuerte "
-                    "preocupación de la sociedad, esto último se evidencia en el hecho que todos seamos más vigilantes al respecto. "
-                    "No obstante, aún hace falta más acción social, sobretodo, más intervención institucional "
-                    "para diseñar estrategias efectivas de prevención y promover su denuncia. Es imperativo "
-                    "acabar con esta violencia de género. "
+                 
                     "",
                     style= {"font-size":22,})], 
            
