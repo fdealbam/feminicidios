@@ -939,10 +939,7 @@ body = html.Div([
                 html.P("Los feminicidios y los decesos femeninos son problemas  irresueltos y ocupan un lugar central e la agenda legislativa. "
                       " Entre 2015 y 2021 se registraron "+ str(f"{int(TOTFEMINICID):,}") +" casos, lo que representa una tasa de "+
        str(TASAFEMINICID) +" delitos por cada 100 mil habitantes. "+
-      "En este dashboard analítico observamos su gravedad según intervalos anuales e intervalos mensuales"+
-      "; también incluimos un análisis detallado de las cuatro entidades con más incidencias en este delito"+
-      "; finalmente, comparamos los rankings por entidad según sumas acumuladas respecto a las tasas, ambas "+
-      "por entidad y ambas del periódo 2015 al 2021."
+      
                   
                     "Este dashboard analítico se compone de dos secciones. "
                     "En la primera sección tratamos los feminicidios, observamos su gravedad en los casos según intervalos "
