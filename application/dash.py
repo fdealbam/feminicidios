@@ -550,7 +550,7 @@ femi15_21 = ff[[
     
  'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
  'Agosto21',
-    #'Septiembre21','Octubre21','Noviembre21','Diciembre21'
+    'Septiembre21',#'Octubre21','Noviembre21','Diciembre21'
              ]]
 
 
@@ -577,7 +577,7 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
 
 femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21','Mayo21',
                                    'Junio21','Julio21','Agosto21',
-                                   #'Septiembre21','Octubre21',
+                                   'Septiembre21',#'Octubre21',
                                    #'Noviembre21','Diciembre21'
                                   ]].sum(axis=1)
 
@@ -613,7 +613,7 @@ pagra = ff[[
     'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20',
 
  'Enero21', 'Febrero21', 'Marzo21', 'Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
-  #  'Septiembre21','Octubre21','Noviembre21','Diciembre21'
+    'Septiembre21',#'Octubre21','Noviembre21','Diciembre21'
             ]]
 
 
@@ -994,7 +994,7 @@ body = html.Div([
                                         style={"background-color":"white"}),
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
-                         'margin-left': '10px',
+                         #'margin-left': '10px',
                         'width': '200px'
                          }, disabled=True)),
     
@@ -1047,12 +1047,13 @@ body = html.Div([
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
                         'width': '200px',
-                         #'margin-left': '-390px'
+                         'margin-right': '100px'
                         }, disabled=True)),
            
     ],style={ "background-color": "lightgray",
               #"box-shadow": "10px 20px 30px black",
-              'margin-left': '50px'}),
+              'margin-left': '50px'
+            }),
     
     
     
@@ -1077,7 +1078,7 @@ body = html.Div([
                                        width={'size': 11,  "offset":1 })]),
        dbc.Row(
            [        
-               dbc.Col(html.H5("(hasta agosto 2021)"),
+               dbc.Col(html.H5("(hasta septiembre 2021)"),
                                        width={ 'size': 3, "offset":1 }),
 
             ]),
