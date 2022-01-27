@@ -1,4 +1,3 @@
-
 # feminicidios
 
 import dash
@@ -550,7 +549,7 @@ femi15_21 = ff[[
     
  'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
  'Agosto21',
-    'Septiembre21','Octubre21',#'Noviembre21','Diciembre21'
+    'Septiembre21','Octubre21','Noviembre21','Diciembre21'
              ]]
 
 
@@ -578,7 +577,7 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
 femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21','Mayo21',
                                    'Junio21','Julio21','Agosto21',
                                    'Septiembre21','Octubre21',
-                                   #'Noviembre21','Diciembre21'
+                                   'Noviembre21','Diciembre21'
                                   ]].sum(axis=1)
 
 
@@ -613,7 +612,7 @@ pagra = ff[[
     'Septiembre20','Octubre20', 'Noviembre20', 'Diciembre20',
 
  'Enero21', 'Febrero21', 'Marzo21', 'Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
-    'Septiembre21','Octubre21',#'Noviembre21','Diciembre21'
+    'Septiembre21','Octubre21','Noviembre21','Diciembre21'
             ]]
 
 
@@ -1078,7 +1077,7 @@ body = html.Div([
                                        width={'size': 11,  "offset":1 })]),
        dbc.Row(
            [        
-               dbc.Col(html.H5("(hasta octubre 2021)"),
+               dbc.Col(html.H5("(hasta diciembre 2021)"),
                                        width={ 'size': 3, "offset":1 }),
 
             ]),
@@ -1227,7 +1226,7 @@ html.Br(),
             
             dbc.Col(dcc.Graph(figure= graf_tasafem, config= "autosize")),
                    #lg={'size': 5,  "offset": 1,}),
-        ], justify="end", no_gutters=True,),
+        ], ), #justify="end", no_gutters=True,),
 
        html.Br(),
        html.Br(),
@@ -1717,3 +1716,4 @@ app.layout = html.Div([body],
 if __name__ == "__main__":
     app.run_server()
     
+
