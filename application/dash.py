@@ -1172,7 +1172,7 @@ body = html.Div([
                          #'margin-left': '-390px'
                         }, disabled=True)),
        dbc.Col(dbc.Button(([html.H5("2020", style= {"font-size": 18,"color": "black","background-color": "white",}),
-                            html.H1(conf_2020,style= {"font-size": 64, "color": "red","background-color": "white",}),
+                            html.H1(conf_2020,style= {"font-size": 64, "color": "black","background-color": "white",}),
                             dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2020.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
@@ -1180,7 +1180,7 @@ body = html.Div([
                          #'margin-left': '-390px'
                         }, disabled=True)),
         dbc.Col(dbc.Button(([html.H5("2021", style= {"font-size": 18,"color": "black","background-color": "white",}),
-                            html.H1(conf_2021,style= {"font-size": 64, "color": "red","background-color": "white",}),
+                            html.H1(conf_2021,style= {"font-size": 64, "color": "black","background-color": "white",}),
                             dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2021.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
@@ -1188,7 +1188,7 @@ body = html.Div([
                          'margin-right': '100px'
                         }, disabled=True)),
         dbc.Col(dbc.Button(([html.H5("2022", style= {"font-size": 18,"color": "black","background-color": "white",}),
-                            html.H1(conf_2022,style= {"font-size": 64, "color": "red","background-color": "white",}),
+                            html.H1(conf_2022,style= {"font-size": 64, "color": "black","background-color": "white",}),
                             dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/Mapa%20feminicidio%20Total2022.png?raw=true",                               style= {"background-color": "white"}),
                ]),style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
