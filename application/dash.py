@@ -119,6 +119,23 @@ defunciones19["Variable"]= defunciones19["Variable"].replace("familia nuclear", 
 defunciones19["Variable"]= defunciones19["Variable"].replace("UniÃ³n libre", "Unión libre") #####################CDMX 
 
 
+defunciones20 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def20_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
+                    )
+defunciones20.replace(["Ã­","Ã¡", "Ã©", "Ã³", "Ã±", "Ãº"], ["í", "á", "é", "ó", "ñ", "ú"], inplace= True)
+defunciones20["Variable"]= defunciones20["Variable"].replace("Ciudad de MÃ©xico", "Ciudad de México") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("Veracruz de Ignacio de la Llave", "Veracruz") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("MÃ©xico", "México") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("VÃ­a pÃºblica", "Vía pública") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("De 15 a 19 aÃ±os", "De 15 a 19 años") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("De 20 a 39 aÃ±os", "De 20 a 39 años") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("De 40 a 55 aÃ±os", "De 40 a 55 años") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("De 55 a 74 aÃ±os", "De 55 a 74 años") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("no especificado", "No especificado") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("De 30 a 34 aÃ±os", "De 30 a 34 años") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("familia nuclear", "Familia nuclear") #####################CDMX 
+defunciones20["Variable"]= defunciones20["Variable"].replace("UniÃ³n libre", "Unión libre") #####################CDMX 
+
+
 
 #defunciones20 = pd.read_csv("https://raw.githubusercontent.com/fdealbam/feminicidios/main/application/def20_r_femeninas_tabla%20de%20datos.csv", encoding= "Latin-1", 
 #                    )
@@ -464,6 +481,75 @@ civl319_val = defunciones19.iloc[40]['Valor']
 civl319_txt = defunciones19.iloc[40]['Variable']
 civl419_val = defunciones19.iloc[41]['Valor']
 civl419_txt = defunciones19.iloc[41]['Variable']
+
+
+#2020_______________________________________________________<<<
+def_tot20 =defunciones20.iloc[0]['Valor']
+def20_tot = defunciones20.iloc[0]['Valor']
+agr20_val = defunciones20.iloc[34]['Valor']
+agr20_txt = defunciones20.iloc[34]['Variable']
+agr220_val  = defunciones20.iloc[35]['Valor']
+agr220_txt  = defunciones20.iloc[35]['Variable']
+agr320_val  = defunciones20.iloc[36]['Valor']
+agr320_txt  = defunciones20.iloc[36]['Variable']
+
+viofm120_val = defunciones20.iloc[21]['Valor']
+viofm120_txt = defunciones20.iloc[21]['Variable']
+viofm220_val = defunciones20.iloc[22]['Valor']
+viofm220_txt = defunciones20.iloc[22]['Variable']
+
+lug120_val = defunciones20.iloc[12]['Valor']
+lug120_txt = defunciones20.iloc[12]['Variable']
+lug220_val = defunciones20.iloc[13]['Valor']
+lug220_txt = defunciones20.iloc[13]['Variable']
+
+aurb20_val = defunciones20.iloc[20]['Valor']
+aurb20_txt = defunciones20.iloc[20]['Variable']
+
+ent120_val = defunciones20.iloc[2]['Valor']
+ent120_txt = defunciones20.iloc[2]['Variable']
+ent220_val = defunciones20.iloc[3]['Valor']
+ent220_txt = defunciones20.iloc[3]['Variable']
+ent320_val = defunciones20.iloc[4]['Valor']
+ent320_txt = defunciones20.iloc[4]['Variable']
+ent420_val = defunciones20.iloc[5]['Valor']
+ent420_txt = defunciones20.iloc[5]['Variable']
+ent520_val = defunciones20.iloc[6]['Valor']
+ent520_txt = defunciones20.iloc[6]['Variable']
+
+eda120_val = defunciones20.iloc[24]['Valor']
+eda120_txt = defunciones20.iloc[24]['Variable']
+eda220_val = defunciones20.iloc[25]['Valor']
+eda220_txt = defunciones20.iloc[25]['Variable']
+eda320_val = defunciones20.iloc[26]['Valor']
+eda320_txt = defunciones20.iloc[26]['Variable']
+eda420_val = defunciones20.iloc[27]['Valor']
+eda420_txt = defunciones20.iloc[27]['Variable']
+eda520_val = defunciones20.iloc[28]['Valor']
+eda520_txt = defunciones20.iloc[28]['Variable']
+
+emba120_val = defunciones20.iloc[15]['Valor']
+emba120_txt = defunciones20.iloc[15]['Variable']
+emba220_val = defunciones20.iloc[16]['Valor']
+emba220_txt = defunciones20.iloc[16]['Variable']
+emba320_val = defunciones20.iloc[17]['Valor']
+emba320_txt = defunciones20.iloc[17]['Variable']
+
+esc120_val = defunciones20.iloc[8]['Valor']
+esc120_txt = defunciones20.iloc[8]['Variable']
+esc220_val = defunciones20.iloc[9]['Valor']
+esc220_txt = defunciones20.iloc[9]['Variable']
+esc320_val = defunciones20.iloc[10]['Valor']
+esc320_txt = defunciones20.iloc[10]['Variable']
+
+civl120_val = defunciones20.iloc[38]['Valor']
+civl120_txt = defunciones20.iloc[38]['Variable']
+civl220_val = defunciones20.iloc[39]['Valor']
+civl220_txt = defunciones20.iloc[39]['Variable']
+civl320_val = defunciones20.iloc[40]['Valor']
+civl320_txt = defunciones20.iloc[40]['Variable']
+civl420_val = defunciones20.iloc[41]['Valor']
+civl420_txt = defunciones20.iloc[41]['Variable']
 
 #os.chdir(r"C:\Users\PRIME\AnacondaProjects\Project_curso\\")
 
@@ -1420,7 +1506,17 @@ html.Br(),
            
             dbc.Col(dbc.Button(([html.H4("2019", style={"font-size": 18,"color": "black","background-color": "white"}),
                             html.Br(),
-                                 html.P((f'{int(def19_tot):,}'),style={"font-size":"60px","color":"red",}),
+                                 html.P((f'{int(def19_tot):,}'),style={"font-size":"60px","color":"gray",}),
+                            
+               ]), style={"background-color":"white",
+                         "box-shadow": "10px 20px 30px black",
+                         'margin-left': '10px',
+                        'width': '250px'
+                         }, disabled=True)),
+           
+           dbc.Col(dbc.Button(([html.H4("2020", style={"font-size": 18,"color": "black","background-color": "white"}),
+                            html.Br(),
+                                 html.P((f'{int(def20_tot):,}'),style={"font-size":"60px","color":"red",}),
                             
                ]), style={"background-color":"white",
                          "box-shadow": "10px 20px 30px black",
@@ -1482,8 +1578,7 @@ html.Br(),
             html.H6([ (ent417_txt),": ", (ent417_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent517_txt),": ", (ent517_val),"%",],style={"text-align":"left",  "font-size": 20,}),                
         ]), disabled=True,)], style={#"margin-left":"-20px",
-                                     "width": "28em"
-        }),
+                                     "width": "28em"}),
 
         dbc.Col([dbc.Button(([    
             html.P("2018", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1493,8 +1588,7 @@ html.Br(),
             html.H6([ (ent418_txt),": ", (ent418_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent518_txt),": ", (ent518_val),"%",],style={"text-align":"left",  "font-size": 20,}),
         ]), disabled=True,)], style={#"margin-left":"-40px",
-                                     "width": "28em"
-        }),
+                                     "width": "28em"}),
 
         dbc.Col([dbc.Button(([  
             html.P("2019", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
@@ -1503,6 +1597,16 @@ html.Br(),
             html.H6([ (ent319_txt),": ", (ent319_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent419_txt),": ", (ent419_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (ent519_txt),": ", (ent519_val),"%",],style={"text-align":"left",  "font-size": 20, "margin-right":"20px"}),                
+        ]), disabled=True,)], style={"margin-right":"20px",
+                                     "width": "28em"}),
+        
+        dbc.Col([dbc.Button(([  
+            html.P("2020", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
+            html.H6([ (ent120_txt),": ", (ent120_val),"%",],style={"text-align":"left",  "font-size": 20,"color":"red"}),
+            html.H6([ (ent220_txt),": ", (ent220_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent320_txt),": ", (ent320_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent420_txt),": ", (ent420_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (ent520_txt),": ", (ent520_val),"%",],style={"text-align":"left",  "font-size": 20, "margin-right":"20px"}),                
         ]), disabled=True,)], style={"margin-right":"20px",
                                      "width": "28em"}),
            ]),
@@ -1599,6 +1703,23 @@ html.Br(),
             html.P("¿Dónde ocurrió? ", style={"text-align":"left",   "font-size": 20,"color":"red"}),
             html.H6([ (lug119_txt),": ",     (lug119_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (lug219_txt),": ",     (lug219_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+        ]), disabled=True,)], style={"margin-right":"20px",
+                                     "width": "28em"}),
+               
+    dbc.Col([dbc.Button(([  
+            html.P("2020", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
+            html.P("Parentesco con agresor", style={"text-align":"left",  "font-size": 20,"color":"red"}), 
+            html.H6([ (agr20_txt),": ",       (agr20_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (agr220_txt),": ",     (agr220_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (agr320_txt),": ",     (agr320_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+    html.Br(),
+            html.P("¿Hubo violencia?", style={"text-align":"left",   "font-size": 20, "color":"red"}),  
+            html.H6([ (viofm220_txt),": ", (viofm220_val),"%",],style={"text-align":"left",  "font-size": 20,}),          
+            html.H6([ (viofm120_txt),": ", (viofm120_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+    html.Br(),
+            html.P("¿Dónde ocurrió? ", style={"text-align":"left",   "font-size": 20,"color":"red"}),
+            html.H6([ (lug120_txt),": ",     (lug120_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (lug220_txt),": ",     (lug220_val),"%",],style={"text-align":"left",  "font-size": 20,}),
         ]), disabled=True,)], style={"margin-right":"20px",
                                      "width": "28em"}),
            ]),
@@ -1752,6 +1873,34 @@ html.Br(),
             html.H6([ (esc219_txt),": ", (esc219_val),"%",],style={"text-align":"left",  "font-size": 20,}),
             html.H6([ (esc319_txt),": ", (esc319_val),"%",],style={"text-align":"left",  "font-size": 20,})
         ]), disabled=True)],style={"margin-right":"20px","width": "28em"}),
+        
+        
+    dbc.Col([dbc.Button(([
+            html.P("2020", style={"text-align":"left",  "font-family": "Arial Black",   "font-size": 24,}),
+            html.P("Estado civil", style={"text-align":"left",   "font-size": 20,"color":"red"}),
+            html.H6([ (civl120_txt),": ", (civl120_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (civl220_txt),": ", (civl220_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (civl320_txt),": ", (civl320_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (civl420_txt),": ", (civl420_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+    html.Br(),
+            html.P("¿Qué rangos de edad tenían?", style={"text-align":"left",   "font-size": 20,"color":"red"}),
+            html.H6([ (eda120_txt),": ", (eda120_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (eda220_txt),": ", (eda220_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (eda320_txt),": ", (eda320_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (eda420_txt),": ", (eda420_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (eda520_txt),": ", (eda520_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+    html.Br(),
+    html.Br(),            
+            html.P("¿Estaba embarazada?", style={"text-align":"left",   "font-size": 20,"color":"red"}),
+            html.H6([ (emba320_txt),": ", (emba320_val),"%",],style={"text-align":"left",  "font-size": 20,}), 
+            html.H6([ (emba220_txt),": ", (emba220_val),"%",],style={"text-align":"left",  "font-size": 20,}), 
+            html.H6([ (emba120_txt),": ", (emba120_val),"%",],style={"text-align":"left",  "font-size": 20,}), 
+    html.Br(),            
+            html.P("Escolaridad", style={"text-align":"left",   "font-size": 20,"color":"red"}),
+            html.H6([ (esc120_txt),": ", (esc120_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (esc220_txt),": ", (esc220_val),"%",],style={"text-align":"left",  "font-size": 20,}),
+            html.H6([ (esc320_txt),": ", (esc320_val),"%",],style={"text-align":"left",  "font-size": 20,})
+        ]), disabled=True)],style={"margin-right":"20px","width": "28em"}),
     ]),
     
 
@@ -1813,37 +1962,20 @@ html.Br(),
                   width={'size': 3, 'offset': 0}),
                ], justify="start",),
             
-     dbc.Row([    
-           dbc.Col(html.P([dbc.Badge("Equipo responsable", style={"font-size":20},
-                          href="https://innovation-learning.herokuapp.com/",
-                                     )]),
-                  width={'size': 3,  "offset": 3}),
-                       ], justify="start",),
+     dbc.Row([dbc.Col(html.P([dbc.Badge("Equipo responsable", style={"font-size":20},
+                          href="https://innovation-learning.herokuapp.com/",)]),
+                  width={'size': 3,  "offset": 3}),], justify="start",),
    
     html.Br(),
     html.Br(),
     html.Br(),
-
-    
-
-    
     html.Br(),
-                  
-                  
-                  ])
+    ])
 
-
-app.layout = html.Div([body],
-                              style={'width': '1900px',
-                                    "background-color": "lightgray"})
-
-                     
-                     
+app.layout = html.Div([body],style={'width': '1900px',"background-color": "lightgray"})
 
 #from application.dash import app
 #from settings import config
 
 if __name__ == "__main__":
     app.run_server()
-    
-
