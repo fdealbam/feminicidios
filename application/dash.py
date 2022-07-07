@@ -1,5 +1,4 @@
 # feminicidios
-
 import dash
 import matplotlib.pyplot as plt 
 import dash_bootstrap_components as dbc
@@ -17,7 +16,7 @@ import sidetable as stb
 import datetime
 from datetime import datetime, timedelta
 from datetime import date
-import geopandas as gpd
+#import geopandas as gpd
 import flask
 import os
 
@@ -642,7 +641,7 @@ femi15_21 = fg[[
  'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
  'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21',
     
- 'Enero22', 'Febrero22', 'Marzo22',#'Abril22', 'Mayo22', 'Junio22', 'Julio22', 'Agosto22',
+ 'Enero22', 'Febrero22', 'Marzo22','Abril22', 'Mayo22',# 'Junio22',# 'Julio22', 'Agosto22',
    #'Septiembre22','Octubre22','Noviembre22','Diciembre22'
              ]]
 
@@ -670,7 +669,7 @@ femi15_21['Total2020']= femi15_21[[ 'Enero20', 'Febrero20', 'Marzo20', 'Abril20'
 femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21','Mayo21',
                                    'Junio21','Julio21','Agosto21','Septiembre21','Octubre21',
                                    'Noviembre21','Diciembre21']].sum(1)
-femi15_21['Total2022']= femi15_21[[ 'Enero22', 'Febrero22', 'Marzo22',# 'Abril22', 'Mayo22',
+femi15_21['Total2022']= femi15_21[[ 'Enero22', 'Febrero22', 'Marzo22', 'Abril22', 'Mayo22',
                               # 'Junio22', 'Julio22', 'Agosto22', 'Septiembre22', 'Octubre22',
                                #'Noviembre22', 'Diciembre22',
                                   ]].sum(1)
@@ -710,7 +709,7 @@ pagra = fg[[
  'Enero21', 'Febrero21', 'Marzo21', 'Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
     'Septiembre21','Octubre21','Noviembre21','Diciembre21',
     
- 'Enero22', 'Febrero22', 'Marzo22',#'Abril22', 'Mayo22', 'Junio22', 'Julio22', 'Agosto22',
+ 'Enero22', 'Febrero22', 'Marzo22','Abril22', 'Mayo22',# 'Junio22', 'Julio22', 'Agosto22',
    #'Septiembre22','Octubre22','Noviembre22','Diciembre22' 
             ]]
 
@@ -1170,7 +1169,7 @@ body = html.Div([
                     "Este tablero analítico se compone de dos secciones. "
                     "En la primera sección tratamos los feminicidios, observamos su gravedad en los casos según intervalos "
                     "anuales o mensuales; incluimos el análisis detallado de cuatro entidades con más incidencias de este "
-                    "delito; finalmente, comparamos los rankings por entidad según sumas del periódo 2015 al 2021 "
+                    "delito; finalmente, comparamos los rankings por entidad según sumas del periodo 2015 al 2022 "
                     "con las tasas por entidad del mismo intervalo. " 
                     "En la segunda sección, como contraste a las cifras de los feminicidios, analizamos los decesos femeninos, "
                     "porque es otro rubro que permite ver la insuficiencia de los datos sobre este fenómeno. En ese sentido, "
@@ -1310,7 +1309,7 @@ body = html.Div([
                                        width={'size': 11,  "offset":1 })]),
        dbc.Row(
            [        
-               dbc.Col(html.H5("(hasta marzo 2022)"),
+               dbc.Col(html.H5("(hasta mayo 2022)"),
                                        width={ 'size': 3, "offset":1 }),
 
             ]),
