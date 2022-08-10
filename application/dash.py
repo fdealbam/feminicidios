@@ -641,7 +641,7 @@ femi15_21 = fg[[
  'Enero21','Febrero21','Marzo21','Abril21','Mayo21','Junio21','Julio21',
  'Agosto21','Septiembre21','Octubre21','Noviembre21','Diciembre21',
     
- 'Enero22', 'Febrero22', 'Marzo22','Abril22', 'Mayo22',# 'Junio22',# 'Julio22', 'Agosto22',
+ 'Enero22', 'Febrero22', 'Marzo22','Abril22', 'Mayo22', 'Junio22',# 'Julio22', 'Agosto22',
    #'Septiembre22','Octubre22','Noviembre22','Diciembre22'
              ]]
 
@@ -670,7 +670,7 @@ femi15_21['Total2021']= femi15_21[[ 'Enero21','Febrero21', 'Marzo21', 'Abril21',
                                    'Junio21','Julio21','Agosto21','Septiembre21','Octubre21',
                                    'Noviembre21','Diciembre21']].sum(1)
 femi15_21['Total2022']= femi15_21[[ 'Enero22', 'Febrero22', 'Marzo22', 'Abril22', 'Mayo22',
-                              # 'Junio22', 'Julio22', 'Agosto22', 'Septiembre22', 'Octubre22',
+                               'Junio22', #'Julio22', 'Agosto22', 'Septiembre22', 'Octubre22',
                                #'Noviembre22', 'Diciembre22',
                                   ]].sum(1)
 
@@ -709,7 +709,7 @@ pagra = fg[[
  'Enero21', 'Febrero21', 'Marzo21', 'Abril21', 'Mayo21', 'Junio21', 'Julio21', 'Agosto21',
     'Septiembre21','Octubre21','Noviembre21','Diciembre21',
     
- 'Enero22', 'Febrero22', 'Marzo22','Abril22', 'Mayo22',# 'Junio22', 'Julio22', 'Agosto22',
+ 'Enero22', 'Febrero22', 'Marzo22','Abril22', 'Mayo22', 'Junio22',# 'Julio22', 'Agosto22',
    #'Septiembre22','Octubre22','Noviembre22','Diciembre22' 
             ]]
 
