@@ -1345,8 +1345,8 @@ body = html.Div([
     #4 CUADROS
     
      dbc.Row([
-       dbc.Col(dbc.Button(([html.P("México", style={"font-size": 30,"color": "black","background-color": "white"}),
-                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/mx2.jpeg?raw=true",
+       dbc.Col(dbc.Button(([html.P("Ciudad de México", style={"font-size": 30,"color": "black","background-color": "white"}),
+                            dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/cdmx2.jpeg?raw=true",
                                         style={"background-color":"white"}),
                             html.P(bulletedo1,
                        style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
@@ -1376,8 +1376,8 @@ html.Br(),
     
     #################################################################  MUNICIPIOS ranking    
           dbc.Row([
-          dbc.Col(dbc.Button(([html.P("Ciudad de México",style={"font-size": 30,"color": "black","background-color": "white"}),
-                        dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/cdmx2.jpeg?raw=true",
+          dbc.Col(dbc.Button(([html.P("México",style={"font-size": 30,"color": "black","background-color": "white"}),
+                        dbc.CardImg(src="https://github.com/fdealbam/feminicidios/blob/main/application/static/mx2.jpeg?raw=true",
                                         style={"background-color":"white"}),
                                html.P(bulletedo3,
                        style={'font-size': 14, "font-family":"Arial", "text-align":"justify" }),
