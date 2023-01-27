@@ -1,0 +1,44 @@
+,Variable,Valor
+0,Total anual,8004
+1,Entidad,Entidad_%
+2,Guanajuato,13.5
+3,México,10.9
+4,Baja California,8.6
+5,Chihuahua,8.3
+6,Michoacán de Ocampo,6.9
+7,Escolaridad,Escolaridad_%
+8,Secundaria completa,26.2
+9,Primaria completa,16.7
+10,No especificado,11.8
+11,Lugar,Lugar_%
+12,Calle o carretera (vía pública),38.705647176411794
+13,Vicienda particular,24.36281859070465
+14,Se ignora,21.43928035982009
+15,Embarazo,Embarazo_%
+16,"Si, o en fase posterior",1.8
+17,No,31.9
+18,No especificado ,55.2
+19,Area Urbana,Area Urbana_%
+20,Urbano,78.8
+21,Violencia Familiar,Violencia Familiar_%
+22,Violencia familiar o de fuera,0.9
+23,No especificado,99.1
+24,Edad Agrupada,Edad Agrupada_%
+25,De 20 a 39 años,52.8
+26,De 40 a 55 años,18.9
+27,De 15 a 19 años,8.5
+28,De 55 a 74 años,7.2
+29,Edad no  especificada,6.6
+30,Ocupación,Ocupación_%
+31,No trabaja,47.1
+32,No especificada,26.4
+33,Trabaja,25.2
+34,Parentesco c/agresor,Parentesco c/agresor_%
+35,No especificado,98.8
+36,Familia nuclear,0.8
+37,Ninguno,0.3
+38,Estado Civil,Civil_%
+39,Soltera,45.1
+40,Unión libre,17.1
+41,Casada,14.7
+42,Estado civil no especificado,13.0
